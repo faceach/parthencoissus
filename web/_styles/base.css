@@ -22,7 +22,6 @@ em, em strong, .italic      {   font-style: italic; }
 /* - Clear Fix */
 .cf:after,ul.hor:after      {   clear: both; content: "."; display: block; height: 0; visibility: hidden;   }
 .cf,ul.hor                  {   *zoom: 1;       }
-.bfc                        {   overflow: hidden; *zoom: 1;    }
 .clear                      {   clear: both;    }
 
 /* - Float */
@@ -47,7 +46,7 @@ em, em strong, .italic      {   font-style: italic; }
 .valign-m-help	{   display: inline-block; vertical-align: middle; font-size: 10px; text-indent: -5000px; overflow: hidden;	}
 
 /* - Width Free/Flexible Button */
-.flexwidth              {   display: inline-block; _display: inline; _zoom: 1;      }
+.flexwidth              {   display: inline-block; *display: inline; *zoom: 1;      }
 .flexwidth .fw-l        {   display: block; _display: inline; _zoom: 1;             }
 a.flexwidth             {   cursor: pointer; white-space: nowrap;                   }
 a.flexwidth:hover       {   text-decoration: none;                                  }
@@ -58,7 +57,6 @@ a.flexwidth:hover       {   text-decoration: none;                              
 a.ndr,
 a.ndr:hover     {   text-decoration: none;  }
 .hidden         {   display: none;          }
-.hidden-im      {   display: none!important;}
 .hand           {   cursor: pointer;        }
 .nohand         {   cursor: default;        }
 .ltspacing      {   letter-spacing: -1px;   }
@@ -67,6 +65,9 @@ a.ndr:hover     {   text-decoration: none;  }
 .breakword      {   word-wrap: break-word; word-break: break-all; overflow:hidden;  }
 .nowrap         {   white-space: nowrap;    }
 .justify        {   text-align: justify;    }
+
+/* - html5 */
+article, aside, dialog, footer, header, section, footer, nav, figure, menu  {   display: block; }
 
 /* +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ */
 /* - Opacity */
@@ -95,22 +96,6 @@ html        {   -webkit-text-size-adjust: none;     }
 .txt-7xl    {   font-size: 190%;    }
 .txt-8xl    {   font-size: 210%;    }
 .txt-9xl    {   font-size: 230%;    }
-/* - Pixel */
-.txt-9      {   font-size: 9px;     }
-.txt-10     {   font-size: 10px;    }
-.txt-11     {   font-size: 11px;    }
-.txt-12     {   font-size: 12px;    }
-.txt-13     {   font-size: 13px;    }
-.txt-14     {   font-size: 14px;    }
-.txt-15     {   font-size: 15px;    }
-.txt-16     {   font-size: 16px;    }
-.txt-17     {   font-size: 17px;    }
-.txt-18     {   font-size: 18px;    }
-.txt-20     {   font-size: 20px;    }
-.txt-22     {   font-size: 22px;    }
-.txt-25     {   font-size: 25px;    }
-.txt-32     {   font-size: 32px;    }
-.txt-36     {   font-size: 36px;    }
 
 /* - Gap */
 .mt-1       {   margin-top: 1px;    }
@@ -170,6 +155,25 @@ html        {   -webkit-text-size-adjust: none;     }
 .mr-40      {   margin-right: 40px; }
 .mr-45      {   margin-right: 45px; }
 .mr-50      {   margin-right: 50px; }
+.mr-60      {   margin-right: 60px; }
+.mr-70      {   margin-right: 70px; }
+.mr-80      {   margin-right: 80px; }
+.mr-90      {   margin-right: 90px; }
+.mr-100     {   margin-right: 100px;}
+
+/* - Column(12 grid) */
+.grid-1     {   width: 08.33%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-2     {   width: 16.66%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-3     {   width: 25.00%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-4     {   width: 33.33%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-5     {   width: 41.66%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-6     {   width: 50.00%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-7     {   width: 58.33%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-8     {   width: 66.66%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-9     {   width: 75.00%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-10    {   width: 83.33%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-11    {   width: 91.66%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.grid-12    {   width: 100.0%;  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* - Text Color */
 .whi,
@@ -212,10 +216,10 @@ a.yel:hover         {   color: #ff0;    }
 .gre a,
 .gre a:hover,
 a.gre:hover         {   color: #0f0;    }
-.icesnowblue,
-.icesnowblue a,
-.icesnowblue a:hover,
-a.icesnowblue:hover {   color: #0ff;    }
+.cyan,
+.cyan a,
+.cyan a:hover,
+a.cyan:hover        {   color: #0ff;    }
 .blu,
 .blu a,
 .blu a:hover,

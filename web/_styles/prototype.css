@@ -1,2 +1,8 @@
-﻿body {
+﻿.simulation
+{
+    width: 320px;
+    height: 480px;
+    border: 10px solid #000;
+    background-color: #fff;
+    border-radius: 5px;
 }
