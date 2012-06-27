@@ -27,8 +27,8 @@
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
 		            </div>
 		            <div class="well">
 		                <a class="btn btn-primary" href="#takeword">Take one word!</a>
@@ -43,11 +43,11 @@
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
 		            </div>
 		            <div class="well">
-		                <a class="btn btn-primary" href="#takeword">Try next one!</a>
+		                <a class="btn btn-primary" href="#takeword">Take next word!</a>
 		                <h1 class="mt-10 ora">favor</h1>
 		                <label class="mt-10">Type an explanation:</label>
 		                <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
@@ -64,16 +64,16 @@
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
 		            </div>
 		            <div class="well">
-		                <p class="help-block">UserB is now guessing your word.</p>
+		                <p class="help-block">Hold On! UserB is now guessing your word.</p>
 		                <h3>Don't forget learning!</h3>
 		                <h1 class="mt-10 ora">solve</h1>
-		                <p>
-		                    find the solution to (a problem or question) or understand the meaning of
-		                </p>
+		                <ul class="txtalign-l">
+		                    <li>find the solution to (a problem or question) or understand the meaning of</li>
+		                </ul>
 		                <a class="btn btn-primary" href="#waiting">Next</a>
 		            </div>
 
@@ -86,12 +86,46 @@
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
 		            </div>
 		            <div class="well">
 		                <h2 class="mt-10">Congratulations!</h1>
 		                <span class="help-block">You two guys really the word genius!</span>
+		                <h1 class="mt-10 ora">favor</h1>
+		                <ul class="txtalign-l">
+		                    <li>an act of gracious kindness</li>
+		                    <li>an advantage to the benefit of someone or something</li>
+		                    <li>an inclination to approve</li>
+		                    <li>a feeling of favorable regard</li>
+		                    <li>souvenir consisting of a small gift given to a guest at a party</li>
+		                </ul>
+		                <a class="btn btn-primary" href="#takeword">Take next word!</a>
+		            </div>
+
+		        </div>
+
+		        <p id="wrongresult" class="txtalign-c mt-15">5. UserB's response back - wrong</p>
+			    <div class="simulation txtalign-c align-c mt-10">
+
+		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
+		                <i class="icon-cog"></i>
+		                Settings
+		            </a>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
+		            </div>
+		            <div class="well">
+		                <h2 class="mt-10">Sorry!</h1>
+		                <span class="help-block">UserB gave the wrong word!</span>
+						<h1 class="mt-10 red"><del>enjoy</del></h1>
+		                <ul class="txtalign-l">
+		                    <li>derive or receive pleasure from; get enjoyment from; take pleasure in</li>
+		                    <li>have benefit from</li>
+		                    <li>get pleasure from</li>
+		                    <li>have for one's benefit</li>
+		                    <li>take delight in</li>
+		                </ul>
 		                <h1 class="mt-10 ora">favor</h1>
 		                <ul class="txtalign-l">
 		                    <li>an act of gracious kindness</li>
@@ -112,8 +146,8 @@
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
 		            </div>
 		            <div class="well">
 		                <h2 class="mt-10">Help!</h1>
@@ -130,27 +164,19 @@
 
 		        </div>
 
-		        <p id="wrongresult" class="txtalign-c mt-15">5. UserB's response back - wrong</p>
+		        <p id="giveupresult" class="txtalign-c mt-15">5. UserB's response back - give up</p>
 			    <div class="simulation txtalign-c align-c mt-10">
 
 		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
 		            </div>
 		            <div class="well">
 		                <h2 class="mt-10">Sorry!</h1>
-		                <span class="help-block">UserB gave the wrong word!</span>
-						<h1 class="mt-10 red"><del>enjoy</del></h1>
-		                <ul class="txtalign-l">
-		                    <li>derive or receive pleasure from; get enjoyment from; take pleasure in</li>
-		                    <li>have benefit from</li>
-		                    <li>get pleasure from</li>
-		                    <li>have for one's benefit</li>
-		                    <li>take delight in</li>
-		                </ul>
+		                <span class="help-block">UserB gave up current challenge!</span>
 		                <h1 class="mt-10 ora">favor</h1>
 		                <ul class="txtalign-l">
 		                    <li>an act of gracious kindness</li>
@@ -160,6 +186,29 @@
 		                    <li>souvenir consisting of a small gift given to a guest at a party</li>
 		                </ul>
 		                <a class="btn btn-primary" href="#takeword">Take next word!</a>
+		            </div>
+
+		        </div>
+
+		        <p id="exitresult" class="txtalign-c mt-15">5. UserB's response back - exit</p>
+			    <div class="simulation txtalign-c align-c mt-10">
+
+		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
+		                <i class="icon-cog"></i>
+		                Settings
+		            </a>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 67%"></div>
+		            </div>
+		            <div class="well">
+		                <h2 class="mt-10">Sorry!</h1>
+		                <span class="help-block">UserB is busy, play with a new partner!</span>
+		                <a class="btn btn-primary" href="#takeword">Take next word!</a>
+		                <h1 class="mt-10 ora">favor</h1>
+		                <label class="mt-10">Type an explanation:</label>
+		                <textarea class="input-xlarge" id="textarea3" rows="3">More than like, even love.</textarea>
+		                <p class="help-block">By click "Send" button, we will automaticly find a new partner for you.</p>
+		                <a class="btn" href="#waiting">Send</a>
 		            </div>
 
 		        </div>
@@ -170,13 +219,13 @@
 				
 				<h1 class="txtalign-c mt-15">As a UserB</h1>
 				
-		        <p class="txtalign-c mt-15 placeholder">&nbsp;</p>
-			    <div class="simulation placeholder txtalign-c align-c mt-10">
+		        <p class="txtalign-c mt-15">&nbsp;</p>
+			    <div class="simulation txtalign-c align-c mt-10">
 
 		        </div>
 
-		        <p class="txtalign-c mt-15 placeholder">&nbsp;</p>
-			    <div class="simulation placeholder txtalign-c align-c mt-10">
+		        <p class="txtalign-c mt-15">&nbsp;</p>
+			    <div class="simulation txtalign-c align-c mt-10">
 
 		        </div>
 
@@ -187,35 +236,65 @@
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 30%"></div>
 		            </div>
 		            <div class="well">
-		                <p class="help-block">UserB is now guessing your word.</p>
-		                <h3>Don't forget learning!</h3>
-		                <h1 class="mt-10 ora">solve</h1>
-		                <p>
-		                    find the solution to (a problem or question) or understand the meaning of
-		                </p>
-		                <a class="btn btn-primary" href="#waiting">Next</a>
+		                <h2 class="mt-10">Hey, dude!</h1>
+		                <span class="help-block">There's a challenge from UserA!</span>
+		                <label class="mt-10">Guess one word from following explanation:</label>
+                        <div class="alert alert-info">
+			                <ul class="txtalign-l">
+			                    <li>More than like, even love.</li>
+						    </ul>
+                        </div>
+                        <p>
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                        </p>
+		                <a class="btn btn-warning" href="#failed">I'm sure</a>
+		                <p class="help-block mt-10">Can't guess one word? Require more information or give up</p>
+                        <p>
+		                    <a class="btn btn-small btn-info" href="#requiring"><i class="icon-info-sign icon-white"></i>Require</a>
+		                    <a class="btn ml-5" href="#giveup">Give up</a>
+                        </p>
+		                <p class="help-block mt-10">Exit the game by click "Exit"</p>
+                        <p>
+		                    <a class="btn btn-inverse ml-5" href="#exitresult">Exit</a>
+                        </p>
 		            </div>
 
 		        </div>
 
-		        <p id=" " class="txtalign-c mt-15">4. UserB's response back - right</p>
+		        <p id="success" class="txtalign-c mt-15">2. Successfully guess the word</p>
 			    <div class="simulation txtalign-c align-c mt-10">
 
 		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 30%"></div>
 		            </div>
 		            <div class="well">
 		                <h2 class="mt-10">Congratulations!</h1>
-		                <span class="help-block">You two guys really the word genius!</span>
-		                <h1 class="mt-10 ora">favor</h1>
+		                <span class="help-block">You are really the word genius!</span>
+		                <label class="mt-10">Guess one word from following explanation:</label>
+                        <div class="alert alert-info">
+			                <ul class="txtalign-l">
+			                    <li>More than like, even love.</li>
+						    </ul>
+                        </div>
+                        <p>
+                            <input type="text" class="input-letter" maxlength="1" value="f">
+                            <input type="text" class="input-letter" maxlength="1" value="a">
+                            <input type="text" class="input-letter" maxlength="1" value="v">
+                            <input type="text" class="input-letter" maxlength="1" value="e">
+                            <input type="text" class="input-letter" maxlength="1" value="r">
+                        </p>
 		                <ul class="txtalign-l">
 		                    <li>an act of gracious kindness</li>
 		                    <li>an advantage to the benefit of someone or something</li>
@@ -223,49 +302,24 @@
 		                    <li>a feeling of favorable regard</li>
 		                    <li>souvenir consisting of a small gift given to a guest at a party</li>
 		                </ul>
-		                <a class="btn btn-primary" href="#takeword">Take next word!</a>
+		                <a class="btn btn-primary" href="#takeword">Start my game!</a>
 		            </div>
 
 		        </div>
 
-		        <p id=" " class="txtalign-c mt-15">5. UserB's response back - help</p>
+		        <p id="failed" class="txtalign-c mt-15">4. Failed guess the word </p>
 			    <div class="simulation txtalign-c align-c mt-10">
 
 		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
 		                <i class="icon-cog"></i>
 		                Settings
 		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
-		            </div>
-		            <div class="well">
-		                <h2 class="mt-10">Help!</h1>
-		                <span class="help-block">Could you please give UserB more information!</span>
-		                <h1 class="mt-10 ora">favor</h1>
-			            <ul class="txtalign-l">
-			                <li>More than like, even love.</li>
-						</ul>
-		                <label class="mt-10">Type more explanation:</label>
-		                <textarea class="input-xlarge" id="textarea1" rows="3"></textarea>
-		                <p class="help-block">Try your best to help your partner!</p>
-		                <a class="btn" href="#waiting">Rescue</a>
-		            </div>
-
-		        </div>
-
-		        <p id=" " class="txtalign-c mt-15">5. UserB's response back - wrong</p>
-			    <div class="simulation txtalign-c align-c mt-10">
-
-		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
-		                <i class="icon-cog"></i>
-		                Settings
-		            </a>
-		            <div class="progress progress-info mt-15 ml-10 grid-8">
-		                <div class="bar" style="width: 20%"></div>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 30%"></div>
 		            </div>
 		            <div class="well">
 		                <h2 class="mt-10">Sorry!</h1>
-		                <span class="help-block">UserB gave the wrong word!</span>
+		                <span class="help-block">You may give the wrong word. Try to learn the following words, you'll win next time!</span>
 						<h1 class="mt-10 red"><del>enjoy</del></h1>
 		                <ul class="txtalign-l">
 		                    <li>derive or receive pleasure from; get enjoyment from; take pleasure in</li>
@@ -274,7 +328,19 @@
 		                    <li>have for one's benefit</li>
 		                    <li>take delight in</li>
 		                </ul>
-		                <h1 class="mt-10 ora">favor</h1>
+                        <label class="mt-10">Guess one word from following explanation:</label>
+                        <div class="alert alert-info">
+			                <ul class="txtalign-l">
+			                    <li>More than like, even love.</li>
+						    </ul>
+                        </div>
+                        <p>
+                            <input type="text" class="input-letter" maxlength="1" value="f">
+                            <input type="text" class="input-letter" maxlength="1" value="a">
+                            <input type="text" class="input-letter" maxlength="1" value="v">
+                            <input type="text" class="input-letter" maxlength="1" value="e">
+                            <input type="text" class="input-letter" maxlength="1" value="r">
+                        </p>
 		                <ul class="txtalign-l">
 		                    <li>an act of gracious kindness</li>
 		                    <li>an advantage to the benefit of someone or something</li>
@@ -282,7 +348,85 @@
 		                    <li>a feeling of favorable regard</li>
 		                    <li>souvenir consisting of a small gift given to a guest at a party</li>
 		                </ul>
-		                <a class="btn btn-primary" href="#takeword">Take next word!</a>
+		                <a class="btn btn-primary" href="#takeword">Start my game!</a>
+		            </div>
+
+		        </div>
+
+		        <p id="requiring" class="txtalign-c mt-15">3. Requiring more information</p>
+			    <div class="simulation txtalign-c align-c mt-10">
+
+		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
+		                <i class="icon-cog"></i>
+		                Settings
+		            </a>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 30%"></div>
+		            </div>
+		            <div class="well">
+		                <h2 class="mt-10">Hey, dude!</h1>
+		                <span class="help-block">Hold on! UserA is now giving you more information.</span>
+		                <label class="mt-10">Guess one word from following explanation:</label>
+                        <div class="alert alert-info">
+			                <ul class="txtalign-l">
+			                    <li>More than like, even love.</li>
+						    </ul>
+                        </div>
+                        <p>
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                            <input type="text" class="input-letter" maxlength="1">
+                        </p>
+                        <p>
+		                    <a class="btn btn-warning" href="#success">I'm sure</a>
+		                    <a class="btn ml-5" href="#giveup">Give up</a>
+                        </p>
+		                <h3 class="mt-10">Don't forget learning!</h3>
+		                <h1 class="mt-10 ora">solve</h1>
+		                <ul class="txtalign-l">
+		                    <li>find the solution to (a problem or question) or understand the meaning of</li>
+		                </ul>
+		                <a class="btn btn-primary" href="#this">Next</a>
+		            </div>
+
+		        </div>
+
+		        <p id="giveup" class="txtalign-c mt-15">5. Give up</p>
+			    <div class="simulation txtalign-c align-c mt-10">
+
+		            <a class="btn btn-small pull-right mr-10 mt-10" href="#">
+		                <i class="icon-cog"></i>
+		                Settings
+		            </a>
+		            <div class="progress progress-info progress-striped active mt-15 ml-10 grid-7">
+		                <div class="bar" style="width: 30%"></div>
+		            </div>
+		            <div class="well">
+		                <h2 class="mt-10">Keep up!</h1>
+		                <span class="help-block">Learn the following word, you'll win next time!</span>
+		                <label class="mt-10">Guess one word from following explanation:</label>
+                        <div class="alert alert-info">
+			                <ul class="txtalign-l">
+			                    <li>More than like, even love.</li>
+						    </ul>
+                        </div>
+                        <p>
+                            <input type="text" class="input-letter" maxlength="1" value="f">
+                            <input type="text" class="input-letter" maxlength="1" value="a">
+                            <input type="text" class="input-letter" maxlength="1" value="v">
+                            <input type="text" class="input-letter" maxlength="1" value="e">
+                            <input type="text" class="input-letter" maxlength="1" value="r">
+                        </p>
+		                <ul class="txtalign-l">
+		                    <li>an act of gracious kindness</li>
+		                    <li>an advantage to the benefit of someone or something</li>
+		                    <li>an inclination to approve</li>
+		                    <li>a feeling of favorable regard</li>
+		                    <li>souvenir consisting of a small gift given to a guest at a party</li>
+		                </ul>
+		                <a class="btn btn-primary" href="#takeword">Start my game!</a>
 		            </div>
 
 		        </div>

@@ -9,13 +9,15 @@
     border: 10px solid #000;
     background-color: #fff;
     border-radius: 5px;
-	overflow: scroll;
-}
-.placeholder
-{
-	visibility: hidden;
+    overflow-y: auto;
 }
 .well
 {
 	margin-bottom: 0;
+}
+.input-letter
+{
+    width: 18px;
+    text-align: center;
+    font-weight: bold;
 }

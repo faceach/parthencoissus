@@ -1,10 +1,8 @@
-require(["jquery"], function($) {
-    $(function() {
+require(["jquery", "preventscrolling"], function ($, preventscrolling) {
+    $(function () {
 
-        $(".simulation").bind("scroll", function(e){
+        var $simulation = $(".simulation");
+        preventscrolling($simulation);
 
-			e.preventDefault();
-			return false;
-		});
     });
 });
