@@ -1,8 +1,21 @@
-﻿.simulation
+﻿body
+{
+	padding-bottom: 280px;
+}
+.simulation
 {
     width: 320px;
     height: 480px;
     border: 10px solid #000;
     background-color: #fff;
     border-radius: 5px;
+	overflow: scroll;
+}
+.placeholder
+{
+	visibility: hidden;
+}
+.well
+{
+	margin-bottom: 0;
 }
