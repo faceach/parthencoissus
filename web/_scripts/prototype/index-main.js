@@ -10,7 +10,7 @@ require.config({
     locale: "fr-fr"
 });
 
-require(["jquery", "preventscrolling"], function ($, preventscrolling) {
+require(["jquery", "common/preventscrolling"], function ($, preventscrolling) {
     $(function () {
 
         var $simulation = $(".simulation");

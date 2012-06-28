@@ -1,4 +1,4 @@
-﻿define(["_lib/jquery.mousewheel"], function () {
+﻿define(["_lib/jquery/jquery.mousewheel"], function () {
 
     return function ($els) {
 
