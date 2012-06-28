@@ -1,9 +1,9 @@
 msgtype = [
-"invite",
-"help",
-"giveup",
-"rescue",
-"exit",
-"success",
-"fail"
+	"invite",
+	"help",
+	"giveup",
+	"rescue",
+	"exit",
+	"success",
+	"fail"
 ];
