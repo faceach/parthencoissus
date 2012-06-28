@@ -1,0 +1,6 @@
+{
+    word: "solve",
+    explanation: [
+        "find the solution to (a problem or question) or understand the meaning of Next"
+        ]
+}
