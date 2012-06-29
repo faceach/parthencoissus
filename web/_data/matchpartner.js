@@ -1,8 +1,10 @@
 // parameter
+/*
 {
 	level: "A",
 	userid: "0001"
 }
+*/
 
 // httpget
 // response data

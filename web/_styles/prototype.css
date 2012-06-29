@@ -2,15 +2,8 @@
 {
 	padding-bottom: 280px;
 }
-.simulation
-{
-    width: 320px;
-    height: 480px;
-    border: 10px solid #000;
-    background-color: #fff;
-    border-radius: 5px;
-    overflow-y: auto;
-}
+
+/* + override bootstrap */
 .well
 {
 	margin-bottom: 0;
@@ -20,4 +13,15 @@
     width: 18px;
     text-align: center;
     font-weight: bold;
+}
+
+/* + gw */
+.gw-container
+{
+    width: 320px;
+    height: 480px;
+    border: 10px solid #000;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow-y: auto;
 }

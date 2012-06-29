@@ -4,31 +4,32 @@
 		{
 			word: "solve",
 			explanation: [
-			    "find the solution to (a problem or question) or understand the meaning of Next"
+			    "find the solution to (a problem or question) or understand the meaning of Next",
+                "settle, as of a debt"
 			    ]
 		}
 	],
 	"B": [
 		{
-			word: "solve",
+			word: "widget",
 			explanation: [
-			    "find the solution to (a problem or question) or understand the meaning of Next"
+			    "a device that is very useful for a particular job"
 			    ]
 		}
 	],
 	"C": [
 		{
-			word: "solve",
+			word: "inimitable",
 			explanation: [
-			    "find the solution to (a problem or question) or understand the meaning of Next"
+			    "defying imitation; matchless"
 			    ]
 		}
 	],
 	"D": [
 		{
-			word: "solve",
+			word: "microeconomics",
 			explanation: [
-			    "find the solution to (a problem or question) or understand the meaning of Next"
+			    "the branch of economics that studies the economy of consumers or households or individual firms"
 			    ]
 		}
 	]
