@@ -2,7 +2,7 @@
 
 define(["jquery"], function ($) {
 
-    var url = "../_data/takeword.txt";
+    var url = "../_data/getscore.txt";
 
     return function (callback) {
 

@@ -1,0 +1,4 @@
+{
+    "username": "UserB",
+    "userid": "0002"
+}

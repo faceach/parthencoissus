@@ -4,18 +4,22 @@ require.config({
     baseUrl: "../_scripts",
     urlArgs: "version=1.0.0",
     paths: {
-        "preventscrolling": "common/preventscrolling"
+        // common
+        "preventscrolling": "common/preventscrolling",
+
+        // component
+		"roundoff": "component/roundoff",
+        "takeword": "component/takeword"
     },
     catchError: true,
     waitSeconds: 7,
     locale: "fr-fr"
 });
 
-require(["jquery", "preventscrolling"], function ($, preventscrolling) {
+require(["jquery", "roundoff"], function ($, roundoff) {
     $(function () {
 
-        var $gwcontainer = $(".gw-container");
-        preventscrolling($gwcontainer);
+        roundoff();
 
     });
 });
