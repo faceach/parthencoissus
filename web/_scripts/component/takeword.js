@@ -1,13 +1,15 @@
 "use strict";
 
-define(["jquery"], function ($) {
+define(["jquery", "context", "service/takeword"], function ($, context, takewordService) {
 
-    var url = "../_data/takeword.txt";
+	/*
+    var url = "service/takeword";
 
     return function (callback) {
 
         $.ajax({
             url: url,
+			data: context
             dataType: 'json',
             cache: false,
             success: callback.success,
@@ -15,5 +17,10 @@ define(["jquery"], function ($) {
         });
 
     };
+	*/
+	
+	return function(callback){
+		takewordService(context, callback.success);
+	};
 
 });

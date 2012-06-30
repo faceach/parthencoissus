@@ -13,6 +13,7 @@ require.config({
         "preventscrolling": "common/preventscrolling",
 
         // component
+		"context": "component/context",
 		"roundoff": "component/roundoff",
         "takeword": "component/takeword",
 		"getscore": "component/getscore",
@@ -23,10 +24,10 @@ require.config({
     locale: "fr-fr"
 });
 
-require(["jquery", "modernizr", "roundoff", "widget/score/score", "widget/init/init"], function ($, modernizr, roundoff, score, init) {
+require(["jquery", "modernizr", "widget/score/score", "widget/init/init", "roundoff"], function ($, modernizr, score, init, roundoff) {
     $(function () {
 
-		score();
+		score.get();
 		init();
         roundoff();
 

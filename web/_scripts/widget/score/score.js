@@ -19,18 +19,20 @@ define(["jquery", "mustache", "getscore", "updatescore", "text!./template.tpl"],
 		return cssClass;
 	};
 	
-	return function(){
+	return {
+		"get": function(){
 		
-		var successCallback = function(data){
-			var progressCssClass = getProgressCssClass(data.level),
-				html = Mustache.render(template, {"level": progressCssClass, "score": data.score});
-			$container.html(html);
-		};
+			var successCallback = function(data){
+				var progressCssClass = getProgressCssClass(data.level),
+					html = mustache.render(template, $.extend(data, {"level": progressCssClass}));
+				$container.html(html);
+			};
 		
-		getscore(
-			{"success": successCallback}
-			);
+			getscore(
+				{"success": successCallback}
+				);
 	
+		}
 	};
 
 });

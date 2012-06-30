@@ -1,25 +1,22 @@
 "use strict";
 
-define(["jquery", "takeword", "text!./template.tpl"], function ($, takeword, template) {
+define(["jquery", "widget/takeword/takeword", "text!./template.tpl", "roundoff"], function ($, takeword, template, roundoff) {
 
     var $container = $("#gw-main");
 	
 	return function(){
-		$container.html(template);
+		var $html = $(template),		
+        	$btnTakeword = $html.find(".gw-btn-takeword");
 		
-		var successCallback = function(data){
-			console.log(data.word);
-		};
-		
-        var $btnTakeword = $container.find(".gw-btn-takeword");
 		$btnTakeword.click(function () {
+	        takeword.load();
 
-	        takeword(
-				{ "success": successCallback }
-				);
-
+			return false;
 	    });
-	
+		
+		$container.empty().append($html);
+		roundoff();
+
 	};
 
 });
