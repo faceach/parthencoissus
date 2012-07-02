@@ -1,21 +1,15 @@
 "use strict";
 
-define(["jquery", "backbone", "text!./template.html", "roundoff"],
-function ($, Backbone, template, roundoff) {
+define(["jquery", "backbone", "widget/study/study", "text!./template.html", "roundoff"],
+function ($, Backbone, study, template, roundoff) {
 
     var $container = $("#gw-main");
 
     return function () {
         var $html = $(template),
-        	$btnNext = $html.find(".gw-btn-next");
+            $study = $html.find("gw-study");
 
-        $btnNext.click(function (e) {
-            console.log("xx");
-            e.preventDefault();
-            //takeword.load();
-            //location.hash = this.hash;
-        });
-        console.log("yy");
+        study($study);
 
         $container.empty().append($html);
         roundoff();

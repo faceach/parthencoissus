@@ -20,8 +20,8 @@ define(["jquery"], function ($) {
                 var randomNum = parseInt(Math.random() * max);
                 var wordExp = levelWords[randomNum],
 					word = { "word": wordExp.word };
-                console.log("Word: " + wordExp.word + ";\nExplanation: " + wordExp.explanation);
                 callback(word);
+                console.log("Word: " + wordExp.word + ";\nExplanation: " + wordExp.explanation);
 
             },
             error: function (e) {
