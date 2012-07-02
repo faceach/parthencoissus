@@ -20,7 +20,7 @@ define(["jquery", "context", "service/takeword"], function ($, context, takeword
 	*/
 	
 	return function(callback){
-		takewordService(context, callback.success);
+		takewordService(context.get(), callback.success);
 	};
 
 });

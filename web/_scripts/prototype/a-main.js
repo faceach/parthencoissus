@@ -17,7 +17,9 @@ require.config({
 		"roundoff": "component/roundoff",
         "takeword": "component/takeword",
 		"getscore": "component/getscore",
-		"updatescore": "component/updatescore"
+		"updatescore": "component/updatescore",
+		"msghandler": "component/msghandler",
+		"matchpartner": "component/matchpartner"
     },
     catchError: true,
     waitSeconds: 7,

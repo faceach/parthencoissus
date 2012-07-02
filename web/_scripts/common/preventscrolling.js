@@ -1,4 +1,6 @@
-﻿define(["_lib/jquery/jquery.mousewheel"], function () {
+﻿"use strict";
+
+define(["_lib/jquery/jquery.mousewheel"], function () {
 
     return function ($els) {
 
