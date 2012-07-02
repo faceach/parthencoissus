@@ -1,22 +1,27 @@
 "use strict";
 
-define(["jquery", "widget/takeword/takeword", "text!./template.tpl", "roundoff"], function ($, takeword, template, roundoff) {
+define(["jquery", "backbone", "widget/takeword/takeword", "text!./template.html", "roundoff"],
+function ($, Backbone, takeword, template, roundoff) {
+
+    gwRouter.route("init", "init", function () {
+        console.log("#init");
+    });
 
     var $container = $("#gw-main");
-	
-	return function(){
-		var $html = $(template),		
+
+    return function () {
+        var $html = $(template),
         	$btnTakeword = $html.find(".gw-btn-takeword");
-		
-		$btnTakeword.click(function () {
-	        takeword.load();
 
-			return false;
-	    });
-		
-		$container.empty().append($html);
-		roundoff();
+        $btnTakeword.click(function (e) {
+            e.preventDefault();
+            takeword.load();
+            location.hash = this.hash;
+        });
 
-	};
+        $container.empty().append($html);
+        roundoff();
+
+    };
 
 });

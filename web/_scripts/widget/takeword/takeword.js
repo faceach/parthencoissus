@@ -1,74 +1,86 @@
 "use strict";
 
-define(["jquery", "context", "mustache", "takeword", "matchpartner", "msghandler", "text!./template.tpl", "roundoff"], 
-function ($, context, mustache, takeword, matchpartner, msghandler, template, roundoff) {
+define(["jquery", "jquery.textchange", "context", "mustache", "takeword", "widget/waiting/waiting", "matchpartner", "msghandler", "text!./template.html", "roundoff"],
+function ($, textchange, context, mustache, takeword, waiting, matchpartner, msghandler, template, roundoff) {
 
-	var $container = $("#gw-main");
-	var word = "";
-	
-	var refreshWord = function($el){
-		takeword(
+    gwRouter.route("takeword", "takeword", function () {
+        console.log("#takeword");
+    });
+
+    var $container = $("#gw-main");
+    var word = "";
+
+    function refreshWord($el) {
+        takeword(
 			{
-				"success": function(data){
-					word = data.word;
-					$el.text(word);
-				}
+			    "success": function (data) {
+			        word = data.word;
+			        $el.text(word);
+			    }
 			}
 		);
-	};
-	
-	var sendExplanation = function(msg){
-		
-		matchpartner(
+    };
+
+    function sendExplanation(msg) {
+
+        matchpartner(
 			{
-				"success": function(data){
-					$.extend(msg, {"to": data.userid});
-					msghandler.send(msg);
-				}
+			    "success": function (data) {
+			        $.extend(msg, { "to": data.userid });
+			        msghandler.send(msg, waiting);
+			    }
 			}
 		);
-		
-	};
-	
-	return {
-		load: function(){
 
-			var $html = $(template),		
+    };
+
+    function explanationGrade($input, $grade) {
+        // Text input event
+        $input.bind("textchange", function () {
+            var strInput = this.value;
+            $grade.text(strInput.length);
+        });
+    };
+
+    return {
+        load: function () {
+
+            var $html = $(template),
 				$btnTakeword = $html.find(".gw-btn-takeword"),
 				$btnSend = $html.find(".gw-btn-send"),
 				$word = $html.find("h1"),
-				$input = $html.find("textarea");
-			
-			refreshWord($word);
-			
-			$btnTakeword.click(function () {
-			    refreshWord($word);
-			
-				return false;
-			});
-			
-			$btnSend.click(function(){
-				var input = $input.val();
+				$input = $html.find("textarea"),
+                $grade = $html.find(".gw-explanationgrade");
 
-				var msg = { 
-				    "from": context.get().userid,
-				    "type": "invite",
-				    "content": {
-				        "word": word,
-				        "explanation": input
-				    }
-				}
+            refreshWord($word);
+            explanationGrade($input, $grade);
 
-				sendExplanation(msg);
-				
-				return false;
-			});
+            $btnTakeword.click(function (e) {
+                e.preventDefault();
+                refreshWord($word);
+            });
 
-			$container.empty().append($html);
-			roundoff();
-			
-		}
-	}
+            $btnSend.click(function (e) {
+                e.preventDefault();
+
+                var input = $input.val();
+                var msg = {
+                    "from": context.get().userid,
+                    "type": "invite",
+                    "content": {
+                        "word": word,
+                        "explanation": input
+                    }
+                };
+
+                sendExplanation(msg);
+            });
+
+            $container.empty().append($html);
+            roundoff();
+
+        }
+    }
 
 });
 
