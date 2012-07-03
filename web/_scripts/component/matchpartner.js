@@ -1,7 +1,8 @@
 "use strict";
 
-define(["jquery", "context"], function ($, context) {
+define(["jquery", "service/matchpartner"], function ($, matchpartnerService) {
 
+/*
     var url = "../_data/matchpartner.txt";
 
     return function (callback) {
@@ -14,6 +15,11 @@ define(["jquery", "context"], function ($, context) {
             error: callback.error
         });
 
+    };
+    */
+
+    return function (userid, callback) {
+        matchpartnerService(userid, callback.success);
     };
 
 });

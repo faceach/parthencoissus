@@ -1,4 +1,10 @@
-{
-    "username": "UserB",
-    "userid": "0002"
-}
+[
+	{
+		"username": "UserA",
+		"userid": "0001"
+	},
+	{
+		"username": "UserB",
+		"userid": "0002"
+	}
+]

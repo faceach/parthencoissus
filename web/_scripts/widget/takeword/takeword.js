@@ -1,14 +1,16 @@
 "use strict";
 
 define(["jquery", "jquery.textchange", "context", "mustache", "takeword", "widget/waiting/waiting", "matchpartner", "msghandler", "text!./template.html", "roundoff"],
-function ($, textchange, context, mustache, takeword, waiting, matchpartner, msghandler, template, roundoff) {
+function ($, textchange, Context, mustache, takeword, waiting, matchpartner, MsgHandler, template, roundoff) {
 
     gwRouter.route("takeword", "takeword", function () {
         console.log("#takeword");
     });
 
-    var $container = $("#gw-main");
-    var word = "";
+    var $container = $("#gw-main"),
+        word = "",
+        context = Context.get(),
+        msgHandler = new MsgHandler;
 
     function refreshWord($el) {
         takeword(
@@ -23,11 +25,11 @@ function ($, textchange, context, mustache, takeword, waiting, matchpartner, msg
 
     function sendExplanation(msg) {
 
-        matchpartner(
+        matchpartner(context.userid,
 			{
 			    "success": function (data) {
 			        $.extend(msg, { "to": data.userid });
-			        msghandler.send(msg, waiting);
+			        msgHandler.send(msg, waiting);
 			    }
 			}
 		);
@@ -65,7 +67,7 @@ function ($, textchange, context, mustache, takeword, waiting, matchpartner, msg
 
                 var input = $input.val();
                 var msg = {
-                    "from": context.get().userid,
+                    "from": context.userid,
                     "type": "invite",
                     "content": {
                         "word": word,

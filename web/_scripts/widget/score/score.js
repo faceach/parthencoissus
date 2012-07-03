@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "mustache", "getscore", "updatescore", "text!./template.html"],
-function ($, mustache, getscore, updatescore, template) {
+define(["jquery", "context", "mustache", "getscore", "updatescore", "text!./template.html"],
+function ($, context, mustache, getscore, updatescore, template) {
 
     var $container = $("#gw-progress");
     function getProgressCssClass(level) {
@@ -23,14 +23,15 @@ function ($, mustache, getscore, updatescore, template) {
     return {
         "get": function () {
 
-            var successCallback = function (data) {
+            function successCallback(data) {
                 var progressCssClass = getProgressCssClass(data.level),
 					html = mustache.render(template, { "level": progressCssClass, "score": data.score });
                 console.log("Level: " + data.level + "; Score: " + data.score);
                 $container.html(html);
+                context.set(data);
             };
 
-            getscore(
+            getscore(context.get().userid,
 				{ "success": successCallback }
 				);
 

@@ -25,8 +25,7 @@ function ($, Backbone, mustache, getwordexplanation, template, roundoff) {
         $container.empty().append($html);
 
         var $main = $container.find(".gw-study-main");
-        var successCallback = function (data) {
-            console.log(data);
+        function successCallback(data) {
             var html = mustache.render(musTmp, data);
             $main.empty().html(html);
             roundoff();

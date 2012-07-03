@@ -17,6 +17,7 @@ require.config({
         "jquery.textchange": "_lib/jquery/jquery.textchange",
 
         // common
+        "msglistener": "common/msglistener",
         "preventscrolling": "common/preventscrolling",
 
         // component
@@ -44,8 +45,8 @@ require(["jquery", "backbone"], function ($, Backbone) {
         gwRouter = new Backbone.Router;
 });
 
-require(["jquery", "modernizr", "widget/score/score", "widget/init/init", "roundoff", "backbone"],
-function ($, modernizr, score, init, roundoff, Backbone) {
+require(["jquery", "modernizr", "backbone", "widget/score/score", "widget/init/init", "widget/invited/invited", "roundoff"],
+function ($, modernizr, Backbone, score, init, invited, roundoff) {
     $(function () {
 
         // Route start
@@ -55,6 +56,7 @@ function ($, modernizr, score, init, roundoff, Backbone) {
         score.get();
         roundoff();
         init();
+        invited();
 
     });
 });
