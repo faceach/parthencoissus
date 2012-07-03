@@ -20,7 +20,14 @@ define(["jquery", "context", "service/getwordexplanation"], function ($, context
     */
 
     return function (word, callback) {
-        getwordexplanationService(word, context.get(), callback.success);
+		if(typeof word !== "string"){
+			callback = word;
+			word = null;
+        	getwordexplanationService(context.get(), callback.success);
+		}
+		else{
+        	getwordexplanationService(word, context.get(), callback.success);
+		}
     };
 
 });

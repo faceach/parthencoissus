@@ -26,7 +26,8 @@ require.config({
         "getscore": "component/getscore",
         "updatescore": "component/updatescore",
         "msghandler": "component/msghandler",
-        "matchpartner": "component/matchpartner"
+        "matchpartner": "component/matchpartner",
+		"getwordexplanation": "component/getwordexplanation"
     },
     shim: {
         'jquery.mousewheel': ['jquery'],
