@@ -24,8 +24,10 @@ textarea
 {
     width: 320px;
     height: 480px;
-    border: 10px solid #000;
+    border: 7px solid #000;
+    border-top-width: 45px;
+    border-bottom-width: 60px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 14px;
     overflow-y: auto;
 }

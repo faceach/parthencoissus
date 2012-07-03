@@ -54,9 +54,9 @@ function ($, modernizr, Backbone, score, init, invited, roundoff) {
         location.hash = "init";
         // Fuction start
         score.get();
-        roundoff();
         init();
         invited();
+        roundoff();
 
     });
 });

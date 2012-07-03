@@ -28,7 +28,12 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
         matchpartner(context.userid,
 			{
 			    "success": function (data) {
-			        $.extend(msg, { "to": data.userid });
+			        $.extend(msg, {
+			            "to": {
+			                "username": data.username,
+			                "userid": data.userid
+			            }
+			        });
 			        msgHandler.send(msg, waiting);
 			    }
 			}
@@ -67,7 +72,10 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
 
                 var input = $input.val();
                 var msg = {
-                    "from": context.userid,
+                    "from": {
+                        "username": context.username,
+                        "userid": context.userid
+                    },
                     "type": "invite",
                     "content": {
                         "word": word,

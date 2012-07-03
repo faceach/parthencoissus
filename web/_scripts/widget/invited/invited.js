@@ -10,7 +10,7 @@ function ($, Backbone, MsgHandler, template, roundoff) {
     var $container = $("#gw-main"),
         msgHandler = new MsgHandler;
 
-    function handleInvited() {
+    function handleInvited(msg) {
         console.log("invited");
         $container.empty().html(template);
     };

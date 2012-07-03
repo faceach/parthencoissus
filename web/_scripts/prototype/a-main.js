@@ -42,7 +42,7 @@ require.config({
 
 var gwRouter;
 require(["jquery", "backbone"], function ($, Backbone) {
-        gwRouter = new Backbone.Router;
+    gwRouter = new Backbone.Router;
 });
 
 require(["jquery", "modernizr", "backbone", "widget/score/score", "widget/init/init", "widget/invited/invited", "roundoff"],
@@ -54,9 +54,9 @@ function ($, modernizr, Backbone, score, init, invited, roundoff) {
         location.hash = "init";
         // Fuction start
         score.get();
-        roundoff();
         init();
         invited();
+        roundoff();
 
     });
 });
