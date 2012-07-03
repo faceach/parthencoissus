@@ -16,7 +16,6 @@ function ($, Backbone, MsgHandler, template, roundoff) {
     };
     return function () {
         msgHandler.listen("invite", handleInvited);
-
     };
 
 });
