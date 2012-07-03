@@ -5,37 +5,34 @@ function ($, Backbone, mustache, getwordexplanation, template, roundoff) {
 
     var $container;
 
-    return function ($el) {
-        $container = $el;
-
-        var $html = $(template),
-			musTmp = $html.find(".gw-study-tmp").html(),
-        	$btnNext = $html.find(".gw-btn-next");
-
-        $btnNext.click(function (e) {
-            e.preventDefault();
-            getwordexplanation(
-				{
-				    "success": successCallback
-				}
-			);
-            //location.hash = this.hash;
-        });
-
-        $container.empty().append($html);
-
-        var $main = $container.find(".gw-study-main");
-        function successCallback(data) {
-            var html = mustache.render(musTmp, data);
-            $main.empty().html(html);
-            roundoff();
-        };
-        getwordexplanation(
-			{
-			    "success": successCallback
-			}
-		);
-
+    function successCallback(data) {
+        var html = mustache.render(template, data);
+        $container.empty().html(html);
+        roundoff();
     };
+
+    var Word = function (word) {
+        this.word = word;
+    };
+
+    Word.prototype = {
+        "display": function ($el) {
+            if (!$container) {
+                $container = $el;
+            }
+            if (this.word) {
+                getwordexplanation(this.word, {
+                    "success": successCallback
+                });
+            }
+            else {
+                getwordexplanation({
+                    "success": successCallback
+                });
+            }
+        }
+    };
+
+    return Word;
 
 });

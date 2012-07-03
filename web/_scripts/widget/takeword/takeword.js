@@ -12,19 +12,17 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
         context = Context.get(),
         msgHandler = new MsgHandler;
 
-    function refreshWord($el) {
+    function refreshWord($el, tmp) {
         takeword(
 			{
 			    "success": function (data) {
-			        word = data.word;
-			        $el.text(word);
+			        $el.html(mustache.render(tmp, data));
 			    }
 			}
 		);
     };
 
     function sendExplanation(msg) {
-
         matchpartner(context.userid,
 			{
 			    "success": function (data) {
@@ -38,14 +36,22 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
 			    }
 			}
 		);
+    };
 
+    function gradehandler(input) {
+        var wordNum = input.trim().split(" ").length,
+            commaNum = input.trim().split(",").length,
+            points;
+        commaNum = commaNum >= wordNum ? wordNum - 1 : commaNum;
+        points = (wordNum * 0.04) + ((commaNum + 1) * 0.06);
+        return points > 1 ? 1 : points;
     };
 
     function explanationGrade($input, $grade) {
         // Text input event
         $input.bind("textchange", function () {
             var strInput = this.value;
-            $grade.text(strInput.length);
+            $grade.width(gradehandler(strInput) * 100 + "%");
         });
     };
 
@@ -56,15 +62,16 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
 				$btnTakeword = $html.find(".gw-btn-takeword"),
 				$btnSend = $html.find(".gw-btn-send"),
 				$word = $html.find("h1"),
+                musTmp = $html.find(".gw-tmp-word").html(),
 				$input = $html.find("textarea"),
                 $grade = $html.find(".gw-explanationgrade");
 
-            refreshWord($word);
+            refreshWord($word, musTmp);
             explanationGrade($input, $grade);
 
             $btnTakeword.click(function (e) {
                 e.preventDefault();
-                refreshWord($word);
+                refreshWord($word, musTmp);
             });
 
             $btnSend.click(function (e) {

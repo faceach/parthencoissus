@@ -31,3 +31,13 @@ textarea
     border-radius: 14px;
     overflow-y: auto;
 }
+.gw-explanationgrade
+{
+    width: 0%;
+    height: 5px;
+    line-height: 5px;
+    margin-bottom: 9px;
+
+	/* CSS3 background */
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #f90), color-stop(1, #f00));
+}

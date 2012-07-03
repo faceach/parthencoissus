@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "backbone", "mustache", "getwordexplanation", "text!./template.html", "roundoff"],
-function ($, Backbone, mustache, getwordexplanation, template, roundoff) {
+define(["jquery", "backbone", "mustache", "widget/word/word", "text!./template.html", "roundoff"],
+function ($, Backbone, mustache, Word, template, roundoff) {
 
     var $container;
 
@@ -9,32 +9,19 @@ function ($, Backbone, mustache, getwordexplanation, template, roundoff) {
         $container = $el;
 
         var $html = $(template),
-			musTmp = $html.find(".gw-study-tmp").html(),
+            $main = $html.find(".gw-study-main"),
         	$btnNext = $html.find(".gw-btn-next");
+
+        var word = new Word;
 
         $btnNext.click(function (e) {
             e.preventDefault();
-            getwordexplanation(
-				{
-				    "success": successCallback
-				}
-			);
+            word.display($main);
             //location.hash = this.hash;
         });
 
+        word.display($main);
         $container.empty().append($html);
-
-        var $main = $container.find(".gw-study-main");
-        function successCallback(data) {
-            var html = mustache.render(musTmp, data);
-            $main.empty().html(html);
-            roundoff();
-        };
-        getwordexplanation(
-			{
-			    "success": successCallback
-			}
-		);
 
     };
 
