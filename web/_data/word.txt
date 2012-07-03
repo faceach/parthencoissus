@@ -8,22 +8,25 @@
 			    ]
 		},
 		{
-		    "word": "airtime",
+		    "word": "protect",
 		    "explanation": [
-			    "the amount of time allocated to a particular subject or type of material on radio or television",
-                "the time during which a mobile phone is in use"
+			    "keep safe from harm or injury"
 			    ]
 		},
-        {
-            "word": "aireplay",
-            "explanation": [
-                "broadcasting time devoted to a particular record, performer, or type of music"
-			    ]
-        },
 		{
-		    "word": "chancy",
+		    "word": "overwork",
 		    "explanation": [
-			    "risky; uncertain"
+			    "work too hard",
+			    "use a word or idea too much and so make it less effective",
+			    "too much work"
+			    ]
+		},
+		{
+		    "word": "rush",
+		    "explanation": [
+			    "move or act with urgent haste",
+			    "transport something with urgent haste",
+			    "deal with something too quickly"
 			    ]
 		},
 		{
@@ -40,48 +43,6 @@
 			    "the process of teaching or learning",
                 "the theory and practice of teaching",
                 "information about or training"
-			    ]
-		},
-		{
-		    "word": "criminal",
-		    "explanation": [
-			    "relating to crime or a crime",
-                "disgraceful and shocking"
-			    ]
-		},
-		{
-		    "word": "ballet",
-		    "explanation": [
-			    "an artistic form of dancing performed to music, using set steps and gestures",
-                "acreative work in this form"
-			    ]
-		},
-		{
-		    "word": "bang",
-		    "explanation": [
-			    "a sudden loud sharp noise",
-                "a sudden painful blow",
-                "make or cause to make a bang"
-			    ]
-		},
-		{
-		    "word": "bareback",
-		    "explanation": [
-                "on a horse without a saddle"
-			    ]
-		},
-		{
-		    "word": "bliss",
-		    "explanation": [
-			    "perfect happiness",
-                "a state of spiritual"
-			    ]
-		},
-		{
-		    "word": "bountiful",
-		    "explanation": [
-			    "abundant",
-                "giving generously"
 			    ]
 		},
 		{
@@ -109,13 +70,6 @@
 		    "word": "aboard",
 		    "explanation": [
                 "on or into a ship, trip, or other vehicle"
-			    ]
-		},
-		{
-		    "word": "abject",
-		    "explanation": [
-                "very unpleasant and humiliating",
-                "completely without pride or dignity"
 			    ]
 		},
 		{
@@ -150,9 +104,32 @@
 			    "a vigorous or determined attempt",
                 "the physical or mental vigour needed to do something"
 			    ]
+		},
+		{
+		    "word": "money",
+		    "explanation": [
+			    "a means of payment in the form of coins and banknotes",
+			    "wealth",
+			    "payment or profit"
+			    ]
+		},
+		{
+		    "word": "lonely",
+		    "explanation": [
+			    "sad because of having no friends or company",
+			    "spent alone",
+			    "(of a place) remote"
+			    ]
 		}
 	],
     "B": [
+		{
+		    "word": "abject",
+		    "explanation": [
+	            "very unpleasant and humiliating",
+	            "completely without pride or dignity"
+			    ]
+		},
 		{
 		    "word": "widget",
 		    "explanation": [
@@ -298,6 +275,60 @@
 	],
     "C": [
 		{
+		    "word": "airtime",
+		    "explanation": [
+			    "the amount of time allocated to a particular subject or type of material on radio or television",
+	            "the time during which a mobile phone is in use"
+			    ]
+		},
+		{
+		    "word": "criminal",
+		    "explanation": [
+			    "relating to crime or a crime",
+                "disgraceful and shocking"
+			    ]
+		},
+		{
+		    "word": "ballet",
+		    "explanation": [
+			    "an artistic form of dancing performed to music, using set steps and gestures",
+                "acreative work in this form"
+			    ]
+		},
+		{
+		    "word": "bang",
+		    "explanation": [
+			    "a sudden loud sharp noise",
+                "a sudden painful blow",
+                "make or cause to make a bang"
+			    ]
+		},
+		{
+		    "word": "bareback",
+		    "explanation": [
+                "on a horse without a saddle"
+			    ]
+		},
+		{
+		    "word": "bountiful",
+		    "explanation": [
+			    "abundant",
+                "giving generously"
+			    ]
+		},		
+	    {
+	        "word": "aireplay",
+	        "explanation": [
+	            "broadcasting time devoted to a particular record, performer, or type of music"
+			    ]
+	    },
+		{
+		    "word": "chancy",
+		    "explanation": [
+			    "risky; uncertain"
+			    ]
+		},
+		{
 		    "word": "inimitable",
 		    "explanation": [
 			    "defying imitation; matchless"
@@ -307,6 +338,13 @@
 		    "word": "motto",
 		    "explanation": [
 			    "a short sentence or phrase expressing the aims or beliefs of a person or group"
+			    ]
+		},
+		{
+		    "word": "bliss",
+		    "explanation": [
+			    "perfect happiness",
+                "a state of spiritual"
 			    ]
 		},
 		{
@@ -328,14 +366,6 @@
 			    "existing from the beginning",
 			    "produced by an artist, author, etc. rather than copied",
 			    "new and different from what has been done before"
-			    ]
-		},
-		{
-		    "word": "overwork",
-		    "explanation": [
-			    "work too hard",
-			    "use a word or idea too much and so make it less effective",
-			    "too much work"
 			    ]
 		},
 		{
@@ -363,20 +393,6 @@
 		    "explanation": [
 			    "officially allow someone to do something",
 			    "make something possible"
-			    ]
-		},
-		{
-		    "word": "protect",
-		    "explanation": [
-			    "keep safe from harm or injury"
-			    ]
-		},
-		{
-		    "word": "rush",
-		    "explanation": [
-			    "move or act with urgent haste",
-			    "transport something with urgent haste",
-			    "deal with something too quickly"
 			    ]
 		},
 		{

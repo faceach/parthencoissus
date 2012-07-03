@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "jquery.textchange", "context", "mustache", "takeword", "widget/waiting/waiting", "matchpartner", "msghandler", "text!./template.html", "roundoff"],
-function ($, textchange, Context, mustache, takeword, waiting, matchpartner, MsgHandler, template, roundoff) {
+define(["jquery", "jquery.textchange", "context", "mustache", "takeword", "widget/waiting/waiting", "matchpartner", "msghandler", "gradehandler", "text!./template.html", "roundoff"],
+function ($, textchange, Context, mustache, takeword, waiting, matchpartner, MsgHandler, gradehandler, template, roundoff) {
 
     gwRouter.route("takeword", "takeword", function () {
         console.log("#takeword");
@@ -38,20 +38,12 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
 		);
     };
 
-    function gradehandler(input) {
-        var wordNum = input.trim().split(" ").length,
-            commaNum = input.trim().split(",").length,
-            points;
-        commaNum = commaNum >= wordNum ? wordNum - 1 : commaNum;
-        points = (wordNum * 0.04) + ((commaNum + 1) * 0.06);
-        return points > 1 ? 1 : points;
-    };
-
-    function explanationGrade($input, $grade) {
+    function explanationGrade($input, $grade, $inputControl) {
         // Text input event
         $input.bind("textchange", function () {
             var strInput = this.value;
             $grade.width(gradehandler(strInput) * 100 + "%");
+			$inputControl.removeClass("warning");
         });
     };
 
@@ -64,10 +56,11 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
 				$word = $html.find("h1"),
                 musTmp = $html.find(".gw-tmp-word").html(),
 				$input = $html.find("textarea"),
+				$inputControl = $html.find(".control-group"),
                 $grade = $html.find(".gw-explanationgrade");
 
             refreshWord($word, musTmp);
-            explanationGrade($input, $grade);
+            explanationGrade($input, $grade, $inputControl);
 
             $btnTakeword.click(function (e) {
                 e.preventDefault();
@@ -78,6 +71,11 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
                 e.preventDefault();
 
                 var input = $input.val();
+				if(input === "" || input.length <= 0){
+					$inputControl.addClass("warning");
+					return;
+				}
+				
                 var msg = {
                     "from": {
                         "username": context.username,

@@ -1,9 +1,29 @@
 "use strict";
 
-define(["jquery", "backbone", "widget/study/study", "text!./template.html", "roundoff"],
-function ($, Backbone, study, template, roundoff) {
+define(["jquery", "backbone", "widget/study/study", "text!./template.html", "msghandler", "roundoff"],
+function ($, Backbone, study, template,MsgHandler, roundoff) {
 
-    var $container = $("#gw-main");
+    var $container = $("#gw-main"),
+		msgHandler = new MsgHandler;
+
+    function handleSuccess(msg) {
+        console.log("success");
+    };
+    function handleGiveup(msg) {
+        console.log("Give up");
+    };
+    function handleExit(msg) {
+        console.log("Exit");
+    };
+    function handleFail(msg) {
+        console.log("Fail");
+    };
+    function handleMsg() {
+        msgHandler.listen("success", handleSuccess);
+        msgHandler.listen("giveup", handleGiveup);
+        msgHandler.listen("exit", handleExit);
+        msgHandler.listen("fail", handleFail);
+    };
 
     return function () {
         var $html = $(template),
@@ -12,6 +32,8 @@ function ($, Backbone, study, template, roundoff) {
         study($study);
 
         $container.empty().append($html);
+
+		handleMsg();
         roundoff();
 
     };

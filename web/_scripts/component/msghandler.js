@@ -28,7 +28,8 @@ define(["msglistener", "context"], function (msglistener, context) {
             };
 
             msglistener(handler);
-
+			
+			return this;
         }
     };
 
