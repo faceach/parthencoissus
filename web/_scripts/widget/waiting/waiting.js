@@ -7,7 +7,7 @@ function ($, Backbone, study, template, roundoff) {
 
     return function () {
         var $html = $(template),
-            $study = $html.find("gw-study");
+            $study = $html.find(".gw-study");
 
         study($study);
 

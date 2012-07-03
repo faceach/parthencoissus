@@ -2,8 +2,12 @@
     <h3>Don't forget learning!</h3>
 	<div class="gw-study-main"></div>
     <a class="btn btn-primary gw-btn-next" href="#waiting">Next</a>
-	<p class="gw-study-tmp hidden">
-		<h1 class='mt-10 ora'>{{word}}</h1>
-
-	</p>
+	<script class="gw-study-tmp" type="text/template">
+		<h1 class="mt-10 ora">{{word}}</h1>
+        <ul class="txtalign-l">
+            {{#explanation}}
+                <li>{{.}}</li>
+            {{/explanation}}
+        </ul>
+	</script>
 </div>
