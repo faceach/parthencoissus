@@ -71,7 +71,7 @@ function ($, textchange, Context, doT, takeword, waiting, matchpartner, MsgHandl
 			$btnSend.click(function (e) {
 				e.preventDefault();
 
-				var word =  $word.text.trim(),
+				var word = $word.text().trim(),
 					input = $input.val();
 				if (input === "" || input.length <= 0) {
 					$inputControl.addClass("warning");
