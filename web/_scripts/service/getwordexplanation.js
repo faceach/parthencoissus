@@ -6,11 +6,11 @@ define(["jquery"], function ($) {
 
     return function (word, context, callback) {
 
-		if(typeof word !== "string"){
-			callback = context;
-			context = word;
-			word = null;
-		}
+        if (typeof word !== "string") {
+            callback = context;
+            context = word;
+            word = null;
+        }
 
         var level = context.level;
 
@@ -25,20 +25,23 @@ define(["jquery"], function ($) {
                     wordExp;
                 var randomNum = parseInt(Math.random() * max);
 
-				if(word){
-	                for (var i = 0; i < max; i++) {
-	                    wordExp = levelWords[i];
-	                    if (wordExp.word === word) {
-	                        callback(wordExp);
-	                        console.log("Word: " + wordExp.word + ";\nExplanation: " + wordExp.explanation);
-	                    }
-	                }
-				}
-				else{
-					var wordExp = levelWords[randomNum];
-	                callback(wordExp);
+                if (word) {
+                    for (var i = 0; i < max; i++) {
+                        wordExp = levelWords[i];
+                        if (wordExp.word === word) {
+                            callback(wordExp);
+                            console.log("Word: " + wordExp.word + ";\nExplanation: " + wordExp.explanation);
+                            return;
+                        }
+                    }
+                    callback();
+                    console.log("Word cannot be found in our library!");
+                }
+                else {
+                    var wordExp = levelWords[randomNum];
+                    callback(wordExp);
                     console.log("Random - Word: " + wordExp.word + ";\nExplanation: " + wordExp.explanation);
-				}
+                }
             },
             error: function (e) {
                 console.log(e);

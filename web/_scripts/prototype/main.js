@@ -46,20 +46,22 @@ require.config({
 var gwRouter;
 require(["jquery", "backbone"], function ($, Backbone) {
     gwRouter = new Backbone.Router;
-});
 
-require(["jquery", "modernizr", "backbone", "widget/score/score", "widget/init/init", "widget/invited/invited", "roundoff"],
-function ($, modernizr, Backbone, score, init, invited, roundoff) {
-    $(function () {
+    require(["modernizr", "widget/score/score", "widget/init/init", "widget/invited/invited", "roundoff"],
+    function (modernizr, score, init, invited, roundoff) {
+        $(function () {
 
-        // Route start
-        Backbone.history.start();
-        location.hash = "init";
-        // Fuction start
-        score.get();
-        init();
-        invited();
-        roundoff();
+            // Route start
+            Backbone.history.start();
+            location.hash = "init";
+            // Fuction start
+            score.get();
+            init();
+            invited();
+            roundoff();
 
+        });
     });
+
 });
+

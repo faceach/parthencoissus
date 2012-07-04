@@ -1,6 +1,18 @@
-<h1 class="mt-10 ora">{{=it.word || ""}}</h1>
-<ul class="txtalign-l">
-    {{~it.explanation :value:index}}
-        <li>{{=value}}</li>
-    {{~}}
-</ul>
+<div>
+    <script class="gw-tmp-word" type="text/template">
+        <h1 class="mt-10 ora">{{=it.word || ""}}</h1>
+        <ul class="txtalign-l">
+            {{~it.explanation :value:index}}
+                <li>{{=value}}</li>
+            {{~}}
+        </ul>
+    </script>
+    <script class="gw-tmp-mistakeword" type="text/template">
+        <h1 class="mt-10 red"><del>{{=it.word || ""}}</del></h1>
+        <ul class="txtalign-l">
+            {{~it.explanation :value:index}}
+                <li>{{=value}}</li>
+            {{~}}
+        </ul>
+    </script>
+</div>

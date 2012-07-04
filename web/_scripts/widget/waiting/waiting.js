@@ -1,41 +1,48 @@
 "use strict";
 
-define(["jquery", "widget/study/study", "text!./template.html", "msghandler", "roundoff"],
-function ($, study, template,MsgHandler, roundoff) {
+define(["jquery", "widget/bullistword/bullistword", "text!./template.html", "msghandler", "roundoff"],
+function ($, bullistword, template, MsgHandler, roundoff) {
 
-	var $container = $("#gw-main"),
+    var $container = $("#gw-main"),
 		msgHandler = new MsgHandler;
 
-	function handleSuccess(msg) {
-		console.log("success");
-	};
-	function handleGiveup(msg) {
-		console.log("Give up");
-	};
-	function handleExit(msg) {
-		console.log("Exit");
-	};
-	function handleFail(msg) {
-		console.log("Fail");
-	};
-	function handleMsg() {
-		msgHandler.listen("success", handleSuccess);
-		msgHandler.listen("giveup", handleGiveup);
-		msgHandler.listen("exit", handleExit);
-		msgHandler.listen("fail", handleFail);
-	};
+    function handleSuccess(msg) {
+        console.log("success");
+        require(["widget/success/success"], function (success) {
+            success();
+        });
+    };
+    function handleFail(msg) {
+        var mistakeWord = msg.content.word;
+        console.log("Fail: " + mistakeWord);
+        require(["widget/fail/fail"], function (fail) {
+            fail(mistakeWord);
+        });
+    };
+    function handleGiveup(msg) {
+        console.log("Give up");
+    };
+    function handleExit(msg) {
+        console.log("Exit");
+    };
+    function handleMsg() {
+        msgHandler.listen("success", handleSuccess);
+        msgHandler.listen("fail", handleFail);
+        msgHandler.listen("giveup", handleGiveup);
+        msgHandler.listen("exit", handleExit);
+    };
 
-	return function () {
-		var $html = $(template),
+    return function () {
+        var $html = $(template),
 			$study = $html.find(".gw-study");
 
-		study($study);
+        bullistword($study);
 
-		$container.empty().append($html);
+        $container.empty().append($html);
 
-		handleMsg();
-		roundoff();
+        handleMsg();
+        roundoff();
 
-	};
+    };
 
 });

@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "widget/takeword/takeword", "text!./template.html", "roundoff"],
-function ($, takeword, template, roundoff) {
+define(["jquery", "widget/playbutton/playbutton", "text!./template.html"],
+function ($, playbutton, template) {
 
     gwRouter.route("init", "init", function () {
         console.log("#init");
@@ -10,18 +10,9 @@ function ($, takeword, template, roundoff) {
     var $container = $("#gw-main");
 
     return function () {
-        var $html = $(template),
-        	$btnTakeword = $html.find(".gw-btn-takeword");
-
-        $btnTakeword.click(function (e) {
-            e.preventDefault();
-            takeword.load();
-            location.hash = this.hash;
-        });
-
-        $container.empty().append($html);
-        roundoff();
-
+        var $html = $(template);
+        playbutton($html);
+        $container.html($html);
     };
 
 });

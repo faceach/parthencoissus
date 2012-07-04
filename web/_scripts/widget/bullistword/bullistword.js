@@ -9,18 +9,18 @@ function ($, Word, template, roundoff) {
         $container = $el;
 
         var $html = $(template),
-            $main = $html.find(".gw-study-main"),
+            $word = $html.find(".gw-word"),
         	$btnNext = $html.find(".gw-btn-next");
 
         var word = new Word;
 
         $btnNext.click(function (e) {
             e.preventDefault();
-            word.display($main);
+            word.display($word);
             //location.hash = this.hash;
         });
 
-        word.display($main);
+        word.display($word);
         $container.empty().append($html);
         roundoff();
     };

@@ -14,38 +14,38 @@ textarea
 }
 .input-letter
 {
-    width: 18px;
-    text-align: center;
-    font-weight: bold;
+	width: 18px;
+	text-align: center;
+	font-weight: bold;
 }
 
 /* + gw */
 .gw-container
 {
-    width: 320px;
-    height: 480px;
-    border: 7px solid #000;
-    border-top-width: 45px;
-    border-bottom-width: 60px;
-    background-color: #fff;
-    border-radius: 14px;
-    overflow-y: auto;
+	width: 320px;
+	height: 480px;
+	border: 7px solid #000;
+	border-top-width: 45px;
+	border-bottom-width: 60px;
+	background-color: #fff;
+	border-radius: 14px;
+	overflow-y: auto;
 }
 .gw-explanationgrade-bar
 {
-    width: 280px;
-    height: 6px;
-    line-height: 6px;
+	width: 280px;
+	height: 6px;
+	line-height: 6px;
 
 	/* CSS3 background */
-    background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#af0), to(#f00), color-stop(0.5, #f90));
+	background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#af0), to(#f00), color-stop(0.5, #f90));
 }
 .gw-explanationgrade
 {
 	width: 0%;
 	height: 6px;
 	line-height: 6px;
-    margin-bottom: 9px;
+	margin-bottom: 9px;
 	border-radius: 6px;
 	overflow: hidden;
 }

@@ -21,7 +21,7 @@ define(["msglistener", "context"], function (msglistener, context) {
 
             function handler() {
                 var msg = JSON.parse(localStorage.getItem(key));
-                if (msg.type === type && msg.to.userid === context.get().userid) {
+                if (msg && msg.type === type && msg.to.userid === context.get().userid) {
                     console.log("listen", msg);
                     callback(msg);
                 }
