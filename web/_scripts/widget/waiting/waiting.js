@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "backbone", "widget/study/study", "text!./template.html", "msghandler", "roundoff"],
-function ($, Backbone, study, template,MsgHandler, roundoff) {
+define(["jquery", "widget/study/study", "text!./template.html", "msghandler", "roundoff"],
+function ($, study, template,MsgHandler, roundoff) {
 
     var $container = $("#gw-main"),
 		msgHandler = new MsgHandler;

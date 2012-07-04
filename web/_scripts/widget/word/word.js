@@ -1,13 +1,13 @@
 "use strict";
 
-define(["jquery", "backbone", "mustache", "getwordexplanation", "text!./template.html", "roundoff"],
-function ($, Backbone, mustache, getwordexplanation, template, roundoff) {
+define(["jquery", "doT", "getwordexplanation", "text!./template.html", "roundoff"],
+function ($, doT, getwordexplanation, template, roundoff) {
 
     var $container;
 
     function successCallback(data) {
-        var html = mustache.render(template, data);
-        $container.empty().html(html);
+        var doTemp = doT.template(template);
+        $container.empty().html(doTemp(data));
         roundoff();
     };
 

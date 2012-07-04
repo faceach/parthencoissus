@@ -13,6 +13,8 @@ require.config({
         "backbone": "_lib/require/adapter/backbone",
         "backbone-localstorage": "_lib/require/adapter/backbone-localstorage",
 
+        "doT": "_lib/doT/doT",
+
         "jquery.mousewheel": "_lib/jquery/jquery.mousewheel",
         "jquery.textchange": "_lib/jquery/jquery.textchange",
 

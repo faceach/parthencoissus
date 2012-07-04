@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "backbone", "mustache", "widget/word/word", "text!./template.html", "roundoff"],
-function ($, Backbone, mustache, Word, template, roundoff) {
+define(["jquery", "widget/word/word", "text!./template.html", "roundoff"],
+function ($, Word, template, roundoff) {
 
     var $container;
 
@@ -22,7 +22,7 @@ function ($, Backbone, mustache, Word, template, roundoff) {
 
         word.display($main);
         $container.empty().append($html);
-
+        roundoff();
     };
 
 });

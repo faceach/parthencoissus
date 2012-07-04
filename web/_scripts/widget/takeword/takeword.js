@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "jquery.textchange", "context", "mustache", "takeword", "widget/waiting/waiting", "matchpartner", "msghandler", "gradehandler", "text!./template.html", "roundoff"],
-function ($, textchange, Context, mustache, takeword, waiting, matchpartner, MsgHandler, gradehandler, template, roundoff) {
+define(["jquery", "jquery.textchange", "context", "doT", "takeword", "widget/waiting/waiting", "matchpartner", "msghandler", "gradehandler", "text!./template.html", "roundoff"],
+function ($, textchange, Context, doT, takeword, waiting, matchpartner, MsgHandler, gradehandler, template, roundoff) {
 
     gwRouter.route("takeword", "takeword", function () {
         console.log("#takeword");
@@ -12,11 +12,12 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
         context = Context.get(),
         msgHandler = new MsgHandler;
 
-    function refreshWord($el, tmp) {
+    function refreshWord($el, temp) {
         takeword(
 			{
 			    "success": function (data) {
-			        $el.html(mustache.render(tmp, data));
+			        var doTemp = doT.template(temp);
+			        $el.html(doTemp(data));
 			    }
 			}
 		);
@@ -43,7 +44,7 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
         $input.bind("textchange", function () {
             var strInput = this.value;
             $grade.width(gradehandler(strInput) * 100 + "%");
-			$inputControl.removeClass("warning");
+            $inputControl.removeClass("warning");
         });
     };
 
@@ -54,28 +55,28 @@ function ($, textchange, Context, mustache, takeword, waiting, matchpartner, Msg
 				$btnTakeword = $html.find(".gw-btn-takeword"),
 				$btnSend = $html.find(".gw-btn-send"),
 				$word = $html.find("h1"),
-                musTmp = $html.find(".gw-tmp-word").html(),
+                temp = $html.find(".gw-tmp-word").html(),
 				$input = $html.find("textarea"),
 				$inputControl = $html.find(".control-group"),
                 $grade = $html.find(".gw-explanationgrade");
 
-            refreshWord($word, musTmp);
+            refreshWord($word, temp);
             explanationGrade($input, $grade, $inputControl);
 
             $btnTakeword.click(function (e) {
                 e.preventDefault();
-                refreshWord($word, musTmp);
+                refreshWord($word, temp);
             });
 
             $btnSend.click(function (e) {
                 e.preventDefault();
 
                 var input = $input.val();
-				if(input === "" || input.length <= 0){
-					$inputControl.addClass("warning");
-					return;
-				}
-				
+                if (input === "" || input.length <= 0) {
+                    $inputControl.addClass("warning");
+                    return;
+                }
+
                 var msg = {
                     "from": {
                         "username": context.username,

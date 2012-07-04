@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "backbone", "widget/takeword/takeword", "text!./template.html", "roundoff"],
-function ($, Backbone, takeword, template, roundoff) {
+define(["jquery", "widget/takeword/takeword", "text!./template.html", "roundoff"],
+function ($, takeword, template, roundoff) {
 
     gwRouter.route("init", "init", function () {
         console.log("#init");
