@@ -1,5 +1,25 @@
 <div>
-    <p class="help-block">Hold On! UserB is now guessing your word.</p>
-    <h3>Don't forget learning!</h3>
-    <div class="gw-study"></div>
+    <h2 class="mt-10">Sorry!</h1>
+	<span class="help-block">You may give the wrong word. Try to learn the following words, you'll win next time!</span>
+	
+    <div class="gw-mistakeword"></div>
+    
+    <label class="mt-10">Guess one word from following explanation:</label>
+    <div class="alert alert-info">
+		<ul class="txtalign-l">
+			<li>{{=it.origin.explanation}}</li>
+		</ul>
+    </div>
+    <p>
+        {{~it.origin.word :value:index}}
+            {{if({{=value}}){ }}
+                <input type="text" class="input-letter gw-input-letter-valid" maxlength="1" readonly="readonly" value="{{=value}}" >
+            {{ }else{ }}
+                <input type="hidden" class="input-letter" maxlength="1" >
+            {{ } }}
+        {{~}}
+    </p>
+	
+    <div class="gw-word"></div>
+    <div class="gw-btn-container"></div>
 </div>

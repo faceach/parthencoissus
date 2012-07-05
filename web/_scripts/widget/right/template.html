@@ -10,18 +10,12 @@
     <p>
         {{~it.content.word :value:index}}
             {{if({{=value}}){ }}
-                <input type="text" class="input-letter gw-input-letter-valid" maxlength="1" value="{{=value}}" >
+                <input type="text" class="input-letter gw-input-letter-valid" maxlength="1" readonly="readonly" value="{{=value}}" >
             {{ }else{ }}
                 <input type="hidden" class="input-letter" maxlength="1" >
             {{ } }}
         {{~}}
     </p>
-	<ul class="txtalign-l">
-		<li>an act of gracious kindness</li>
-		<li>an advantage to the benefit of someone or something</li>
-		<li>an inclination to approve</li>
-		<li>a feeling of favorable regard</li>
-		<li>souvenir consisting of a small gift given to a guest at a party</li>
-	</ul>
-	<a class="btn btn-primary" href="#takeword">Start my game!</a>
+    <div id="gw-explanation-main"></div>
+	<div class="gw-btn-container"></div>
 </div>
