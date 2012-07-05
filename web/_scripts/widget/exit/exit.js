@@ -1,41 +1,20 @@
 "use strict";
 
-define(["jquery", "widget/study/study", "text!./template.html", "msghandler", "roundoff"],
-function ($, study, template,MsgHandler, roundoff) {
+define(["jquery", "widget/takeword/takeword", "doT", "text!./template.html", "roundoff"],
+function ($, takeword, doT, template, roundoff) {
 
-	var $container = $("#gw-main"),
-		msgHandler = new MsgHandler;
+    var $container = $("#gw-main");
 
-	function handleSuccess(msg) {
-		console.log("success");
-	};
-	function handleGiveup(msg) {
-		console.log("Give up");
-	};
-	function handleExit(msg) {
-		console.log("Exit");
-	};
-	function handleFail(msg) {
-		console.log("Fail");
-	};
-	function handleMsg() {
-		msgHandler.listen("success", handleSuccess);
-		msgHandler.listen("giveup", handleGiveup);
-		msgHandler.listen("exit", handleExit);
-		msgHandler.listen("fail", handleFail);
-	};
+    return function (mistakeWord) {
+        var doTemp = doT.template(template),
+			$html = $(doTemp(takeword.getPartner())),
+			$newGame = $html.find(".gw-newgame");
 
-	return function () {
-		var $html = $(template),
-			$study = $html.find(".gw-study");
+        takeword.load($newGame);
+        $container.empty().append($html);
 
-		study($study);
+        roundoff();
 
-		$container.empty().append($html);
-
-		handleMsg();
-		roundoff();
-
-	};
+    };
 
 });

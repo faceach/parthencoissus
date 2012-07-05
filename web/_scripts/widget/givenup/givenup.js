@@ -7,7 +7,7 @@ function ($, takeword, Word, playbutton, doT, template, roundoff) {
 
     return function () {
         var doTemp = doT.template(template),
-			$html = $(doTemp({"partnerName": takeword.getPartner()})),
+			$html = $(doTemp(takeword.getPartner())),
 			$word = $html.find(".gw-word"),
 			$btnContainer = $html.find(".gw-btn-container");
 

@@ -19,6 +19,12 @@ function ($,takeword, bullistword,doT, template, MsgHandler, roundoff) {
             fail(mistakeWord);
         });
     };
+    function handleHelp(msg) {
+        console.log("Help");
+        require(["widget/rescue/rescue"], function (rescue) {
+            rescue();
+        });
+    };
     function handleGiveup(msg) {
         console.log("Give up");
         require(["widget/givenup/givenup"], function (givenup) {
@@ -34,13 +40,14 @@ function ($,takeword, bullistword,doT, template, MsgHandler, roundoff) {
     function handleMsg() {
         msgHandler.listen("success", handleSuccess);
         msgHandler.listen("fail", handleFail);
+        msgHandler.listen("help", handleHelp);
         msgHandler.listen("giveup", handleGiveup);
         msgHandler.listen("exit", handleExit);
     };
 
     return function () {
         var doTemp = doT.template(template),
-			$html = $(doTemp({"partnerName": takeword.getPartner()})),
+			$html = $(doTemp(takeword.getPartner())),
 			$study = $html.find(".gw-study");
 
         bullistword($study);
