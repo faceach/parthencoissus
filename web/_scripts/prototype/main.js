@@ -58,7 +58,7 @@ require(["jquery", "backbone"], function ($, Backbone) {
             // Fuction start
             score.get();
             init();
-            invited();
+            invited.init();
             roundoff();
 
         });

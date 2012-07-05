@@ -1,34 +1,31 @@
 "use strict";
 
-<<<<<<< HEAD
-define(["jquery", "doT", "text!./template.html", "msghandler", "roundoff"],
-=======
-define(["jquery", "doT",  "text!./template.html", "msghandler", "roundoff"],
->>>>>>> 48fc0cbadd78485e688a677b8062f734aeda38c0
-function ($, doT, template, MsgHandler, roundoff) {
+define(["jquery", "doT", "widget/word/word", "widget/playbutton/playbutton", "text!./template.html", "msghandler", "roundoff"],
+function ($, doT, Word, playbutton, template, MsgHandler, roundoff) {
 
-	var $container = $("#gw-main"),
-		msgHandler = new MsgHandler;
+    var $container = $("#gw-main"),
+		msgHandler = new MsgHandler,
+		word = new Word(),
+        msg;
 
-	function handleSuccess(data) {
-		var $html = $(template),
+    function init() {
+        var $expMain = $container.find("#gw-explanation-main"),
+            $btnContainer = $container.find(".gw-btn-container");
+
+        word.display($expMain, msg.content.word);
+        playbutton($btnContainer);
+
+    }
+
+    return function ($data) {
+
+        var $html = $(template),
 			doTemp = doT.template(template);
 
-<<<<<<< HEAD
-        $container.empty().html(doTemp(data));
-        roundoff();
-    }
-=======
-		$container.empty().html(doTemp(data));
-		answer = msg.content.word;
-		btnClickHandler();
-		autoSkip();
-		roundoff();
-	}
->>>>>>> 48fc0cbadd78485e688a677b8062f734aeda38c0
+        $container.empty().html(doTemp($data));
+        msg = $data;
+        init();
 
-	return function () {
-		msgHandler.listen("success", handleSuccess);
-	};
+    };
 
 });
