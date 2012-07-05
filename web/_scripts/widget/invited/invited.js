@@ -98,7 +98,7 @@ function ($, doT, textchange, backbone, Context, MsgHandler, matchpartner, compa
             doTemp = doT.template(template);
 
         $container.empty().html(doTemp(msg));
-        answer = msg.content.word;
+        answer = msg.content;
         btnClickHandler();
         autoSkip();
         roundoff();

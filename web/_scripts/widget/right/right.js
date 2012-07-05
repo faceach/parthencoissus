@@ -1,41 +1,24 @@
 "use strict";
 
-define(["jquery", "widget/study/study", "text!./template.html", "msghandler", "roundoff"],
-function ($, study, template,MsgHandler, roundoff) {
+define(["jquery", "doT", "widget/study/study", "text!./template.html", "msghandler", "roundoff"],
+function ($, doT, study, template, MsgHandler, roundoff) {
 
-	var $container = $("#gw-main"),
+    var $container = $("#gw-main"),
 		msgHandler = new MsgHandler;
 
-	function handleSuccess(msg) {
-		console.log("success");
-	};
-	function handleGiveup(msg) {
-		console.log("Give up");
-	};
-	function handleExit(msg) {
-		console.log("Exit");
-	};
-	function handleFail(msg) {
-		console.log("Fail");
-	};
-	function handleMsg() {
-		msgHandler.listen("success", handleSuccess);
-		msgHandler.listen("giveup", handleGiveup);
-		msgHandler.listen("exit", handleExit);
-		msgHandler.listen("fail", handleFail);
-	};
+    function handleSuccess(data) {
+        var $html = $(template),
+            doTemp = doT.template(template);
 
-	return function () {
-		var $html = $(template),
-			$study = $html.find(".gw-study");
+        $container.empty().html(doTemp(data));
+        answer = msg.content.word;
+        btnClickHandler();
+        autoSkip();
+        roundoff();
+    }
 
-		study($study);
-
-		$container.empty().append($html);
-
-		handleMsg();
-		roundoff();
-
-	};
+    return function () {
+        msgHandler.listen("success", handleSuccess);
+    };
 
 });

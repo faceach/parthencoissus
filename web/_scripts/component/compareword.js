@@ -29,9 +29,13 @@ function ($, Context, MsgHandler, matchpartner, right, wrong) {
     };
 
     return function ($guess, $answer) {
-        if ($guess === $answer) {
+        if ($guess === $answer.word) {
             $.extend(msg, {
-                "type": "success"
+                "type": "success",
+                "content": {
+                    "explanation": $answer.explanation,
+                    "word": $answer.word
+                }
             });
             sendMessage(msg, right);
         } else {
