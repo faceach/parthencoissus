@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "context", "msghandler", "matchpartner", "widget/waiting/waiting"],
-function ($, Context, MsgHandler, matchpartner, waiting) {
+define(["jquery", "context", "msghandler", "matchpartner", "widget/right/right", "widget/wrong/wrong"],
+function ($, Context, MsgHandler, matchpartner, right, wrong) {
 
     var context = Context.get(),
         msgHandler = new MsgHandler,
@@ -33,7 +33,7 @@ function ($, Context, MsgHandler, matchpartner, waiting) {
             $.extend(msg, {
                 "type": "success"
             });
-            sendMessage(msg, waiting);
+            sendMessage(msg, right);
         } else {
             $.extend(msg, {
                 "type": "fail",
@@ -41,7 +41,7 @@ function ($, Context, MsgHandler, matchpartner, waiting) {
                     "word": $guess
                 }
             });
-            sendMessage(msg, waiting);
+            sendMessage(msg, wrong);
         }
     };
 
