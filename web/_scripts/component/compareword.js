@@ -1,12 +1,12 @@
 "use strict";
 
-define(["jquery", "context", "msghandler", "matchpartner"],
-function ($, Context, MsgHandler, matchpartner) {
+define(function () {
 
-    return function ($guess, $answer) {
-        if ($guess === $answer) {
+    return function (guess, answer) {
+        if (guess === answer) {
             return true;
-        } else {
+        }
+		else {
             return false;
         }
     };

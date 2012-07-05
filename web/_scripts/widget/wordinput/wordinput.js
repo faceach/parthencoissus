@@ -1,9 +1,9 @@
 "use strict";
 
-define(["jquery", "doT", "gethint", "jquery.textchange", "widget/word/word", "text!./template.html", "roundoff"],
-function ($, doT, gethint, textchange, Word, template, roundoff) {
+define(["jquery", "doT", "gethint","compareword", "jquery.textchange", "widget/word/word", "text!./template.html", "roundoff"],
+function ($, doT, gethint,compareword, textchange, Word, template, roundoff) {
 
-    var word, wordExp, $inputs, $letters;
+    var word, wordExp, $letters;
 
     function keySupport($inputs) {
         $inputs.bind("textchange", function () {
@@ -12,9 +12,9 @@ function ($, doT, gethint, textchange, Word, template, roundoff) {
             }
         });
     };
-    function getInput($inputs) {
+    function getInput($letters) {
         var inputWord = "";
-        $inputs.each(function (i, e) {
+        $letters.each(function (i, e) {
             var letter = e.value;
             if (!letter) {
                 //TODO: warning this input to user
@@ -37,8 +37,8 @@ function ($, doT, gethint, textchange, Word, template, roundoff) {
 				tempGuess = $html.find(".gw-tmp-guess").html(),
 				doTemp = doT.template(tempGuess),
 				$html = $(doTemp(wordExp)),
-				$inputs = $html.find("input.gw-input-letter-valid"),
-				$letters = $html.find("input[type='text']");
+				$inputs = $html.find("input.gw-input-letter-valid");
+			$letters = $html.find("input.gw-input-letter");
 
             keySupport($inputs);
             $container.empty().append($html);
@@ -61,7 +61,12 @@ function ($, doT, gethint, textchange, Word, template, roundoff) {
         },
         "compare": function () {
             var guessWord = getInput($letters);
-            return guessWord === word;
+            if(compareword(guessWord, word)){
+				return true;
+			}
+			else{
+				return guessWord;
+			}
         },
         "getWord": function () {
             return word;

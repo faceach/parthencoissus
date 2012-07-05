@@ -15,7 +15,9 @@ define(["msglistener", "context"], function (msglistener, context) {
             console.log("msg[" + msg.type + "]:");
             console.log(msg);
 
-            callback();
+            if(callback){
+				callback();
+			}
         },
         "listen": function (type, callback) {
 

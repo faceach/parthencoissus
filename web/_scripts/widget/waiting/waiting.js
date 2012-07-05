@@ -32,9 +32,9 @@ function ($, takeword, bullistword, doT, template, MsgHandler, roundoff) {
         });
     };
     function handleExit(msg) {
-        console.log("Exit");
-        require(["widget/exit/exit"], function (exit) {
-            exit();
+        console.log("Exited");
+        require(["widget/exited/exited"], function (exited) {
+            exited();
         });
     };
     function handleMsg() {
