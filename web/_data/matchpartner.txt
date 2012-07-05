@@ -1,10 +1,10 @@
 [
 	{
-		"username": "UserA",
+		"username": "Alice",
 		"userid": "0001"
 	},
 	{
-		"username": "UserB",
+		"username": "Bob",
 		"userid": "0002"
 	}
 ]

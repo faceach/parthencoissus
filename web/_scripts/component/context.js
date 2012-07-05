@@ -7,13 +7,13 @@ var gwcontext = (function () {
 
     if (url.indexOf("a.htm") > 0) {
         context = {
-            "username": "UserA",
+            "username": "Alice",
             "userid": "0001"
         };
     }
     else {
         context = {
-            "username": "UserB",
+            "username": "Bob",
             "userid": "0002"
         };
     }

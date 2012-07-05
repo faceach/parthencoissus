@@ -8,7 +8,8 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
     });
 
     var $container = $("#gw-main"),
-		word = "",
+		word,
+		partnerName,
 		context = Context.get(),
 		msgHandler = new MsgHandler;
 
@@ -28,6 +29,7 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
         matchpartner(context.userid,
 			{
 			    "success": function (data) {
+					partnerName = data.username;
 			        $.extend(msg, {
 			            "to": {
 			                "username": data.username,
@@ -101,9 +103,12 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
             roundoff();
 
         },
-        get: function () {
+        getWord: function () {
             return word;
-        }
+        },
+		getPartner: function(){
+			return partnerName;
+		}
     }
 
 });

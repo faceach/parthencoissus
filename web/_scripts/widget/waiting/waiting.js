@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "widget/bullistword/bullistword", "text!./template.html", "msghandler", "roundoff"],
-function ($, bullistword, template, MsgHandler, roundoff) {
+define(["jquery", "widget/takeword/takeword", "widget/bullistword/bullistword","doT", "text!./template.html", "msghandler", "roundoff"],
+function ($,takeword, bullistword,doT, template, MsgHandler, roundoff) {
 
     var $container = $("#gw-main"),
 		msgHandler = new MsgHandler;
@@ -21,9 +21,15 @@ function ($, bullistword, template, MsgHandler, roundoff) {
     };
     function handleGiveup(msg) {
         console.log("Give up");
+        require(["widget/givenup/givenup"], function (givenup) {
+            givenup();
+        });
     };
     function handleExit(msg) {
         console.log("Exit");
+        require(["widget/exit/exit"], function (exit) {
+            exit();
+        });
     };
     function handleMsg() {
         msgHandler.listen("success", handleSuccess);
@@ -33,7 +39,8 @@ function ($, bullistword, template, MsgHandler, roundoff) {
     };
 
     return function () {
-        var $html = $(template),
+        var doTemp = doT.template(template),
+			$html = $(doTemp({"partnerName": takeword.getPartner()})),
 			$study = $html.find(".gw-study");
 
         bullistword($study);
