@@ -7,12 +7,20 @@ function ($, doT, getwordexplanation, template, roundoff) {
 
     var $html = $(template),
         tempWord = $html.find(".gw-tmp-word").html(),
+        tempExplanation = $html.find(".gw-tmp-explanation").html(),
         tempMistakeword = $html.find(".gw-tmp-mistakeword").html();
 
     Word.prototype = {
-        "display": function ($el, word, isMistake) {
-
-            var temp = isMistake && word ? tempMistakeword : tempWord;
+        "display": function ($el, word, type) {
+            var temp;
+            switch (type) {
+                case "mistake": temp = tempMistakeword;
+                    break;
+                case "explanation": temp = tempExplanation;
+                    break;
+                default: temp = tempWord;
+                    break;
+            }
             function successCallback(data) {
                 var doTemp = doT.template(temp);
 

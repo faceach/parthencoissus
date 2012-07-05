@@ -32,7 +32,8 @@ require.config({
         "matchpartner": "component/matchpartner",
 		"getwordexplanation": "component/getwordexplanation",
 		"gradehandler": "component/gradehandler",
-        "compareword": "component/compareword"
+        "compareword": "component/compareword",
+        "gethint": "component/gethint"
     },
     shim: {
         'jquery.mousewheel': ['jquery'],

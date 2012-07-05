@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "widget/takeword/takeword", "widget/bullistword/bullistword","doT", "text!./template.html", "msghandler", "roundoff"],
-function ($,takeword, bullistword,doT, template, MsgHandler, roundoff) {
+define(["jquery", "widget/takeword/takeword", "widget/bullistword/bullistword", "doT", "text!./template.html", "msghandler", "roundoff"],
+function ($, takeword, bullistword, doT, template, MsgHandler, roundoff) {
 
     var $container = $("#gw-main"),
 		msgHandler = new MsgHandler;

@@ -2,20 +2,7 @@
 	<h2 class="mt-10">Hey, {{=it.to.username || "Dude"}}!</h1>
 	<span class="help-block">There's a challenge from {{=it.from.username}}!</span>
 	<label class="mt-10">Guess one word from following explanation:</label>
-	<div class="alert alert-info">
-		<ul class="txtalign-l">
-			<li>{{=it.content.explanation}}</li>
-		</ul>
-	</div>
-	<p>
-		{{~it.content.word :value:index}}
-			{{if({{=value}}){ }}
-				<input type="text" class="input-letter gw-input-letter-valid" maxlength="1" >
-			{{ }else{ }}
-				<input type="hidden" class="input-letter" maxlength="1" >
-			{{ } }}
-		{{~}}
-	</p>
+	<div class="gw-guess"></div>
 	<a class="btn btn-warning gw-btn-sure" href="#failed">I'm sure</a>
 	<p class="help-block mt-10">Can't guess one word? Require more information or give up</p>
 	<p>

@@ -21,7 +21,7 @@ function ($, Context, takeword, Word, playbutton, doT, template, MsgHandler, gra
 		var doTemp = doT.template(template),
 			partner = takeword.getPartner(),
 			word = takeword.getWord(),
-			explanation = takeword.getExplanation(),
+			explanation = takeword.getMineExplanation(),
 			$html = $(doTemp({
 				"partnerName": partner.username,
 				"word": word,

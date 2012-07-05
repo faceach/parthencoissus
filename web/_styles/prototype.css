@@ -12,11 +12,27 @@ textarea
 {
 	margin-bottom: 0;
 }
-.input-letter
+input.gw-input-letter[type="text"]
 {
-	width: 18px;
+	width: 15px;
 	text-align: center;
 	font-weight: bold;
+	margin: 5px 2px;
+}
+input.gw-input-blank[type="text"]
+{
+	padding: 4px 0;
+	visibility: hidden;
+	cursor: default;
+}
+input.gw-input-hyphen[type="text"]
+{
+	font-size: 18px;
+	padding: 4px 0;
+	border-width: 0;
+	box-shadow: none;
+	background-color: transparent;
+	cursor: default;
 }
 
 /* + gw */

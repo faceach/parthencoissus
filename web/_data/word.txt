@@ -8,6 +8,20 @@
 			    ]
 		},
 		{
+		    "word": "out-of-date",
+		    "explanation": [
+			    "if information is out-of-date, it is not recent and may no longer be correct",
+				"if something is out-of-date, it is no longer considered useful or effective, because something more modern exists",
+				"an official document that is out-of-date cannot be used because the period of time for which it was effective has finished"
+			    ]
+		},
+		{
+		    "word": "pop group",
+		    "explanation": [
+			    "a group of people who sing and perform"
+			    ]
+		},
+		{
 		    "word": "protect",
 		    "explanation": [
 			    "keep safe from harm or injury"
