@@ -10,7 +10,7 @@
     <p>
         {{~it.content.word :value:index}}
             {{if({{=value}}){ }}
-                <input type="text" class="input-letter gw-input-letter-valid" maxlength="1" value="{{=value}}" >
+                <input type="text" class="input-letter gw-input-letter-valid" maxlength="1" readonly="readonly" value="{{=value}}" >
             {{ }else{ }}
                 <input type="hidden" class="input-letter" maxlength="1" >
             {{ } }}
