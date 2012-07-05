@@ -7,11 +7,12 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
         console.log("#takeword");
     });
 
-    var $container = $("#gw-main"),
-		word,
-		partnerName,
+    var word,
+		input,
+		partner,
 		context = Context.get(),
-		msgHandler = new MsgHandler;
+		msgHandler = new MsgHandler,
+	    warningCssClass = "warning";
 
     function refreshWord($el, temp) {
         takeword(
@@ -29,12 +30,12 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
         matchpartner(context.userid,
 			{
 			    "success": function (data) {
-					partnerName = data.username;
+			        partner = {
+			            "username": data.username,
+			            "userid": data.userid
+			        };
 			        $.extend(msg, {
-			            "to": {
-			                "username": data.username,
-			                "userid": data.userid
-			            }
+			            "to": partner
 			        });
 			        msgHandler.send(msg, function () {
 			            require(["widget/waiting/waiting"], function (waiting) {
@@ -50,13 +51,17 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
         // Text input event
         $input.bind("textchange", function () {
             var strInput = this.value;
-            $grade.width(gradehandler(strInput) * 100 + "%");
-            $inputControl.removeClass("warning");
+            $grade.width(gradehandler(strInput));
+            $inputControl.removeClass(warningCssClass);
         });
     };
 
     return {
-        load: function () {
+        load: function ($container) {
+            // Clear storage
+            word = "";
+            input = "";
+            partner = null;
 
             var $html = $(template),
 				$btnTakeword = $html.find(".gw-btn-takeword"),
@@ -78,9 +83,9 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
             $btnSend.click(function (e) {
                 e.preventDefault();
 
-                var input = $input.val();
+                input = $input.val();
                 if (input === "" || input.length <= 0) {
-                    $inputControl.addClass("warning");
+                    $inputControl.addClass(warningCssClass);
                     return;
                 }
 
@@ -106,10 +111,13 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
         getWord: function () {
             return word;
         },
-		getPartner: function(){
-			return partnerName;
-		}
-    }
+        getExplanation: function () {
+            return input;
+        },
+        getPartner: function () {
+            return partner;
+        }
+    };
 
 });
 

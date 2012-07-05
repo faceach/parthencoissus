@@ -1,5 +1,19 @@
 <div>
-    <p class="help-block">Hold On! UserB is now guessing your word.</p>
-    <h3>Don't forget learning!</h3>
-    <div class="gw-study"></div>
+	<h2 class="mt-10">Help!</h1>
+	<span class="help-block">Could you please give {{=it.partnerName || ""}} more information!</span>
+	<h1 class="mt-10 ora">{{=it.word || ""}}</h1>
+	<ul class="txtalign-l">
+		<li>{{=it.explanation || ""}}</li>
+	</ul>
+	<div class="control-group">
+	    <label class="mt-10">Type more explanation:</label>
+		<div class="controls">
+			<textarea class="input-xlarge" rows="3"></textarea>
+		</div>
+	</div>
+	<div class="gw-explanationgrade">
+		<div class="gw-explanationgrade-bar"></div>
+	</div>
+	<p class="help-block">Try your best to help your partner!</p>
+	<a class="btn btn-warning gw-btn-rescue" href="#waiting">Rescue</a>
 </div>
