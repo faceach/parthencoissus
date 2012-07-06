@@ -4,6 +4,20 @@ define(["jquery", "doT", "gethint", "compareword", "jquery.textchange", "widget/
 function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
 
     var $template = $(template),
+<<<<<<< HEAD
+		word,
+		wordExp,
+		warningCssClass = "warning";
+
+    function keySupport($inputs) {
+        $inputs.bind("textchange", function (e) {
+            var $this = $(this);
+            if ($this.val()) {
+                $this
+					.removeClass(warningCssClass)
+					.next()
+					.focus();
+=======
         word,
         wordExp,
         warningCssClass = "warning",
@@ -76,14 +90,23 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
                 default:
                     return;
                     break;
+>>>>>>> 1c902d479fe29bbec75d0661516de0beb4d6ce47
             }
         });
     };
     function validInputs($letters) {
+<<<<<<< HEAD
+        var patt = new RegExp("^[A-Za-z]+$"),
+			result = true;
+        $letters.each(function (i, e) {
+            var letter = e.value;
+            if (!patt.test(letter)) {
+=======
         var result = true;
         $letters.each(function (i, e) {
             var letter = e.value;
             if (!patten.test(letter)) {
+>>>>>>> 1c902d479fe29bbec75d0661516de0beb4d6ce47
                 $(e).addClass(warningCssClass);
                 result = false;
             }
@@ -107,10 +130,16 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
             wordExp = originalWord;
             word = originalWord.word;
             var tempGuess = $template.find(".gw-tmp-guess").html(),
+<<<<<<< HEAD
+				doTemp = doT.template(tempGuess),
+				$html = $(doTemp(wordExp)),
+				$inputs = $html.find("input.gw-input-letter-valid");
+=======
                 doTemp = doT.template(tempGuess),
                 $html = $(doTemp(wordExp)),
                 $inputs = $html.find("input.gw-input-letter-valid");
             this.$inputs = $inputs;
+>>>>>>> 1c902d479fe29bbec75d0661516de0beb4d6ce47
             this.$letters = $html.find("input.gw-input-letter");
             this.$explist = $html.find("ul");
 
@@ -120,6 +149,21 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
         },
         "hint": function () {
             var hintIndex = gethint(word),
+<<<<<<< HEAD
+                $letters = this.$letters,
+                index;
+            for (var i = 0, lens = hintIndex; i < lens; i++) {
+                index = hintIndex[i];
+                $letters[index].value = word[index];
+            }
+        },
+        "help": function (content) {
+            var $explist = this.$explist;
+
+            var tempExpitem = $template.find(".gw-tmp-expitem").html(),
+				doTemp = doT.template(tempExpitem),
+				$html = $(doTemp(content));
+=======
                 index;
             for (var i = 0, lens = hintIndex.length; i < lens; i++) {
                 index = hintIndex[i];
@@ -130,15 +174,22 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
             var tempExpitem = $template.find(".gw-tmp-expitem").html(),
                 doTemp = doT.template(tempExpitem),
                 $html = $(doTemp(content));
+>>>>>>> 1c902d479fe29bbec75d0661516de0beb4d6ce47
 
             this.$explist.append($html);
             roundoff();
         },
         "answer": function ($container) {
             var tempAnswer = $template.find(".gw-tmp-answer").html(),
+<<<<<<< HEAD
+				doTemp = doT.template(tempAnswer),
+				$html = $(doTemp(wordExp)),
+				$word = $html.find(".gw-word");
+=======
                 doTemp = doT.template(tempAnswer),
                 $html = $(doTemp(wordExp)),
                 $word = $html.find(".gw-word");
+>>>>>>> 1c902d479fe29bbec75d0661516de0beb4d6ce47
 
             var insWord = new Word;
             insWord.display($word, word, "explanation");
@@ -147,9 +198,16 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
             roundoff();
         },
         "compare": function () {
+<<<<<<< HEAD
+            var guessWord,
+				$letters = this.$letters;
+            if (validInputs($letters)) {
+                guessWord = getInputs($letters);
+=======
             var guessWord;
             if (validInputs(this.$inputs)) {
                 guessWord = getInputs(this.$letters);
+>>>>>>> 1c902d479fe29bbec75d0661516de0beb4d6ce47
                 if (compareword(guessWord, word)) {
                     return true;
                 }

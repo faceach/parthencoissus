@@ -1,27 +1,23 @@
 "use strict";
 
-define(["jquery", "doT", "widget/word/word", "widget/playbutton/playbutton", "text!./template.html", "roundoff"],
-function ($, doT, Word, playbutton, template, roundoff) {
+define(["jquery", "widget/wordinput/wordinput", "widget/word/word", "widget/playbutton/playbutton", "text!./template.html", "roundoff"],
+function ($, wordinput, Word, playbutton, template, roundoff) {
 
     var $container = $("#gw-main"),
-        word = new Word(),
-        msg;
+        word = new Word();
 
-    function init() {
-        var $word = $container.find(".gw-word"),
-			$btnContainer = $container.find(".gw-btn-container");
-
-        word.display($word, msg.content.word);
-        playbutton($btnContainer);
-    };
-
-    return function ($data) {
+    return function () {
         var $html = $(template),
-            doTemp = doT.template(template);
+            $guess = $html.find(".gw-guess"),
+            $word = $html.find(".gw-word"),
+            $btnContainer = $html.find(".gw-btn-container");
 
-        $container.empty().html(doTemp($data));
-        msg = $data;
-        init();
+        wordinput.answer($guess);
+        word.display($word, wordinput.getWord());
+        playbutton($btnContainer);
+
+        $container.empty().html($html);
+
     };
 
 });
