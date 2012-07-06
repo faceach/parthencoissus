@@ -14,7 +14,7 @@ function ($, wordinput, Word, playbutton, template, roundoff) {
             $btnContainer = $html.find(".gw-btn-container");
 
         wordinput.answer($guess);
-        word.display($mistakeword, wrong, true);
+        word.display($mistakeword, wrong, "mistake");
         word.display($word, wordinput.getWord());
         playbutton($btnContainer);
 

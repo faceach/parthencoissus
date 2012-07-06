@@ -74,9 +74,9 @@ function ($, doT, Context, invited, wordinput, Word, template, MsgHandler, round
             $word = $html.find(".gw-word");
 
         eventHandle($html);
-        wordinput.answer($guess);
+        wordinput.init($guess);
         word.display($word);
-        //wordinput.help(data.content.word);
+        wordinput.help(data.content);
         
         $container.empty().html($html);
         
