@@ -5,12 +5,14 @@
 	<ul class="txtalign-l">
 		<li>{{=it.explanation || ""}}</li>
 	</ul>
-	<div class="control-group">
-	    <label class="mt-10">Type more explanation:</label>
-		<div class="controls">
-			<textarea class="input-xlarge" rows="3" autofocus></textarea>
+	<form>
+		<div class="control-group">
+			<label class="mt-10">Type more explanation:</label>
+			<div class="controls">
+				<textarea class="input-xlarge" rows="3" autofocus="autofocus" pattern="[A-z]"></textarea>
+			</div>
 		</div>
-	</div>
+	</form>
 	<div class="gw-explanationgrade">
 		<div class="gw-explanationgrade-bar"></div>
 	</div>

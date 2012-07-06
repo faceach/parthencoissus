@@ -2,39 +2,39 @@
 
 define(["msglistener", "context"], function (msglistener, context) {
 
-    var key = "guessword";
+	var key = "guessword";
 
-    var MsgHandler = function (args) {
-    };
+	var MsgHandler = function (args) {
+	};
 
-    MsgHandler.prototype = {
-        "send": function (msg, callback) {
+	MsgHandler.prototype = {
+		"send": function (msg, callback) {
 
-            localStorage.setItem(key, JSON.stringify(msg));
+			localStorage.setItem(key, JSON.stringify(msg));
 
-            console.log("msg[" + msg.type + "]:");
-            console.log(msg);
+			console.log("msg[" + msg.type + "]:");
+			console.log(msg);
 
-            if(callback){
+			if(callback){
 				callback();
 			}
-        },
-        "listen": function (type, callback) {
+		},
+		"listen": function (type, callback) {
 
-            function handler() {
-                var msg = JSON.parse(localStorage.getItem(key));
-                if (msg && msg.type === type && msg.to.userid === context.get().userid) {
-                    console.log("listen", msg);
-                    callback(msg);
-                }
-            };
+			function handler() {
+				var msg = JSON.parse(localStorage.getItem(key));
+				if (msg && msg.type === type && msg.to.userid === context.get().userid) {
+					console.log("listen", msg);
+					callback(msg);
+				}
+			};
 
-            msglistener(handler);
+			msglistener(handler);
 			
 			return this;
-        }
-    };
+		}
+	};
 
-    return MsgHandler;
+	return MsgHandler;
 
 });

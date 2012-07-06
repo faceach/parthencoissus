@@ -19,6 +19,11 @@ input.gw-input-letter[type="text"]
 	font-weight: bold;
 	margin: 5px 2px;
 }
+input.gw-input-letter.warning[type="text"]
+{
+	color: #C09853;
+	border-color: #C09853;
+}
 input.gw-input-blank[type="text"]
 {
 	padding: 4px 0;
