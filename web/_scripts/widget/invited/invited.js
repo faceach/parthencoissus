@@ -28,7 +28,6 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 
 		$btnSure.click(function (e) {
 			e.preventDefault();
-
 			var compareResult = wordinput.compare();
 			if (typeof compareResult === "boolean") {
 				if (compareResult) {
@@ -36,6 +35,7 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 					msgHandler.send(msg, handleRight);
 				}
 				// Valid failed
+				console.log("Valid failed!");
 			}
 			else {
 				$.extend(msg, {
