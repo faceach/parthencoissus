@@ -19,6 +19,13 @@ input.gw-input-letter[type="text"]
 	font-weight: bold;
 	margin: 5px 2px;
 }
+input.gw-input-letter[disabled],
+input.gw-input-letter[readonly]
+{
+	cursor: default;
+	background-color: #fff;
+	border-color: #DDD;
+}
 input.gw-input-letter.warning[type="text"]
 {
 	color: #C09853;

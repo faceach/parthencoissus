@@ -32,7 +32,6 @@ function ($, doT, getwordexplanation, template, roundoff) {
                         ]
                     };
                 }
-
                 $el.empty().html(doTemp(data));
                 roundoff();
             };

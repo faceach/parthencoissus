@@ -138,7 +138,7 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
 			var tempAnswer = $template.find(".gw-tmp-answer").html(),
 				doTemp = doT.template(tempAnswer),
 				$html = $(doTemp(wordExp)),
-				$word = $html.find(".gw-word");
+				$word = $html.filter(".gw-word");
 
 			var insWord = new Word;
 			insWord.display($word, word, "explanation");
