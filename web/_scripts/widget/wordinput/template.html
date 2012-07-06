@@ -5,17 +5,17 @@
 				<li>{{=it.explanation}}</li>
 			</ul>
 		</div>
-		<p>
+		<form>
 			{{~it.word :value:index}}
 				{{? value !== " " && value !== "-"}}
-					<input type="text" class="gw-input-letter gw-input-letter-valid" maxlength="1" {{? index === 0}}autofocus{{?}} >
+					<input type="text" class="gw-input-letter gw-input-letter-valid" maxlength="1" {{? index === 0}}autofocus="autofocus"{{?}} pattern="[A-z]{1}">
 				{{?? value === "-"}}
 					<input type="text" class="gw-input-letter gw-input-hyphen" value="{{=value}}" readonly maxlength="1" >
 				{{??}}
 					<input type="text" class="gw-input-letter gw-input-blank" value="{{=value}}" readonly maxlength="1" >
 				{{?}}
 			{{~}}
-		</p>
+		</form>
 	</script>
 	<script class="gw-tmp-answer" type="text/template">
 		<div class="alert alert-info">
@@ -23,17 +23,20 @@
 				<li>{{=it.explanation}}</li>
 			</ul>
 		</div>
-		<p>
+		<form>
 			{{~it.word :value:index}}
 				{{? value !== " " && value !== "-"}}
-					<input type="text" class="gw-input-letter gw-input-letter-valid" value="{{=value}}" readonly maxlength="1" >
+					<input type="text" class="gw-input-letter gw-input-letter-valid" value="{{=value}}" readonly maxlength="1" pattern="[A-z]{1}" >
 				{{?? value === "-"}}
 					<input type="text" class="gw-input-letter gw-input-hyphen" value="{{=value}}" readonly maxlength="1" >
 				{{??}}
 					<input type="text" class="gw-input-letter gw-input-blank" value="{{=value}}" readonly maxlength="1" >
 				{{?}}
 			{{~}}
-		</p>
+		</form>
 		<div class="gw-word"></div>
+	</script>
+	<script class="gw-tmp-expitem" type="text/template">
+		<li>{{=it.explanation}}</li>
 	</script>
 </div>
