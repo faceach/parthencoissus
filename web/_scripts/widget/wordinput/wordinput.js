@@ -1,26 +1,40 @@
 "use strict";
 
-define(["jquery", "doT", "gethint","compareword", "jquery.textchange", "widget/word/word", "text!./template.html", "roundoff"],
-function ($, doT, gethint,compareword, textchange, Word, template, roundoff) {
+define(["jquery", "doT", "gethint", "compareword", "jquery.textchange", "widget/word/word", "text!./template.html", "roundoff"],
+function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
 
-    var word, wordExp, $letters;
+    var $template = $(template),
+		word,
+		wordExp,
+		warningCssClass = "warning";
 
     function keySupport($inputs) {
-        $inputs.bind("textchange", function () {
-            if ($(this).val()) {
-                $(this).next().focus();
+        $inputs.bind("textchange", function (e) {
+            var $this = $(this);
+            if ($this.val()) {
+                $this
+					.removeClass(warningCssClass)
+					.next()
+					.focus();
             }
         });
     };
-    function getInput($letters) {
+    function validInputs($letters) {
+        var patt = new RegExp("^[A-Za-z]+$"),
+			result = true;
+        $letters.each(function (i, e) {
+            var letter = e.value;
+            if (!patt.test(letter)) {
+                $(e).addClass(warningCssClass);
+                result = false;
+            }
+        });
+        return result;
+    };
+    function getInputs($letters) {
         var inputWord = "";
         $letters.each(function (i, e) {
             var letter = e.value;
-            if (!letter) {
-                //TODO: warning this input to user
-                //...
-                return false;
-            }
             inputWord += letter;
         });
         return inputWord;
@@ -33,23 +47,36 @@ function ($, doT, gethint,compareword, textchange, Word, template, roundoff) {
             }
             wordExp = originalWord;
             word = originalWord.word;
-            var $html = $(template),
-				tempGuess = $html.find(".gw-tmp-guess").html(),
+            var tempGuess = $template.find(".gw-tmp-guess").html(),
 				doTemp = doT.template(tempGuess),
 				$html = $(doTemp(wordExp)),
 				$inputs = $html.find("input.gw-input-letter-valid");
-			$letters = $html.find("input.gw-input-letter");
+            this.$letters = $html.find("input.gw-input-letter");
+            this.$explist = $html.find("ul");
 
             keySupport($inputs);
             $container.empty().append($html);
         },
         "hint": function () {
-            var hintIndex = gethint(word);
-            console.log(hintIndex);
+            var hintIndex = gethint(word),
+                $letters = this.$letters,
+                index;
+            for (var i = 0, lens = hintIndex; i < lens; i++) {
+                index = hintIndex[i];
+                $letters[index].value = word[index];
+            }
         },
-        "answer": function () {
-            var $html = $(template),
-				tempAnswer = $html.find(".gw-tmp-answer").html(),
+        "help": function (content) {
+            var $explist = this.$explist;
+
+            var tempExpitem = $template.find(".gw-tmp-expitem").html(),
+				doTemp = doT.template(tempExpitem),
+				$html = $(doTemp(content));
+
+            this.$explist.append($html);
+        },
+        "answer": function ($container) {
+            var tempAnswer = $template.find(".gw-tmp-answer").html(),
 				doTemp = doT.template(tempAnswer),
 				$html = $(doTemp(wordExp)),
 				$word = $html.find(".gw-word");
@@ -60,13 +87,18 @@ function ($, doT, gethint,compareword, textchange, Word, template, roundoff) {
             $container.empty().append($html);
         },
         "compare": function () {
-            var guessWord = getInput($letters);
-            if(compareword(guessWord, word)){
-				return true;
-			}
-			else{
-				return guessWord;
-			}
+            var guessWord,
+				$letters = this.$letters;
+            if (validInputs($letters)) {
+                guessWord = getInputs($letters);
+                if (compareword(guessWord, word)) {
+                    return true;
+                }
+                else {
+                    return guessWord;
+                }
+            }
+            return false;
         },
         "getWord": function () {
             return word;

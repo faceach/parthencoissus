@@ -8,7 +8,8 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
     });
 
     var $container = $("#gw-main"),
-        partner,
+		partner,
+        wrongWord,
 		msgHandler = new MsgHandler,
 		context = Context.get();
 
@@ -28,11 +29,14 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 
         $btnSure.click(function (e) {
             e.preventDefault();
-
             var compareResult = wordinput.compare();
-            if (typeof compareResult === "boolean" && compareResult) {
-                $.extend(msg, { "type": "success" });
-                msgHandler.send(msg, handleRight);
+            if (typeof compareResult === "boolean") {
+                if (compareResult) {
+                    $.extend(msg, { "type": "success" });
+                    msgHandler.send(msg, handleRight);
+                }
+                // Valid failed
+                console.log("Valid failed!");
             }
             else {
                 $.extend(msg, {
@@ -41,6 +45,7 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
                         "word": compareResult
                     }
                 });
+                wrongWord = compareResult;
                 msgHandler.send(msg, handleWrong);
             }
         });
@@ -72,7 +77,7 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
     }
     function handleWrong() {
         require(["widget/wrong/wrong"], function (wrong) {
-            wrong();
+            wrong(wrongWord);
         });
     }
     function handleHelp() {

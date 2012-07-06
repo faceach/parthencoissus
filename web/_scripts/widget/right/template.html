@@ -2,20 +2,7 @@
     <h2 class="mt-10">Congratulations!</h1>
 	<span class="help-block">You are really the word genius!</span>
 	<label class="mt-10">Guess one word from following explanation:</label>
-    <div class="alert alert-info">
-		<ul class="txtalign-l">
-			<li>{{=it.content.explanation}}</li>
-		</ul>
-    </div>
-    <p>
-        {{~it.content.word :value:index}}
-            {{if({{=value}}){ }}
-                <input type="text" class="input-letter gw-input-letter-valid" maxlength="1" readonly="readonly" value="{{=value}}" >
-            {{ }else{ }}
-                <input type="hidden" class="input-letter" maxlength="1" >
-            {{ } }}
-        {{~}}
-    </p>
+    <div class="gw-guess"></div>
     <div id="gw-explanation-main"></div>
 	<div class="gw-btn-container"></div>
 </div>
