@@ -4,7 +4,7 @@ define(["jquery", "doT", "context", "msghandler", "widget/wordinput/wordinput", 
 function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 
 	gwRouter.route("invited", "invited", function () {
-		console.log("#init");
+		console.log("#invited");
 	});
 
 	var $container = $("#gw-main"),

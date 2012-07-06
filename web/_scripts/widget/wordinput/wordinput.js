@@ -34,16 +34,14 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
         $inputs
         .bind("textchange", function (e) {
             var $this = $(this),
-                input = this.value;
-            if (patten.test(input) && $this.index() < lens - 1) {
-                $this
-                .removeClass(warningCssClass)
-                .next()
-                .focus();
-            }
-            else if (patten.test(input) && $this.index() >= lens - 1) {
-                $this
-                .removeClass(warningCssClass);
+                input = this.value,
+                index = $this.index($inputs.selector);
+            console.log("lens: " + lens + " index: " + index);
+            if (patten.test(input)) {
+                $this.removeClass(warningCssClass)
+                if (index < lens - 1) {
+                    $inputs.eq(index + 1).focus();
+                }
             }
         })
         .focus(function (e) {
@@ -51,6 +49,7 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
         })
         .keydown(function (e) {
             var $this = $(this),
+                index = $this.index($inputs.selector),
                 cursorPos = 0; //getPos(this);
             // Event handle
             if (!e) {
@@ -58,36 +57,19 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
             };
             switch (e.keyCode) {
                 case 8: //Backspace
-                    if ($this.index() > 0) {
-                        /*
-                        if (cursorPos > 0) {
-                        $this.val("").prev().focus();
-                        }
-                        else {
-                        $this.prev().val("").focus();
-                        }
-                        */
-                        $this.val("").prev().focus();
+                    if (index > 0) {
+                        $this.val("");
+                        $inputs.eq(index - 1).focus();
                     }
                     break;
                 case 37: //Left
-                    if ($this.index() > 0) {
-                        /*
-                        if (cursorPos <= 0) {
-                        $this.prev().focus();
-                        }
-                        */
-                        $this.prev().focus();
+                    if (index > 0) {
+                        $inputs.eq(index - 1).focus();
                     }
                     break;
                 case 39: //Right
-                    if ($this.index() < lens - 1) {
-                        /*
-                        if (cursorPos > 0) {
-                        $this.next().focus();
-                        }
-                        */
-                        $this.next().focus();
+                    if (index < lens - 1) {
+                        $inputs.eq(index + 1).focus();
                     }
                     break;
                 case 13: // Enter
@@ -134,6 +116,7 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
 
             keySupport($inputs);
             $container.empty().append($html);
+            roundoff();
         },
         "hint": function () {
             var hintIndex = gethint(word),
@@ -149,6 +132,7 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
                 $html = $(doTemp(content));
 
             this.$explist.append($html);
+            roundoff();
         },
         "answer": function ($container) {
             var tempAnswer = $template.find(".gw-tmp-answer").html(),
@@ -160,6 +144,7 @@ function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
             insWord.display($word, word, "explanation");
 
             $container.empty().append($html);
+            roundoff();
         },
         "compare": function () {
             var guessWord;
