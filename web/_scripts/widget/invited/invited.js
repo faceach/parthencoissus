@@ -23,44 +23,44 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 			        "username": context.username,
 			        "userid": context.userid
 			    },
-				"to": partner
+			    "to": partner
 			};
 
         $btnSure.click(function (e) {
             e.preventDefault();
-            
-			var compareResult = wordinput.compare();
+
+            var compareResult = wordinput.compare();
             if (typeof compareResult === "boolean" && compareResult) {
-				$.extend(msg, {"type": "success"});
-				msgHandler.send(msg, handleRight);
-			}
-			else {
-				$.extend(msg, {
-					"type": "fail",
-					"content": {
-						"word": compareResult
-					}
-				});
-				msgHandler.send(msg, handleWrong);
+                $.extend(msg, { "type": "success" });
+                msgHandler.send(msg, handleRight);
+            }
+            else {
+                $.extend(msg, {
+                    "type": "fail",
+                    "content": {
+                        "word": compareResult
+                    }
+                });
+                msgHandler.send(msg, handleWrong);
             }
         });
-		$btnHint.click(function(e){
-			e.preventDefault();
-			wordinput.hint();
-		});
+        $btnHint.click(function (e) {
+            e.preventDefault();
+            wordinput.hint();
+        });
         $btnHelp.click(function (e) {
             e.preventDefault();
-            $.extend(msg, {"type": "help"});
+            $.extend(msg, { "type": "help" });
             msgHandler.send(msg, handleHelp);
         });
         $btnGiveup.click(function (e) {
             e.preventDefault();
-            $.extend(msg, {"type": "giveup"});
+            $.extend(msg, { "type": "giveup" });
             msgHandler.send(msg, handleGiveup);
         });
         $btnExit.click(function (e) {
             e.preventDefault();
-            $.extend(msg, {"type": "exit"});
+            $.extend(msg, { "type": "exit" });
             msgHandler.send(msg, handleExit);
         });
     };
@@ -97,10 +97,10 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 			$guess = $html.find(".gw-guess");
 
         partner = data.from;
-		
-		wordinput.init($guess, data.content);
-		eventsHandler($html);
-		
+
+        wordinput.init($guess, data.content);
+        eventsHandler($html);
+
         $container.empty().append($html);
         roundoff();
     };
