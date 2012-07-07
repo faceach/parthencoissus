@@ -1,8 +1,9 @@
 "use strict";
 
-define(["msglistener", "context"], function (msglistener, context) {
+define(["msglistener", "underscore", "context"], function (msglistener, underscore, context) {
 
-	var key = "guessword";
+	var key = "guessword",
+		regListener = [];
 
 	var MsgHandler = function (args) {
 	};
@@ -20,7 +21,6 @@ define(["msglistener", "context"], function (msglistener, context) {
 			}
 		},
 		"listen": function (type, callback) {
-
 			function handler() {
 				var msg = JSON.parse(localStorage.getItem(key));
 				if (msg && msg.type === type && msg.to.userid === context.get().userid) {
@@ -28,8 +28,10 @@ define(["msglistener", "context"], function (msglistener, context) {
 					callback(msg);
 				}
 			};
-
-			msglistener(handler);
+			if(underscore.intersection(regListener, [type]).length === 0){
+				regListener.push(type);
+				msglistener(handler);
+			}
 			
 			return this;
 		}

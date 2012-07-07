@@ -1,7 +1,7 @@
 "use strict";
 
-define(["jquery", "doT", "context", "msghandler", "widget/wordinput/wordinput", "text!./template.html", "roundoff"],
-function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
+define(["jquery", "doT", "context", "widget/bullistword/bullistword",  "msghandler", "widget/wordinput/wordinput", "text!./template.html", "roundoff"],
+function ($, doT, Context, bullistword,MsgHandler, wordinput, template, roundoff) {
 
 	gwRouter.route("invited", "invited", function () {
 		console.log("#invited");
@@ -14,6 +14,7 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 
 	function eventsHandler($html) {
 		var $btnSure = $html.find(".gw-btn-sure"),
+			$study = $html.find(".gw-study"),
 			$btnHint = $html.find(".gw-btn-hint"),
 			$btnHelp = $html.find(".gw-btn-help"),
 			$btnGiveup = $html.find(".gw-btn-giveup"),
@@ -53,11 +54,16 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 		$btnHint.click(function (e) {
 			e.preventDefault();
 			wordinput.hint();
+			$(this).remove();
 		});
 		$btnHelp.click(function (e) {
 			e.preventDefault();
 			$.extend(msg, { "type": "help" });
-			msgHandler.send(msg, handleHelp);
+			var callback = function () {
+				handleHelp($study);
+			};
+			msgHandler.send(msg, callback);
+			$(this).remove();
 		});
 		$btnGiveup.click(function (e) {
 			e.preventDefault();
@@ -75,27 +81,28 @@ function ($, doT, Context, MsgHandler, wordinput, template, roundoff) {
 		require(["widget/right/right"], function (right) {
 			right();
 		});
-	}
+	};
 	function handleWrong(wrongWord) {
 		require(["widget/wrong/wrong"], function (wrong) {
 			wrong(wrongWord);
 		});
-	}
-	function handleHelp() {
-		require(["widget/help/help"], function (help) {
-			help();
+	};
+	function handleHelp($study) {
+		bullistword($study);
+		msgHandler.listen("rescue", function(msg){
+	        wordinput.help(msg.content);
 		});
-	}
+	};
 	function handleGiveup() {
 		require(["widget/giveup/giveup"], function (giveup) {
 			giveup();
 		});
-	}
+	};
 	function handleExit() {
 		require(["widget/exit/exit"], function (exit) {
 			exit();
 		});
-	}
+	};
 	function handleInvited(data) {
 		var doTemp = doT.template(template),
 			$html = $(doTemp(data)),
