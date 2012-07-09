@@ -1,6 +1,6 @@
 "use strict";
 
-define(["jquery", "doT", "gethint", "compareword", "jquery.textchange", "widget/word/word", "text!./template.html", "roundoff"],
+define(["jquery", "doT", "gethint", "compareword", "jquery.textchange", "word", "text!./control/wordinput/template.html", "roundoff"],
 function ($, doT, gethint, compareword, textchange, Word, template, roundoff) {
 
 	var $template = $(template),

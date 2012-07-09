@@ -12,6 +12,10 @@ textarea
 {
 	margin-bottom: 0;
 }
+.alert
+{
+    padding: 8px;
+}
 input.gw-input-letter[type="text"]
 {
 	width: 15px;

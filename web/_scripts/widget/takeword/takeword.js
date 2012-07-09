@@ -58,7 +58,9 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
 
 	return {
 		load: function ($container) {
-			// Clear storage
+		    location.hash = "takeword";
+
+		    // Clear storage
 			word = "";
 			input = "";
 			partner = null;

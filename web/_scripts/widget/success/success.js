@@ -1,11 +1,17 @@
 "use strict";
 
-define(["jquery", "widget/takeword/takeword", "widget/word/word", "widget/playbutton/playbutton", "doT","text!./template.html", "roundoff"],
+define(["jquery", "widget/takeword/takeword", "word", "playbutton", "doT","text!./template.html", "roundoff"],
 function ($, takeword, Word, playbutton, doT,template, roundoff) {
+
+    gwRouter.route("success", "success", function () {
+        console.log("#success");
+    });
 
     var $container = $("#gw-main");
 
     return function () {
+        location.hash = "success";
+
         var doTemp = doT.template(template),
 			$html = $(doTemp(takeword.getPartner())),
 			$word = $html.find(".gw-word"),

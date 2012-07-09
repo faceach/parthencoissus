@@ -1,8 +1,7 @@
 "use strict";
 
-define(["jquery", "context", "doT", "getscore", "text!./template.html"],
+define(["jquery", "context", "doT", "getscore", "text!./control/score/template.html"],
 function ($, context, doT, getscore, template) {
-	console.log(doT);
 	var $container = $("#gw-progress");
 	function getProgressCssClass(level) {
 		var cssClass = "";

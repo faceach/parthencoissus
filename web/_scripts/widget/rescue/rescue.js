@@ -1,7 +1,11 @@
 "use strict";
 
-define(["jquery", "context", "widget/takeword/takeword", "widget/word/word", "widget/playbutton/playbutton", "doT", "text!./template.html", "msghandler","gradehandler","roundoff"],
+define(["jquery", "context", "widget/takeword/takeword", "word", "playbutton", "doT", "text!./template.html", "msghandler","gradehandler","roundoff"],
 function ($, Context, takeword, Word, playbutton, doT, template, MsgHandler, gradehandler,roundoff) {
+
+    gwRouter.route("rescue", "rescue", function () {
+        console.log("#rescue");
+    });
 
 	var $container = $("#gw-main"),
 		context = Context.get(),
@@ -18,7 +22,9 @@ function ($, Context, takeword, Word, playbutton, doT, template, MsgHandler, gra
 	};
 
 	return function () {
-		var doTemp = doT.template(template),
+	    location.hash = "rescue";
+
+	    var doTemp = doT.template(template),
 			partner = takeword.getPartner(),
 			word = takeword.getWord(),
 			explanation = takeword.getMineExplanation(),

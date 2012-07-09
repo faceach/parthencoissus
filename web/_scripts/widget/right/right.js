@@ -1,11 +1,16 @@
 "use strict";
 
-define(["jquery", "widget/wordinput/wordinput", "widget/playbutton/playbutton", "text!./template.html", "roundoff"],
+define(["jquery", "wordinput", "playbutton", "text!./template.html", "roundoff"],
 function ($, wordinput, playbutton, template, roundoff) {
+
+    gwRouter.route("right", "right", function () {
+        console.log("#right");
+    });
 
     var $container = $("#gw-main");
 
     return function () {
+        location.hash = "right";
 
         var $html = $(template),
             $guess = $html.find(".gw-guess"),

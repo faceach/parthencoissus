@@ -1,7 +1,11 @@
 "use strict";
 
-define(["jquery", "widget/takeword/takeword", "widget/bullistword/bullistword", "doT", "text!./template.html", "msghandler", "roundoff"],
+define(["jquery", "widget/takeword/takeword", "bullistword", "doT", "text!./template.html", "msghandler", "roundoff"],
 function ($, takeword, bullistword, doT, template, MsgHandler, roundoff) {
+
+    gwRouter.route("waiting", "waiting", function () {
+        console.log("#waiting");
+    });
 
     var $container = $("#gw-main"),
 		msgHandler = new MsgHandler;
@@ -46,6 +50,8 @@ function ($, takeword, bullistword, doT, template, MsgHandler, roundoff) {
     };
 
     return function () {
+        location.hash = "waiting";
+
         var doTemp = doT.template(template),
 			$html = $(doTemp(takeword.getPartner())),
 			$study = $html.find(".gw-study");

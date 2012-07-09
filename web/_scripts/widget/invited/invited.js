@@ -1,6 +1,6 @@
 "use strict";
 
-define(["jquery", "doT", "context", "widget/bullistword/bullistword",  "msghandler", "widget/wordinput/wordinput", "text!./template.html", "roundoff"],
+define(["jquery", "doT", "context", "bullistword",  "msghandler", "wordinput", "text!./template.html", "roundoff"],
 function ($, doT, Context, bullistword,MsgHandler, wordinput, template, roundoff) {
 
 	gwRouter.route("invited", "invited", function () {
@@ -90,7 +90,7 @@ function ($, doT, Context, bullistword,MsgHandler, wordinput, template, roundoff
 	function handleHelp($study) {
 		bullistword($study);
 		msgHandler.listen("rescue", function(msg){
-	        wordinput.help(msg.content);
+			wordinput.help(msg.content);
 		});
 	};
 	function handleGiveup() {
@@ -104,7 +104,9 @@ function ($, doT, Context, bullistword,MsgHandler, wordinput, template, roundoff
 		});
 	};
 	function handleInvited(data) {
-		var doTemp = doT.template(template),
+	    location.hash = "invited";
+
+	    var doTemp = doT.template(template),
 			$html = $(doTemp(data)),
 			$guess = $html.find(".gw-guess");
 

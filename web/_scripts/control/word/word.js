@@ -1,6 +1,6 @@
 "use strict";
 
-define(["jquery", "doT", "getwordexplanation", "text!./template.html", "roundoff"],
+define(["jquery", "doT", "getwordexplanation", "text!./control/word/template.html", "roundoff"],
 function ($, doT, getwordexplanation, template, roundoff) {
 
     var Word = function () { };

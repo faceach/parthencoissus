@@ -1,6 +1,6 @@
 "use strict";
 
-define(["jquery", "text!./template.html", "roundoff"],
+define(["jquery", "text!./control/playbutton/template.html", "roundoff"],
 function ($, template, roundoff) {
 
     var $container = $("#gw-main");
@@ -14,7 +14,6 @@ function ($, template, roundoff) {
             require(["widget/takeword/takeword"], function (takeword) {
                 takeword.load($container);
             });
-            location.hash = this.hash;
         });
         $el.empty().append($btn);
         roundoff();

@@ -1,6 +1,6 @@
 "use strict";
 
-define(["jquery", "widget/word/word", "text!./template.html", "roundoff"],
+define(["jquery", "word", "text!./control/bullistword/template.html", "roundoff"],
 function ($, Word, template, roundoff) {
 
     var $container;
