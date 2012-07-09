@@ -1,25 +1,22 @@
 "use strict";
 
-define(["jquery", "wordinput", "word", "playbutton", "text!./template.html", "roundoff"],
-function ($, wordinput, Word, playbutton, template, roundoff) {
+define(["jquery", "wordinput", "playbutton", "text!./template.html", "roundoff"],
+function ($, wordinput, playbutton, template, roundoff) {
 
     gwRouter.route("giveup", "giveup", function () {
         console.log("#giveup");
     });
 
-    var $container = $("#gw-main"),
-        word = new Word();
+    var $container = $("#gw-main");
 
     return function () {
         location.hash = "giveup";
 
         var $html = $(template),
             $guess = $html.find(".gw-guess"),
-            $word = $html.find(".gw-word"),
             $btnContainer = $html.find(".gw-btn-container");
 
         wordinput.answer($guess);
-        word.display($word, wordinput.getWord());
         playbutton($btnContainer);
 
         $container.empty().html($html);

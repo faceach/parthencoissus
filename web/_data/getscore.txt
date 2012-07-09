@@ -6,7 +6,7 @@
 	},
 	{
 		"userid": "0002",
-		"level": "B",
+		"level": "A",
 		"score": 30
 	}
 ]
