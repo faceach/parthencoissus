@@ -5,7 +5,7 @@ define(function () {
     return function (word) {
         var lens = word.length,
 			randomNum;
-        if (lens <= 6) {
+        if (lens <= 5) {
             randomNum = parseInt(Math.random() * (lens));
             return [randomNum];
         }

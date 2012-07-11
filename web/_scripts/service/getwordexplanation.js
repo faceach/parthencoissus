@@ -19,7 +19,6 @@ define(["jquery"], function ($) {
             dataType: 'json',
             cache: false,
             success: function (data) {
-
                 var levelWords = data[level],
 					max = levelWords.length,
 					wordExp;

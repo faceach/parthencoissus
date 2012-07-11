@@ -52,22 +52,10 @@ require.config({
 });
 
 var gwRouter;
-require(["jquery", "backbone"], function ($, Backbone) {
-    gwRouter = new Backbone.Router;
+require(["jquery"], function ($) {
 
-    require(["modernizr", "score", "widget/start/start", "widget/invited/invited", "roundoff"],
-    function (modernizr, score, start, invited, roundoff) {
-        $(function () {
-
-            // Route start
-            Backbone.history.start();
-            // Fuction start
-            score.get();
-            start();
-            invited.init();
-            roundoff();
-
-        });
+    $("#btn-startdemo").click(function () {
+        $.ajax();
     });
 
 });
