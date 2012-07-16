@@ -11,7 +11,15 @@
 	<link rel="Stylesheet" type="text/css" href="../_styles/prototype.css" />
 	
 	<script src="../_scripts/_lib/require/require-jquery.js" data-main="../_scripts/prototype/main"></script>
-	
+	<script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost');
+        socket.on('news', function (data) {
+            console.log(data);
+            socket.emit('my other event', { my: 'data' });
+        });
+    </script>
+
 </head>
 <body>
 	<div class="container">
