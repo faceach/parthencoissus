@@ -1,42 +1,33 @@
 "use strict";
 
-define(["msglistener", "underscore", "context"], function (msglistener, underscore, context) {
+define(["socket.io", "underscore", "context"], function (sio, _, context) {
 
-	var key = "guessword",
-		regListener = [];
+    var socket = io.connect();
+    var key = "guessword",
+        listeners = {};
 
-	var MsgHandler = function (args) {
-	};
+    function handler(msg) {
+        console.log(msg);
+        var callback = listeners[msg.type];
+        if (msg && typeof callback === "function") {// && msg.to.userid === context.get().userid) {
+            callback(msg);
+        }
+    };
+    socket.on(key, handler);
 
-	MsgHandler.prototype = {
-		"send": function (msg, callback) {
+    var MsgHandler = function (args) {
+    };
+    MsgHandler.prototype = {
+        "send": function (msg, callback) {
+            socket.emit(key, msg);
+            callback();
+        },
+        "listen": function (type, callback) {
+            listeners[type] = callback;
+            return this;
+        }
+    };
 
-			localStorage.setItem(key, JSON.stringify(msg));
-
-			console.log("msg[" + msg.type + "]:");
-			console.log(msg);
-
-			if(callback){
-				callback();
-			}
-		},
-		"listen": function (type, callback) {
-			function handler() {
-				var msg = JSON.parse(localStorage.getItem(key));
-				if (msg && msg.type === type && msg.to.userid === context.get().userid) {
-					console.log("listen", msg);
-					callback(msg);
-				}
-			};
-			if(underscore.intersection(regListener, [type]).length === 0){
-				regListener.push(type);
-				msglistener(handler);
-			}
-			
-			return this;
-		}
-	};
-
-	return MsgHandler;
+    return MsgHandler;
 
 });

@@ -9,15 +9,33 @@
 	<link rel="Stylesheet" type="text/css" href="/_styles/bootstrap.css" />
 	<link rel="Stylesheet" type="text/css" href="/_styles/base.css" />
 	<link rel="Stylesheet" type="text/css" href="/_styles/prototype.css" />
-	<link rel="Stylesheet" type="text/css" href="/_styles/style.css" />
+	<link rel="Stylesheet" type="text/css" href="/_styles/chat.css" />
 	
 	<script src="/_scripts/_lib/require/require-jquery.js" data-main="/_scripts/prototype/main"></script>
 
 </head>
 <body>
 	<div class="container">
-		<h1 class="txtalign-c mt-15">As a UserA</h1>
-		<p id="init" class="txtalign-c mt-15">1. Init</p>
+        <div id="chat" class="align-c mt-10">
+            <div id="nickname">
+                <form id="set-nickname" class="wrap">
+                    <p>Please type in your nickname and press enter.</p>
+                    <input id="nick">
+                    <p id="nickname-err">Nickname already in use</p>
+                </form>
+            </div>
+            <div id="connecting">
+                <div class="wrap">Connecting to socket.io server</div>
+            </div>
+            <div id="messages">
+                <div id="nicknames"></div>
+                <div id="lines"></div>
+            </div>
+            <form id="send-message">
+                <input id="message">
+                <button>Send</button>
+            </form>
+        </div>
 		<div class="gw-container txtalign-c align-c mt-10">
 		    <a id="gw-btn-setting" class="btn btn-small pull-right mr-10 mt-10" href="#">
 		        <i class="icon-cog"></i>
@@ -30,27 +48,6 @@
 		        <!-- template -->
 		    </div>
 		</div>
-    </div>
-
-    <div id="chat">
-        <div id="nickname">
-            <form id="set-nickname" class="wrap">
-                <p>Please type in your nickname and press enter.</p>
-                <input id="nick">
-                <p id="nickname-err">Nickname already in use</p>
-            </form>
-        </div>
-        <div id="connecting">
-            <div class="wrap">Connecting to socket.io server</div>
-        </div>
-        <div id="messages">
-            <div id="nicknames"></div>
-            <div id="lines"></div>
-        </div>
-        <form id="send-message">
-            <input id="message">
-            <button>Send</button>
-        </form>
     </div>
 
 </body>

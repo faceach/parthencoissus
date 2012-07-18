@@ -57,7 +57,7 @@ var gwRouter;
 require(["jquery", "backbone"], function ($, Backbone) {
     gwRouter = new Backbone.Router;
 
-    require(["modernizr", "score", "widget/start/start", "widget/invited/invited", "roundoff", "chat"],
+    require(["modernizr", "score", "widget/start/start", "widget/invited/invited", "roundoff"],
     function (modernizr, score, start, invited, roundoff) {
         $(function () {
 
