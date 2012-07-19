@@ -7,9 +7,7 @@ function ($, wordinput, playbutton, template, roundoff) {
         console.log("#giveup");
     });
 
-    var $container = $("#gw-main");
-
-    return function () {
+    return function ($container) {
         location.hash = "giveup";
 
         var $html = $(template),

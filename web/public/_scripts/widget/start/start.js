@@ -3,21 +3,16 @@
 define(["jquery", "playbutton", "text!./template.html"],
 function ($, playbutton, template) {
 
-    // TODO: set route for all steps
-    gwRouter.route("start", "start", function () {
-        var $html = $(template);
+    return function ($container) {
 
-        playbutton($html);
-
-        $container.html($html);
-    });
-
-    var $container = $("#gw-main");
-
-    return function () {
+        // TODO: set route for all steps
+        gwRouter.route("start", "start", function () {
+            var $html = $(template);
+            playbutton($html, $container);
+            $container.html($html);
+        });
 
         location.hash = "start";
-
     };
 
 });

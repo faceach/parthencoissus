@@ -7,38 +7,38 @@ function ($, takeword, bullistword, doT, template, MsgHandler, roundoff) {
         console.log("#waiting");
     });
 
-    var $container = $("#gw-main"),
-		msgHandler = new MsgHandler;
+    var $container,
+        msgHandler = new MsgHandler;
 
     function handleSuccess(msg) {
         console.log("success");
         require(["widget/success/success"], function (success) {
-            success();
+            success($container);
         });
     };
     function handleFail(msg) {
         var mistakeWord = msg.content.word;
         console.log("Fail: " + mistakeWord);
         require(["widget/fail/fail"], function (fail) {
-            fail(mistakeWord);
+            fail($container,mistakeWord);
         });
     };
     function handleHelp(msg) {
         console.log("Help");
         require(["widget/rescue/rescue"], function (rescue) {
-            rescue();
+            rescue($container);
         });
     };
     function handleGiveup(msg) {
         console.log("Give up");
         require(["widget/givenup/givenup"], function (givenup) {
-            givenup();
+            givenup($container);
         });
     };
     function handleExit(msg) {
         console.log("Exited");
         require(["widget/exited/exited"], function (exited) {
-            exited();
+            exited($container);
         });
     };
     function handleMsg() {
@@ -49,7 +49,8 @@ function ($, takeword, bullistword, doT, template, MsgHandler, roundoff) {
         msgHandler.listen("exit", handleExit);
     };
 
-    return function () {
+    return function ($el) {
+        $container = $el;
         location.hash = "waiting";
 
         var doTemp = doT.template(template),

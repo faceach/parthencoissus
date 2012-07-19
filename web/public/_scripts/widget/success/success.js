@@ -3,29 +3,27 @@
 define(["jquery", "widget/takeword/takeword", "word", "playbutton", "doT","text!./template.html", "roundoff"],
 function ($, takeword, Word, playbutton, doT,template, roundoff) {
 
-    gwRouter.route("success", "success", function () {
-        console.log("#success");
-    });
+	gwRouter.route("success", "success", function () {
+		console.log("#success");
+	});
 
-    var $container = $("#gw-main");
+	return function ($container) {
+		location.hash = "success";
 
-    return function () {
-        location.hash = "success";
-
-        var doTemp = doT.template(template),
+		var doTemp = doT.template(template),
 			$html = $(doTemp(takeword.getPartner())),
 			$word = $html.find(".gw-word"),
 			$btnContainer = $html.find(".gw-btn-container");
 
-        var word = new Word();
+		var word = new Word();
 
-        word.display($word, takeword.getWord());
-        playbutton($btnContainer);
+		word.display($word, takeword.getWord());
+		playbutton($btnContainer);
 
-        $container.empty().append($html);
+		$container.empty().append($html);
 
-        roundoff();
+		roundoff();
 
-    };
+	};
 
 });

@@ -7,9 +7,7 @@ function ($, takeword, Word, playbutton, doT, template, roundoff) {
         console.log("#givenup");
     });
 
-    var $container = $("#gw-main");
-
-    return function () {
+    return function ($container) {
         location.hash = "givenup";
 
         var doTemp = doT.template(template),

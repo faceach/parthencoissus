@@ -3,9 +3,7 @@
 define(["jquery", "text!./control/playbutton/template.html", "roundoff"],
 function ($, template, roundoff) {
 
-    var $container = $("#gw-main");
-
-    return function ($el) {
+    return function ($el, $container) {
 
         $el;
         var $btn = $(template);

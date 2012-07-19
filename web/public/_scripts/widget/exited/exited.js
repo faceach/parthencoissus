@@ -7,9 +7,7 @@ function ($, takeword, doT, template, roundoff) {
         console.log("#exited");
     });
 
-    var $container = $("#gw-main");
-
-    return function (mistakeWord) {
+    return function ($container) {
         location.hash = "exited";
 
         var doTemp = doT.template(template),

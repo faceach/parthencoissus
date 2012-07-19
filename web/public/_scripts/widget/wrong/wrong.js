@@ -7,10 +7,9 @@ function ($, wordinput, Word, playbutton, template, roundoff) {
         console.log("#wrong");
     });
 
-    var $container = $("#gw-main"),
-        word = new Word;
+    var word = new Word;
 
-    return function (wrongWord) {
+    return function ($container, wrongWord) {
         location.hash = "wrong";
 
         var $html = $(template),

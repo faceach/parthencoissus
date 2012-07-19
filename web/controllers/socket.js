@@ -5,36 +5,30 @@ var sio = require('socket.io');
 */
 exports.init = function (app) {
     var io = sio.listen(app)
-          , nicknames = {};
+          , usernames = {};
 
     io.sockets.on('connection', function (socket) {
         // chat
-        socket.on('user message', function (msg) {
-            socket.broadcast.emit('user message', socket.nickname, msg);
-        });
 
-        socket.on('nickname', function (nick, fn) {
-            if (nicknames[nick]) {
+        socket.on('username', function (name, fn) {
+            if (usernames[name]) {
                 fn(true);
             } else {
                 fn(false);
-                nicknames[nick] = socket.nickname = nick;
-                socket.broadcast.emit('announcement', nick + ' connected');
-                io.sockets.emit('nicknames', nicknames);
+                usernames[name] = socket.username = name;
+                io.sockets.emit('usernames', usernames);
             }
         });
 
         socket.on('disconnect', function () {
-            if (!socket.nickname) return;
+            if (!socket.username) return;
 
-            delete nicknames[socket.nickname];
-            socket.broadcast.emit('announcement', socket.nickname + ' disconnected');
-            socket.broadcast.emit('nicknames', nicknames);
+            delete usernames[socket.username];
+            socket.broadcast.emit('usernames', usernames);
         });
 
         // guess word
         socket.on('guessword', function (msg) {
-            console.log("guessword:" + msg);
             socket.broadcast.emit('guessword', msg);
         });
     });

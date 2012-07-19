@@ -7,9 +7,7 @@ function ($, takeword, Word, playbutton, doT,template, roundoff) {
         console.log("#fail");
     });
 
-	var $container = $("#gw-main");
-
-	return function (mistakeWord) {
+	return function ($container,mistakeWord) {
 	    location.hash = "fail";
 
 	    var doTemp = doT.template(template),

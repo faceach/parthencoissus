@@ -57,6 +57,8 @@ a.flexwidth:hover       {   text-decoration: none;                              
 a.ndr,
 a.ndr:hover     {   text-decoration: none;  }
 .hidden         {   display: none;          }
+.corbet         {   visibility: hidden;     }
+.visible        {   visibility: visible;    }
 .hand           {   cursor: pointer;        }
 .nohand         {   cursor: default;        }
 .ltspacing      {   letter-spacing: -1px;   }

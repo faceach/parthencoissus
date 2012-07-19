@@ -7,8 +7,7 @@ function ($, Context, takeword, Word, playbutton, doT, template, MsgHandler, gra
         console.log("#rescue");
     });
 
-	var $container = $("#gw-main"),
-		context = Context.get(),
+	var context = Context.get(),
 		msgHandler = new MsgHandler,
 		warningCssClass = "warning";
 
@@ -21,7 +20,7 @@ function ($, Context, takeword, Word, playbutton, doT, template, MsgHandler, gra
 		});
 	};
 
-	return function () {
+	return function ($container) {
 	    location.hash = "rescue";
 
 	    var doTemp = doT.template(template),
@@ -64,7 +63,7 @@ function ($, Context, takeword, Word, playbutton, doT, template, MsgHandler, gra
 
 			msgHandler.send(msg, function () {
 				require(["widget/waiting/waiting"], function (waiting) {
-					waiting();
+				    waiting($container);
 				});
 			});
 		});

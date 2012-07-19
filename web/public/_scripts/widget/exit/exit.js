@@ -7,9 +7,7 @@ function ($, roundoff) {
         console.log("#exit");
     });
 
-    var $container = $("#gw-main");
-
-    return function () {
+    return function ($container) {
         location.hash = "exit";
 
         $container.empty().html("Exited.");
