@@ -34,7 +34,7 @@ require(["jquery", "socket.io"], function($) {
 
         function message(from, msg) {
             $('#lines').append($('<p>').append($('<b>').text(from), msg));
-        }
+        };
 
         // dom manipulation
         $(function () {

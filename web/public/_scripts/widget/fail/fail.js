@@ -20,7 +20,7 @@ function ($, takeword, Word, playbutton, doT,template, roundoff) {
 
 		word.display($mistakeword, mistakeWord, "mistake");
 		word.display($word, takeword.getWord());
-		playbutton($btnContainer);
+		playbutton($btnContainer, $container);
 
 		$container.empty().append($html);
 

@@ -18,7 +18,7 @@ function ($, takeword, Word, playbutton, doT,template, roundoff) {
 		var word = new Word();
 
 		word.display($word, takeword.getWord());
-		playbutton($btnContainer);
+		playbutton($btnContainer, $container);
 
 		$container.empty().append($html);
 

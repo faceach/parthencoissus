@@ -15,7 +15,7 @@ function ($, wordinput, playbutton, template, roundoff) {
             $btnContainer = $html.find(".gw-btn-container");
 
         wordinput.answer($guess);
-        playbutton($btnContainer);
+        playbutton($btnContainer, $container);
 
         $container.empty().html($html);
 

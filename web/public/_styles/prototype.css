@@ -1,6 +1,6 @@
 ﻿body
 {
-	padding-bottom: 280px;
+
 }
 textarea
 {
@@ -54,13 +54,7 @@ input.gw-input-hyphen[type="text"]
 /* + gw */
 .gw-container
 {
-	width: 320px;
-	height: 480px;
-	border: 7px solid #000;
-	border-top-width: 45px;
-	border-bottom-width: 60px;
-	background-color: #fff;
-	border-radius: 14px;
+
 	overflow-y: auto;
 }
 .gw-explanationgrade-bar

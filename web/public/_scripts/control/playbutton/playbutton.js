@@ -3,9 +3,8 @@
 define(["jquery", "text!./control/playbutton/template.html", "roundoff"],
 function ($, template, roundoff) {
 
-    return function ($el, $container) {
+    return function ($btnContainer, $container) {
 
-        $el;
         var $btn = $(template);
         $btn.click(function (e) {
             e.preventDefault();
@@ -13,7 +12,7 @@ function ($, template, roundoff) {
                 takeword.load($container);
             });
         });
-        $el.empty().append($btn);
+        $btnContainer.empty().append($btn);
         roundoff();
 
     };

@@ -19,7 +19,7 @@ function ($, wordinput, Word, playbutton, template, roundoff) {
 
         wordinput.answer($guess);
         word.display($mistakeword, wrongWord, "mistake");
-        playbutton($btnContainer);
+        playbutton($btnContainer, $container);
 
         $container.empty().html($html);
         roundoff();
