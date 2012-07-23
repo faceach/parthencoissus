@@ -5,7 +5,8 @@ var sio = require('socket.io');
 */
 exports.init = function (app) {
     var io = sio.listen(app)
-          , usernames = {};
+        , usernames = {}
+        , onlineUsers = [];
 
     io.sockets.on('connection', function (socket) {
         // chat
@@ -16,7 +17,8 @@ exports.init = function (app) {
             } else {
                 fn(false);
                 usernames[name] = socket.username = name;
-                io.sockets.emit('usernames', usernames);
+                onlineUsers.push({ "username": name, "userid": "0001" });
+                io.sockets.emit('onlineusers', onlineUsers);
             }
         });
 

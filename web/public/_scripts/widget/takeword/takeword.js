@@ -28,12 +28,12 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
     };
 
     function sendExplanation(msg) {
-        matchpartner(context.userid,
+        // TODO: userid instead of username
+        matchpartner(context.username,
 			{
 			    "success": function (data) {
 			        partner = {
-			            "username": data.username,
-			            "userid": data.userid
+			            "username": data.username
 			        };
 			        $.extend(msg, {
 			            "to": partner

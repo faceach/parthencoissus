@@ -7,9 +7,8 @@ define(["socket.io", "underscore", "context"], function (sio, _, context) {
         listeners = {};
 
     function handler(msg) {
-        console.log(msg);
         var callback = listeners[msg.type];
-        if (msg && typeof callback === "function") {// && msg.to.userid === context.get().userid) {
+        if (msg && typeof callback === "function" && msg.to.username === context.get().username) {
             callback(msg);
         }
     };

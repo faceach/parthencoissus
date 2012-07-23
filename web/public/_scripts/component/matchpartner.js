@@ -18,8 +18,8 @@ define(["jquery", "service/matchpartner"], function ($, matchpartnerService) {
     };
     */
 
-    return function (userid, callback) {
-        matchpartnerService(userid, callback.success);
+    return function (username, callback) {
+        matchpartnerService(username, callback.success);
     };
 
 });

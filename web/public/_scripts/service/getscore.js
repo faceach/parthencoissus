@@ -12,13 +12,7 @@ define(["jquery"], function ($) {
             dataType: 'json',
             cache: false,
             success: function (data) {
-                var score;
-                for (var i = 0, lens = data.length; i < lens; i++) {
-                    score = data[i];
-                    if (score.userid === userid) {
-                        callback(score);
-                    }
-                }
+                callback(data);
             },
             error: function (e) {
                 console.log(e);

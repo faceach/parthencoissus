@@ -1,6 +1,6 @@
 "use strict";
 
-var onlineUsers;
+var onlineUsers = [];
 
 define(["jquery", "socket.io", "context", "text!./template.html", "roundoff"],
 function ($, sio, Context, template, roundoff) {
@@ -35,8 +35,8 @@ function ($, sio, Context, template, roundoff) {
             return false;
         });
 
-        socket.on('usernames', function (usernames) {
-            onlineUsers = usernames;
+        socket.on('onlineusers', function (onlineusers) {
+            onlineUsers = onlineusers;
         });
 
         $container.html($html);

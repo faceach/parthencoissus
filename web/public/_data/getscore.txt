@@ -1,12 +1,4 @@
-[
-	{
-		"userid": "0001",
-		"level": "A",
-		"score": 67
-	},
-	{
-		"userid": "0002",
-		"level": "A",
-		"score": 30
-	}
-]
+{
+	"level": "A",
+	"score": 67
+}
