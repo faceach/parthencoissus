@@ -29,7 +29,6 @@ app.configure(function () {
 
 });
 
-// test
 // "app.router" positions our routes 
 // above the middleware defined below,
 // this means that Express will attempt
