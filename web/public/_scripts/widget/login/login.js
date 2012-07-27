@@ -12,22 +12,33 @@ function ($, sio, Context, template, roundoff) {
 
     // TODO: set route for all steps
     gwRouter.route("login", "login", function () {
+        onlineUsers = [];
         var $html = $(template);
+
+        var emitMe = function (userName) {
+            socket.emit('username', userName, function (set) {
+                if (!set) {
+                    Context.set({
+                        "username": userName,
+                        "userid": "0001"
+                    });
+                    loggedCallback($container);
+                    return;
+                }
+                $html.find(".login-name-err").show();
+            });
+        };
+
+        var storageUsername = localStorage.getItem("guessword.username");
+        if (storageUsername) {
+            emitMe(storageUsername);
+        }
 
         $html.submit(function (ev) {
             var userName = $html.find(".login-name").val();
             if (userName) {
-                socket.emit('username', userName, function (set) {
-                    if (!set) {
-                        Context.set({
-                            "username": userName,
-                            "userid": "0001"
-                        });
-                        loggedCallback($container);
-                        return;
-                    }
-                    $html.find(".login-name-err").show();
-                });
+                localStorage.setItem("guessword.username", userName);
+                emitMe(userName);
             }
             else {
                 $html.find(".control-group").addClass("warning");

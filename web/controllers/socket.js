@@ -12,6 +12,7 @@ exports.init = function (app) {
         // chat
 
         socket.on('username', function (name, fn) {
+            console.log("^.^:" + onlineUsers);
             if (usernames[name]) {
                 fn(true);
             } else {
@@ -23,10 +24,18 @@ exports.init = function (app) {
         });
 
         socket.on('disconnect', function () {
+            console.log("^.^ - disconnect");
             if (!socket.username) return;
 
             delete usernames[socket.username];
-            socket.broadcast.emit('usernames', usernames);
+
+            for (var i = 0, lens = usernames.length; i < lens; i++) {
+                if (item.username === socket.username) {
+                    onlineUsers.splice(i, 1);
+                    break;
+                }
+            }
+            io.sockets.emit('onlineusers', onlineUsers);
         });
 
         // guess word
