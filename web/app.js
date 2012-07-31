@@ -29,7 +29,6 @@ app.configure(function () {
 
 });
 
-// test
 // "app.router" positions our routes 
 // above the middleware defined below,
 // this means that Express will attempt
@@ -46,10 +45,11 @@ app.use(app.router);
 // $ curl http://localhost:3000/notfound -H "Accept: application/json"
 // $ curl http://localhost:3000/notfound -H "Accept: text/plain"
 app.use(function (req, res, next) {
+    console.log("440044");
     // respond with html page
     if (req.accepts('html')) {
         res.status(404);
-        res.render('404', { url: req.url });
+        res.render('views/404', { url: req.url });
         return;
     }
 
@@ -75,11 +75,12 @@ app.use(function (req, res, next) {
 // would remain being executed, however here
 // we simply respond with an error page.
 app.use(function (err, req, res, next) {
+    console.log("550000");
     // we may use properties of the error object
     // here and next(err) appropriately, or if
     // we possibly recovered from the error, simply next().
     res.status(err.status || 500);
-    res.render('500', { error: err });
+    res.render('views/500', { error: err });
 });
 
 // Routes

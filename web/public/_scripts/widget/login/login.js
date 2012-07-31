@@ -17,6 +17,7 @@ function ($, sio, Context, template, roundoff) {
 
         var emitMe = function (userName) {
             socket.emit('username', userName, function (set) {
+                console.log("SET:" + set);
                 if (!set) {
                     Context.set({
                         "username": userName,
@@ -25,11 +26,12 @@ function ($, sio, Context, template, roundoff) {
                     loggedCallback($container);
                     return;
                 }
-                $html.find(".login-name-err").show();
+                $html.find(".control-group").addClass("warning");
+                $html.find(".login-name-err").removeClass("corbet");
             });
         };
 
-        var storageUsername = localStorage.getItem("guessword.username");
+        var storageUsername = localStorage.getItem("username");
         if (storageUsername) {
             emitMe(storageUsername);
         }
@@ -37,7 +39,7 @@ function ($, sio, Context, template, roundoff) {
         $html.submit(function (ev) {
             var userName = $html.find(".login-name").val();
             if (userName) {
-                localStorage.setItem("guessword.username", userName);
+                localStorage.setItem("username", userName);
                 emitMe(userName);
             }
             else {
@@ -48,6 +50,8 @@ function ($, sio, Context, template, roundoff) {
 
         socket.on('onlineusers', function (onlineusers) {
             onlineUsers = onlineusers;
+            console.log(onlineUsers);
+            return false;
         });
 
         $container.html($html);
