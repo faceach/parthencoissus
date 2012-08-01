@@ -1,10 +1,9 @@
 "use strict";
 
-define(["jquery", "preventscrolling"], function ($, preventscrolling) {
+define(["jquery"], function ($) {
 
-	var $gwcontainer = $(".gw-container");
-	return function(){
-		preventscrolling($gwcontainer);
-	};
-	
+    return function () {
+        return false;
+    };
+
 });

@@ -16,6 +16,38 @@ textarea
 {
     padding: 8px;
 }
+
+/* + gw */
+.gw-container
+{
+	overflow-y: auto;
+}
+.gw-main
+{
+    margin: 0 10px;
+}
+.gw-main textarea
+{
+    width: 96%;
+}
+.gw-explanationgrade-bar
+{
+	width: 100%;
+	height: 6px;
+	line-height: 6px;
+
+	/* CSS3 background */
+	background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#af0), to(#f00), color-stop(0.5, #f90));
+}
+.gw-explanationgrade
+{
+	width: 0%;
+	height: 6px;
+	line-height: 6px;
+	margin-bottom: 9px;
+	border-radius: 6px;
+	overflow: hidden;
+}
 input.gw-input-letter[type="text"]
 {
 	width: 15px;
@@ -49,29 +81,4 @@ input.gw-input-hyphen[type="text"]
 	box-shadow: none;
 	background-color: transparent;
 	cursor: default;
-}
-
-/* + gw */
-.gw-container
-{
-
-	overflow-y: auto;
-}
-.gw-explanationgrade-bar
-{
-	width: 280px;
-	height: 6px;
-	line-height: 6px;
-
-	/* CSS3 background */
-	background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#af0), to(#f00), color-stop(0.5, #f90));
-}
-.gw-explanationgrade
-{
-	width: 0%;
-	height: 6px;
-	line-height: 6px;
-	margin-bottom: 9px;
-	border-radius: 6px;
-	overflow: hidden;
 }

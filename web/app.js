@@ -87,6 +87,12 @@ app.use(function (err, req, res, next) {
 app.get('/', function (req, res) {
     res.render('views/prototype/index');
 });
+app.get('/index', function (req, res) {
+    res.render('views/prototype/index.html');
+});
+app.get('/end', function (req, res) {
+    res.render('views/prototype/end.html');
+});
 
 app.listen(3000, function () {
     var addr = app.address();

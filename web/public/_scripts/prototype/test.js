@@ -1,0 +1,1 @@
+alert("for test ajax load html/script");
