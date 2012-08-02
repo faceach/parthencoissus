@@ -11,19 +11,26 @@ require.config({
 var gwRouter;
 require(["jquery"], function ($) {
 
-    $("#btn-startdemo").click(function (e) {
-        var target = this.hash;
-        $.ajax({
-            url: "/",
-            dataType: 'html',
-            success: function (data) {
-                $(target).show().addClass("visible").html(data);
-            },
-            error: function () {
-                console.log("error");
-            }
-        });
-    });
+	$("#applist").find("a").click(function (e) {
+
+		var $this = $(this),
+			$target = $(this.hash);
+		if ($this.data("running")) {
+			$target.html("");
+		}
+		else {
+			$.ajax({
+				url: "/",
+				dataType: 'html',
+				success: function (data) {
+					$target.html(data);
+				},
+				error: function () {
+					console.log("error");
+				}
+			});
+		}
+	});
 
 });
 
