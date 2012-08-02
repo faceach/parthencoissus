@@ -30,7 +30,7 @@ else {
 
 function detectRequire() {
     if (typeof require === "undefined" || !require) {
-        $.getScript("/_scripts/_lib/require/require-jquery.js", function () {
+        $.getScript("/_scripts/_lib/requirejs/require-jquery.js", function () {
             main();
         });
     }
@@ -46,13 +46,13 @@ function main() {
         urlArgs: "version=1.0.0",
         paths: {
             // Libs
-            "text": "_lib/require/text",
-            "modernizr": "_lib/require/adapter/modernizr",
+            "text": "_lib/requirejs/text",
+            "modernizr": "_lib/requirejs/adapter/modernizr",
             "doT": "_lib/doT/doT",
 
-            "underscore": "_lib/require/adapter/underscore",
-            "backbone": "_lib/require/adapter/backbone",
-            "backbone-localstorage": "_lib/require/adapter/backbone-localstorage",
+            "underscore": "_lib/requirejs/adapter/underscore",
+            "backbone": "_lib/requirejs/adapter/backbone",
+            "backbone-localstorage": "_lib/requirejs/adapter/backbone-localstorage",
 
             "jquery.mousewheel": "_lib/jquery/jquery.mousewheel",
             "jquery.textchange": "_lib/jquery/jquery.textchange",

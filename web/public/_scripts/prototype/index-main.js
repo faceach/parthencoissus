@@ -5,13 +5,13 @@ require.config({
     urlArgs: "version=1.0.0",
     paths: {
         // lib
-        "text": "_lib/require/text",
-        "modernizr": "_lib/require/adapter/modernizr",
-        "mustache": "_lib/require/adapter/mustache",
+        "text": "_lib/requirejs/text",
+        "modernizr": "_lib/requirejs/adapter/modernizr",
+        "mustache": "_lib/requirejs/adapter/mustache",
 
-        "underscore": "_lib/require/adapter/underscore",
-        "backbone": "_lib/require/adapter/backbone",
-        "backbone-localstorage": "_lib/require/adapter/backbone-localstorage",
+        "underscore": "_lib/requirejs/adapter/underscore",
+        "backbone": "_lib/requirejs/adapter/backbone",
+        "backbone-localstorage": "_lib/requirejs/adapter/backbone-localstorage",
 
         "doT": "_lib/doT/doT",
 
