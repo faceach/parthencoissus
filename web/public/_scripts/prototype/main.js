@@ -19,7 +19,7 @@ function getScript(src, successCallback) {
     document.body.appendChild(s);
 };
 
-if (typeof jquery === "undefined" || !jquery) {
+if (typeof jQuery === "undefined" || !jQuery || parseFloat(jQuery.fn.jquery) < 1.7) {
     getScript("/_scripts/_lib/jquery/jquery-1.7.2.min.js", function () {
         detectRequire();
     });
@@ -29,7 +29,7 @@ else {
 }
 
 function detectRequire() {
-    if (typeof require === "undefined" || !require) {
+    if (typeof require === "undefined" || !require || parseFloat(require.version) < 2) {
         $.getScript("/_scripts/_lib/requirejs/require-jquery.js", function () {
             main();
         });
