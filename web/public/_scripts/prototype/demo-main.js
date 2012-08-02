@@ -24,6 +24,7 @@ require(["jquery"], function ($) {
 				dataType: 'html',
 				success: function (data) {
 					$target.html(data);
+					$this.data("running", true);
 				},
 				error: function () {
 					console.log("error");
