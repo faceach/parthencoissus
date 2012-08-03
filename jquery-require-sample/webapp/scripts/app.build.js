@@ -11,10 +11,10 @@
     },
 
     modules: [
-        //Optimize the application files. jQuery is not 
-        //included since it is already in require-jquery.js
+    //Optimize the application files. jQuery is not 
+    //included since it is already in require-jquery.js
         {
-            name: "main"
-        }
+        name: "main"
+    }
     ]
-})
+});
