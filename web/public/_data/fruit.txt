@@ -1,0 +1,145 @@
+{
+  "word": "apple",
+  "explanation": [
+    "fruit with red or yellow or green skin and sweet to tart crisp whitish flesh",
+    "native Eurasian tree widely cultivated in many varieties for its firm rounded edible fruits"
+  ]
+},
+{
+  "word": "orange", 
+  "explanation": [
+    "round yellow to orange fruit of any of several citrus trees",
+    "orange color or pigment; any of a range of colors between red and yellow",
+    "any citrus tree bearing oranges"
+  ]
+},
+{
+  "word": "pear",
+  "explanation": [
+    "sweet juicy gritty-textured fruit available in many varieties",
+    "Old World tree having sweet gritty-textured juicy fruit; widely cultivated in many varieties"
+  ]
+},
+{
+  "word": "banana",
+  "explanation": [
+    "any of several tropical and subtropical treelike herbs of the genus Musa having a terminal crown of large entire leaves and usually bearing hanging clusters of elongated fruits",
+    "elongated crescent-shaped yellow fruit with soft sweet flesh"
+  ]
+},
+{
+  "word": "watermelon",
+  "explanation": [
+    "an African melon",
+    "large oblong or roundish melon with a hard green rind and sweet watery red or occasionally yellowish pulp"
+  ]
+},
+{
+  "word": "grape",
+  "explanation": [
+    "any of various juicy fruit of the genus Vitis with green or purple skins; grow in clusters",
+    "any of numerous woody vines of genus Vitis bearing clusters of edible berries",
+    "a cluster of small projectiles fired together from a cannon to produce a hail of shot"
+  ]
+},
+{
+  "word": "peach",
+  "explanation": [
+    "cultivated in temperate regions",
+    "a very attractive or seductive looking woman",
+    "downy juicy fruit with sweet yellowish or whitish flesh"
+  ]
+},
+{
+  "word": "melon",
+  "explanation": [
+    "any of numerous fruits of the gourd family having a hard rind and sweet juicy flesh",
+    "any of various fruit of cucurbitaceous vines including: muskmelons; watermelons; cantaloupes; cucumbers"
+  ]
+},
+{
+  "word": "strawberry",
+  "explanation": [
+  "sweet fleshy red fruit",
+    "any of various low perennial herbs with many runners and bearing white flowers followed by edible fruits having many small achenes scattered on the surface of an enlarged red pulpy berry",
+    "a soft red birthmark"
+  ]
+},
+{
+  "word": "cherry",
+  "explanation": [
+    "wood of any of various cherry trees especially the black cherry",
+    "any of numerous trees and shrubs producing a small fleshy round fruit with a single hard stone; many also produce a valuable hardwood",
+    "a red fruit with a single hard stone"
+  ]
+},
+{
+  "word": "mango",
+  "explanation": [
+    "large evergreen tropical tree cultivated for its large oval fruit",
+    "large oval tropical fruit having smooth skin, juicy aromatic pulp, and a large hairy seed"
+  ]
+},
+{
+  "word": "pineapple",
+  "explanation": [
+    "a tropical American plant bearing a large fleshy edible fruit with a terminal tuft of stiff leaves; widely cultivated in the tropics",
+    "large sweet fleshy tropical fruit with a terminal tuft of stiff leaves; widely cultivated"
+  ]
+},
+{
+  "word": "lemon",
+  "explanation": [
+    "yellow oval fruit with juicy acidic flesh",
+    "a strong yellow color",
+    "a small evergreen tree that originated in Asia but is widely cultivated for its fruit"
+  ]
+},
+{
+  "word": "plum",
+  "explanation": [
+    "any of several trees producing edible oval fruit having a smooth skin and a single hard stone",
+    "any of numerous varieties of small to medium-sized round or oval fruit having a smooth skin and a single pit",
+    "a highly desirable position or assignment"
+  ]
+},
+{
+  "word": "lychee",
+  "explanation": [
+    "Chinese fruit having a thin brittle shell enclosing a sweet jellylike pulp and a single seed; often dried"
+  ]
+},
+{
+  "word": "apricot",
+  "explanation": [
+    "Asian tree having clusters of usually white blossoms and edible fruit resembling the peach",
+    "downy yellow to rosy-colored fruit resembling a small peach",
+    "a shade of pink tinged with yellow"
+  ]
+},
+{
+  "word": "blueberry",
+  "explanation": [
+    "any of numerous shrubs of the genus Vaccinium bearing blueberries",
+    "sweet edible dark-blue berries of either low-growing or high-growing blueberry plants"
+  ]
+},
+{
+  "word": "longan",
+  "explanation": [
+    "tree of southeastern Asia to Australia grown primarily for its sweet edible fruit resembling litchi nuts; sometimes placed in genera Euphorbia or Nephelium"
+  ]
+},
+{
+  "word": "pomegranate",
+  "explanation": [
+    "shrub or small tree native to southwestern Asia having large red many-seeded fruit",
+    "large globular fruit having many seeds with juicy red pulp in a tough brownish-red rind"
+  ]
+},
+{
+  "word": "hawthorn",
+  "explanation": [
+    "a spring-flowering shrub or small tree of the genus Crataegus"
+  ]
+}

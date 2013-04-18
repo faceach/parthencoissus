@@ -11,21 +11,27 @@ define(["jquery"], function ($) {
             word = null;
         }
 
-        var level = context.level;
+        var level = context.level,
+            category = context.category || "fruits";
+
+            console.log("*****");
+            console.log(context);
+            console.log(category);
+            console.log("*****");
 
         $.ajax({
             url: url,
             dataType: 'json',
             cache: false,
             success: function (data) {
-                var levelWords = data[level],
-					max = levelWords.length,
+                var categoryWords = data[category],
+					max = categoryWords.length,
 					wordExp;
                 var randomNum = parseInt(Math.random() * max);
 
                 if (word) {
                     for (var i = 0; i < max; i++) {
-                        wordExp = levelWords[i];
+                        wordExp = categoryWords[i];
                         if (wordExp.word === word) {
                             callback(wordExp);
                             console.log("Word: " + wordExp.word + ";\nExplanation: " + wordExp.explanation);
@@ -36,7 +42,7 @@ define(["jquery"], function ($) {
                     console.log("Word cannot be found in our library!");
                 }
                 else {
-                    var wordExp = levelWords[randomNum];
+                    var wordExp = categoryWords[randomNum];
                     callback(wordExp);
                     console.log("Random - Word: " + wordExp.word + ";\nExplanation: " + wordExp.explanation);
                 }

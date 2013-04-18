@@ -1,616 +1,462 @@
 {
-    "A": [
+	"fruits": [
 		{
-		    "word": "solve",
-		    "explanation": [
-			    "find the solution to (a problem or question) or understand the meaning of Next",
-                "settle, as of a debt"
-			    ]
+		  "word": "apple",
+		  "explanation": [
+		    "fruit with red or yellow or green skin and sweet to tart crisp whitish flesh",
+		    "native Eurasian tree widely cultivated in many varieties for its firm rounded edible fruits"
+		  ]
 		},
 		{
-		    "word": "out-of-date",
-		    "explanation": [
-			    "if information is out-of-date, it is not recent and may no longer be correct",
-				"if something is out-of-date, it is no longer considered useful or effective, because something more modern exists",
-				"an official document that is out-of-date cannot be used because the period of time for which it was effective has finished"
-			    ]
+		  "word": "orange", 
+		  "explanation": [
+		    "round yellow to orange fruit of any of several citrus trees",
+		    "orange color or pigment; any of a range of colors between red and yellow",
+		    "any citrus tree bearing oranges"
+		  ]
 		},
 		{
-		    "word": "pop group",
-		    "explanation": [
-			    "a group of people who sing and perform"
-			    ]
+		  "word": "pear",
+		  "explanation": [
+		    "sweet juicy gritty-textured fruit available in many varieties",
+		    "Old World tree having sweet gritty-textured juicy fruit; widely cultivated in many varieties"
+		  ]
 		},
 		{
-		    "word": "protect",
-		    "explanation": [
-			    "keep safe from harm or injury"
-			    ]
+		  "word": "banana",
+		  "explanation": [
+		    "any of several tropical and subtropical treelike herbs of the genus Musa having a terminal crown of large entire leaves and usually bearing hanging clusters of elongated fruits",
+		    "elongated crescent-shaped yellow fruit with soft sweet flesh"
+		  ]
 		},
 		{
-		    "word": "overwork",
-		    "explanation": [
-			    "work too hard",
-			    "use a word or idea too much and so make it less effective",
-			    "too much work"
-			    ]
+		  "word": "watermelon",
+		  "explanation": [
+		    "an African melon",
+		    "large oblong or roundish melon with a hard green rind and sweet watery red or occasionally yellowish pulp"
+		  ]
 		},
 		{
-		    "word": "rush",
-		    "explanation": [
-			    "move or act with urgent haste",
-			    "transport something with urgent haste",
-			    "deal with something too quickly"
-			    ]
+		  "word": "grape",
+		  "explanation": [
+		    "any of various juicy fruit of the genus Vitis with green or purple skins; grow in clusters",
+		    "any of numerous woody vines of genus Vitis bearing clusters of edible berries",
+		    "a cluster of small projectiles fired together from a cannon to produce a hail of shot"
+		  ]
 		},
 		{
-		    "word": "angel",
-		    "explanation": [
-			    "a spiritual being acting an an attendant or messenger of God, pictured as a human being with wings",
-                "a very beautiful, kind, or good person",
-                "a person who gives financial backing to a theatrical production"
-			    ]
+		  "word": "peach",
+		  "explanation": [
+		    "cultivated in temperate regions",
+		    "a very attractive or seductive looking woman",
+		    "downy juicy fruit with sweet yellowish or whitish flesh"
+		  ]
 		},
 		{
-		    "word": "education",
-		    "explanation": [
-			    "the process of teaching or learning",
-                "the theory and practice of teaching",
-                "information about or training"
-			    ]
+		  "word": "melon",
+		  "explanation": [
+		    "any of numerous fruits of the gourd family having a hard rind and sweet juicy flesh",
+		    "any of various fruit of cucurbitaceous vines including: muskmelons; watermelons; cantaloupes; cucumbers"
+		  ]
 		},
 		{
-		    "word": "breast",
-		    "explanation": [
-			    "either of the two organs on a woman's chest which produce milk after childbirth",
-                "a person's or animal's chest region",
-                "face and move forwards against or through"
-			    ]
+		  "word": "strawberry",
+		  "explanation": [
+		  "sweet fleshy red fruit",
+		    "any of various low perennial herbs with many runners and bearing white flowers followed by edible fruits having many small achenes scattered on the surface of an enlarged red pulpy berry",
+		    "a soft red birthmark"
+		  ]
 		},
 		{
-		    "word": "bubbly",
-		    "explanation": [
-			    "containing bubbles",
-                "cheerful and high spirited"
-			    ]
+		  "word": "cherry",
+		  "explanation": [
+		    "wood of any of various cherry trees especially the black cherry",
+		    "any of numerous trees and shrubs producing a small fleshy round fruit with a single hard stone; many also produce a valuable hardwood",
+		    "a red fruit with a single hard stone"
+		  ]
 		},
 		{
-		    "word": "bud",
-		    "explanation": [
-                "a growth on a plant which develops into a leaf, flower, or shoot"
-			    ]
+		  "word": "mango",
+		  "explanation": [
+		    "large evergreen tropical tree cultivated for its large oval fruit",
+		    "large oval tropical fruit having smooth skin, juicy aromatic pulp, and a large hairy seed"
+		  ]
 		},
 		{
-		    "word": "aboard",
-		    "explanation": [
-                "on or into a ship, trip, or other vehicle"
-			    ]
+		  "word": "pineapple",
+		  "explanation": [
+		    "a tropical American plant bearing a large fleshy edible fruit with a terminal tuft of stiff leaves; widely cultivated in the tropics",
+		    "large sweet fleshy tropical fruit with a terminal tuft of stiff leaves; widely cultivated"
+		  ]
 		},
 		{
-		    "word": "ability",
-		    "explanation": [
-			    "the prower or capacity to do something",
-                "skill or talent"
-			    ]
+		  "word": "lemon",
+		  "explanation": [
+		    "yellow oval fruit with juicy acidic flesh",
+		    "a strong yellow color",
+		    "a small evergreen tree that originated in Asia but is widely cultivated for its fruit"
+		  ]
 		},
 		{
-		    "word": "assistant",
-		    "explanation": [
-			    "a person who ranks below a senior person",
-                "a person who provides help in particular role or type of work"
-			    ]
+		  "word": "plum",
+		  "explanation": [
+		    "any of several trees producing edible oval fruit having a smooth skin and a single hard stone",
+		    "any of numerous varieties of small to medium-sized round or oval fruit having a smooth skin and a single pit",
+		    "a highly desirable position or assignment"
+		  ]
 		},
 		{
-		    "word": "broccoli",
-		    "explanation": [
-                "a vegetable with heads of small green or purplish flower buds"
-			    ]
+		  "word": "lychee",
+		  "explanation": [
+		    "Chinese fruit having a thin brittle shell enclosing a sweet jellylike pulp and a single seed; often dried"
+		  ]
 		},
 		{
-		    "word": "British",
-		    "explanation": [
-                "relating to Great Britain"
-			    ]
+		  "word": "apricot",
+		  "explanation": [
+		    "Asian tree having clusters of usually white blossoms and edible fruit resembling the peach",
+		    "downy yellow to rosy-colored fruit resembling a small peach",
+		    "a shade of pink tinged with yellow"
+		  ]
 		},
 		{
-		    "word": "effort",
-		    "explanation": [
-			    "a vigorous or determined attempt",
-                "the physical or mental vigour needed to do something"
-			    ]
+		  "word": "blueberry",
+		  "explanation": [
+		    "any of numerous shrubs of the genus Vaccinium bearing blueberries",
+		    "sweet edible dark-blue berries of either low-growing or high-growing blueberry plants"
+		  ]
 		},
 		{
-		    "word": "money",
-		    "explanation": [
-			    "a means of payment in the form of coins and banknotes",
-			    "wealth",
-			    "payment or profit"
-			    ]
+		  "word": "longan",
+		  "explanation": [
+		    "tree of southeastern Asia to Australia grown primarily for its sweet edible fruit resembling litchi nuts; sometimes placed in genera Euphorbia or Nephelium"
+		  ]
 		},
 		{
-		    "word": "lonely",
-		    "explanation": [
-			    "sad because of having no friends or company",
-			    "spent alone",
-			    "(of a place) remote"
-			    ]
+		  "word": "pomegranate",
+		  "explanation": [
+		    "shrub or small tree native to southwestern Asia having large red many-seeded fruit",
+		    "large globular fruit having many seeds with juicy red pulp in a tough brownish-red rind"
+		  ]
 		},
 		{
-		    "word": "seduce",
-		    "explanation": [
-			    "induce to have sex",
-			    "lure or entice away from duty, principles, or proper conduct"
-			    ]
+		  "word": "hawthorn",
+		  "explanation": [
+		    "a spring-flowering shrub or small tree of the genus Crataegus"
+		  ]
 		}
 	],
-    "B": [
+	"household": [
 		{
-		    "word": "abject",
-		    "explanation": [
-	            "very unpleasant and humiliating",
-	            "completely without pride or dignity"
-			    ]
+		  "word": "fridge",
+		  "explanation": [
+		    " refrigerator in which the coolant is pumped around by an electric motor"
+		  ]
 		},
 		{
-		    "word": "widget",
-		    "explanation": [
-			    "a device that is very useful for a particular job"
-			    ]
+		  "word": "washing-machine",
+		  "explanation": [
+		    "a home appliance for washing clothes and linens automatically"
+		  ]
 		},
 		{
-		    "word": "cheapen",
-		    "explanation": [
-			    "lower the price or worth of"
-			    ]
+		  "word": "air conditioner",
+		  "explanation": [
+		    "a system that keeps air cool and dry"
+		  ]
 		},
 		{
-		    "word": "cheerful",
-		    "explanation": [
-			    "noticeably happy and optimistic",
-			    "bright and pleasant"
-			    ]
+		  "word": "hair drier",
+		  "explanation": [
+		    "a hand-held electric blower that can blow warm air onto the hair; used for styling hair"
+		  ]
 		},
 		{
-		    "word": "dotard",
-		    "explanation": [
-			    "an old person who is weak or senile"
-			    ]
+		  "word": "oven",
+		  "explanation": [
+		    "kitchen appliance used for baking or roasting"
+		  ]
 		},
 		{
-		    "word": "drama",
-		    "explanation": [
-			    "a play",
-			    "plays as a literary form"
-			    ]
+		  "word": "camera",
+		  "explanation": [
+		    "equipment for taking photographs (usually consisting of a lightproof box with a lens at one end and light-sensitive film at the other)",
+		    "television equipment consisting of a lens system that focuses an image on a photosensitive mosaic that is scanned by an electron beam"
+		  ]
 		},
 		{
-		    "word": "drat",
-		    "explanation": [
-			    "used to express mild annoyance"
-			    ]
+		  "word": "projector",
+		  "explanation": [
+		    "an optical device for projecting a beam of light",
+		    "an optical instrument that projects an enlarged image onto a screen"
+		  ]
 		},
 		{
-		    "word": "dynasty",
-		    "explanation": [
-			    "a series or rulers who belong to the same family",
-			    "a succession of powerful people from the same family"
-			    ]
+		  "word": "dining table",
+		  "explanation": [
+		    "a table at which meals are served"
+		  ]
 		},
 		{
-		    "word": "edition",
-		    "explanation": [
-			    "a particular form of published written work",
-			    "the total number of copies of a book, newspaper, etc. issued at one time",
-			    "a particular instance of a regular television or radio programme"
-			    ]
+		  "word": "fan",
+		  "explanation": [
+		    "a device for creating a current of air by movement of a surface or surfaces",
+		    "an enthusiastic devotee of sports",
+		    "an ardent follower and admirer"
+		  ]
 		},
 		{
-		    "word": "emotion",
-		    "explanation": [
-			    "a strong feeling, such as joy or anger",
-			    "instinctive feeling as distinguished from logic or reasoning"
-			    ]
+		  "word": "iron",
+		  "explanation": [
+		    "a heavy ductile magnetic metallic element; is silver-white in pure form but readily rusts; used in construction and tools and armament; plays a role in the transport of oxygen by the blood",
+		    "a golf club that has a relatively narrow metal head",
+		    "implement used to brand live stock"
+		  ]
 		},
 		{
-		    "word": "faint",
-		    "explanation": [
-			    "not clearly seen, heard, or smelt",
-			    "slight",
-			    "close to losing consciousness"
-			    ]
+		  "word": "microwave oven",
+		  "explanation": [
+		    "kitchen appliance that cooks food by passing an electromagnetic wave through it; heat results from the absorption of energy by the water molecules in the food"
+		  ]
 		},
 		{
-		    "word": "faculty",
-		    "explanation": [
-			    "a basic mental or physical power",
-			    "an ability to do a particular thing well",
-			    "a group of university departments concerned with a particular area of knowledge",
-			    "the teaching or research staff of a university or college"
-			    ]
+		  "word": "stove",
+		  "explanation": [
+		  "a kitchen appliance used for cooking food",
+		    "any heating apparatus"
+		  ]
 		},
 		{
-		    "word": "gawky",
-		    "explanation": [
-			    "awkward and clumsy in behaviour or movement"
-			    ]
+		  "word": "water-heater",
+		  "explanation": [
+		    "a heater and storage tank to supply heated water"
+		  ]
 		},
 		{
-		    "word": "induce",
-		    "explanation": [
-			    "persuade someone to do something",
-			    "bring on the start of childbirth by drugs or other artificial means",
-			    "bring about or cause"
-			    ]
+		  "word": "pan",
+		  "explanation": [
+		  "cooking utensil consisting of a wide metal vessel",
+		    "(Greek mythology) god of fields and woods and shepherds and flocks; represented as a man with goat's legs and horns and ears; identified with Roman Sylvanus or Faunus",
+		    "shallow container made of metal"
+		  ]
 		},
 		{
-		    "word": "kangaroo",
-		    "explanation": [
-			    "a large Australian marsupial with a long powerful tail and strong hind legs that enable it to travel by leaping"
-			    ]
+		  "word": "water fountain",
+		  "explanation": [
+		    "a public fountain to provide a jet of drinking water"
+		  ]
 		},
 		{
-		    "word": "lack",
-		    "explanation": [
-			    "the state of being without or not having enough of something"
-			    ]
+		  "word": "dishwasher",
+		  "explanation": [
+		    "a machine for washing dishes",
+		    "someone who washes dishes"
+		  ]
 		},
 		{
-		    "word": "learn",
-		    "explanation": [
-			    "gain knowledge of or skill in something through study or experience or by being taught",
-			    "become aware of something through receiving information or through observation"
-			    ]
+		  "word": "liquidizer",
+		  "explanation": [
+		    "an electrically powered mixer with whirling blades that mix or chop or liquefy foods"
+		  ]
 		},
 		{
-		    "word": "library",
-		    "explanation": [
-			    "a building or room containing a collection of books and periodicals for use by the public or the members of an institution",
-			    "a private collection of books",
-			    "a collection of films oe recorded music kept for research or borrowing"
-			    ]
+		  "word": "stereo",
+		  "explanation": [
+		    "reproducer in which two microphones feed two or more loudspeakers to give a three-dimensional effect to the sound",
+		    "two photographs taken from slightly different angles that appear three-dimensional when viewed together"
+		  ]
 		},
 		{
-		    "word": "location",
-		    "explanation": [
-			    "a place where something is situated",
-			    "the action of discovering where something is",
-			    "an actual place in which a film or broadcast is made, as distinct from in a studio"
-			    ]
+		  "word": "television",
+		  "explanation": [
+		    "broadcasting visual images of stationary or moving objects",
+		    "a telecommunication system that transmits images of objects (stationary or moving) between distant points",
+		    "an electronic device that receives television signals and displays them on a screen"
+		  ]
 		},
 		{
-		    "word": "money",
-		    "explanation": [
-			    "a means of payment in the form of coins and banknotes",
-			    "wealth",
-			    "payment or profit"
-			    ]
-		},
-		{
-		    "word": "lonely",
-		    "explanation": [
-			    "sad because of having no friends or company",
-			    "spent alone",
-			    "(of a place) remote"
-			    ]
+		  "word": "VCR",
+		  "explanation": [
+		    "a magnetic tape recorder for recording (and playing back) TV programs"
+		  ]
 		}
 	],
-    "C": [
+	"sports": [
 		{
-		    "word": "airtime",
-		    "explanation": [
-			    "the amount of time allocated to a particular subject or type of material on radio or television",
-	            "the time during which a mobile phone is in use"
-			    ]
+			"word": "tennis",
+			"explanation": [
+				"a game played with rackets by two or four players who hit a ball back and forth over a net that divides the court"
+			]
 		},
 		{
-		    "word": "criminal",
-		    "explanation": [
-			    "relating to crime or a crime",
-                "disgraceful and shocking"
-			    ]
+			"word": "climbing",
+			"explanation": [
+				"an event that involves rising to a higher point (as in altitude or temperature or intensity etc.)"
+			]
 		},
 		{
-		    "word": "ballet",
-		    "explanation": [
-			    "an artistic form of dancing performed to music, using set steps and gestures",
-                "acreative work in this form"
-			    ]
+			"word": "snooker",
+			"explanation": [
+				"a form of pool played with 15 red balls and six balls of other colors and a cue ball"
+			]
 		},
 		{
-		    "word": "bang",
-		    "explanation": [
-			    "a sudden loud sharp noise",
-                "a sudden painful blow",
-                "make or cause to make a bang"
-			    ]
+			"word": "football",
+			"explanation": [
+				"any of various games played with a ball (round or oval) in which two teams try to kick or carry or propel the ball into each other's goal"
+			]
 		},
 		{
-		    "word": "bareback",
-		    "explanation": [
-                "on a horse without a saddle"
-			    ]
+			"word": "basketball",
+			"explanation": [
+				"a game played on a court by two opposing teams of 5 players; points are scored by throwing the ball through an elevated horizontal hoop"
+			]
 		},
 		{
-		    "word": "bountiful",
-		    "explanation": [
-			    "abundant",
-                "giving generously"
-			    ]
-		},		
-	    {
-	        "word": "aireplay",
-	        "explanation": [
-	            "broadcasting time devoted to a particular record, performer, or type of music"
-			    ]
-	    },
-		{
-		    "word": "chancy",
-		    "explanation": [
-			    "risky; uncertain"
-			    ]
+			"word": "Sailing",
+			"explanation": [
+				"riding in a sailboat"
+			]
 		},
 		{
-		    "word": "inimitable",
-		    "explanation": [
-			    "defying imitation; matchless"
-			    ]
+			"word": "Archery",
+			"explanation": [
+				"the sport of shooting arrows with a bow"
+			]
 		},
 		{
-		    "word": "motto",
-		    "explanation": [
-			    "a short sentence or phrase expressing the aims or beliefs of a person or group"
-			    ]
+			"word": "Diving",
+			"explanation": [
+				"activity of working or looking around underwater, using special breathing equipment"
+			]
+		},
+			{
+			"word": "bowling",
+			"explanation": [
+				"a game in which balls are rolled at an object or group of objects with the aim of knocking them over or moving them"
+			]
 		},
 		{
-		    "word": "bliss",
-		    "explanation": [
-			    "perfect happiness",
-                "a state of spiritual"
-			    ]
+			"word": "golf",
+			"explanation": [
+				"a game played on a large open course with 9 or 18 holes; the object is use as few strokes as possible in playing all the holes"
+			]
 		},
 		{
-		    "word": "offering",
-		    "explanation": [
-			    "something that is offered; a gift or contribution"
-			    ]
+			"word": "skate",
+			"explanation": [
+				"sports equipment that is worn on the feet to enable the wearer to glide along and to be propelled by the alternate actions of the legs"
+			]
 		},
 		{
-		    "word": "oppressive",
-		    "explanation": [
-			    "harsh and demanding strict obedience",
-			    "causing distress or anxiety"
-			    ]
+			"word": "riding",
+			"explanation": [
+				"the sport of siting on the back of a horse while controlling its movements"
+			]
 		},
 		{
-		    "word": "original",
-		    "explanation": [
-			    "existing from the beginning",
-			    "produced by an artist, author, etc. rather than copied",
-			    "new and different from what has been done before"
-			    ]
+			"word": "Weightlifting",
+			"explanation": [
+				"bodybuilding by exercise that involves lifting weights"
+			]
 		},
 		{
-		    "word": "period",
-		    "explanation": [
-			    "a length or portion of time",
-			    "a major division of geological time, forming part of an era"
-			    ]
+			"word": "badminton",
+			"explanation": [
+				"a game played on a court with light long-handled rackets used to volley a shuttlecock over a net"
+			]
 		},
 		{
-		    "word": "painful",
-		    "explanation": [
-			    "affected with or causing pain"
-			    ]
-		},
-		{
-		    "word": "paling",
-		    "explanation": [
-			    "a fence made from stakes",
-			    "a dark cloud of smoke or dust"
-			    ]
-		},
-		{
-		    "word": "permit",
-		    "explanation": [
-			    "officially allow someone to do something",
-			    "make something possible"
-			    ]
-		},
-		{
-		    "word": "scene",
-		    "explanation": [
-			    "the place where an incident occurs or occurred",
-			    "a view or land scape as seen by a spectator"
-			    ]
-		},
-		{
-		    "word": "hardly",
-		    "explanation": [
-			    "capable of surviving difficult conditions"
-			    ]
-		},
-		{
-		    "word": "autograph",
-		    "explanation": [
-			    "a celebrity's signature written for an admirer",
-			    "a manuscript or musical score in an author's or composer's own handwriting"
-			    ]
-		},
-		{
-		    "word": "awfully",
-		    "explanation": [
-			    "very or very much",
-			    "very badly or unpleasantly"
-			    ]
-		},
-		{
-		    "word": "balance",
-		    "explanation": [
-			    "a state in which weight is evenly distributed, enabling a person or thing to remain steady and upright",
-			    "a situation in which different parts are in the correct proportions",
-			    "a device for weighing"
-			    ]
-		},
-		{
-		    "word": "ball",
-		    "explanation": [
-			    "a rounded object that is kicked, thrown, or hit in a game",
-			    "a single throw or kick of the ball in a game"
-			    ]
-		},
-		{
-		    "word": "bicycle",
-		    "explanation": [
-			    "a two-wheeled vehicle propelled by pedals"
-			    ]
-		},
-		{
-		    "word": "chicken",
-		    "explanation": [
-			    "a domestic fowl kept for its eggs or meat"
-			    ]
+			"word": "skiing",
+			"explanation": [
+				"a sport in which participants must travel on skis"
+			]
 		}
 	],
-    "D": [
+	"cartoon":[
 		{
-		    "word": "microeconomics",
-		    "explanation": [
-			    "the branch of economics that studies the economy of consumers or households or individual firms"
-			    ]
+			"word": "Mickey Mouse",
+			"explanation": [
+				"It's an anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves. As the official mascot of The Walt Disney Company"
+			]
 		},
 		{
-		    "word": "choice",
-		    "explanation": [
-			    "an act of choosing",
-			    "the right or ability to choose",
-			    "a range from which to choose",
-			    "a person or thing chosen"
-			    ]
+			"word": "Homer Simpson",
+			"explanation": [
+				"He has a low intelligence level and is described by director David Silverman as 'creatively brilliant in his stupidity'. He often spends his evenings drinking Duff Beer at Moe's Tavern, and was shown in the episode 'Duffless' , as a full-blown alcoholic.  He is very envious of his neighbors, Ned Flanders and his family, and is easily enraged by Bart."
+			]
 		},
 		{
-		    "word": "chocolate",
-		    "explanation": [
-			    "a food made from roasted cacao seeds, eaten as a sweet or mixed with milk or water to make a drink",
-			    "a sweet covered with chocolate"
-			    ]
+			"word": "Popeye",
+			"explanation": [
+				"The sailor is invariably put into what seems like a hopeless situation, upon which (usually after a beating), a can of spinach which he apparently regularly carries with him falls out from inside his shirt. He is often depicted as belonging to Olive Oyl in cartoons"
+			]
 		},
 		{
-		    "word": "clown",
-		    "explanation": [
-			    "a comic entertainer in a circus, wearing a traditional costume and exaggerated make-up",
-			    "a playful and amusing person"
-			    ]
+			"word": "Garfield",
+			"explanation": [
+				"It is an orange, fuzzy, tabby cat born in the kitchen of an Italian restaurant and immediately ate all the pasta and lasagna in sight, thus developing his love and obsession for lasagna and pizza."
+			]
 		},
 		{
-		    "word": "college",
-		    "explanation": [
-			    "an educational establishment providing higher education or specialized training",
-			    "(in Britain) any of the independent institutions into which some universities are separated"
-			    ]
+			"word": "Tweety Bird",
+			"explanation": [
+				"It is a fictional Yellow Canary in the Warner Bros. Looney Tunes and Merrie Melodies series of animated cartoons."
+			]
 		},
 		{
-		    "word": "comfortable",
-		    "explanation": [
-			    "giving or enjoying physical comfort",
-			    "free from financial worry"
-			    ]
+			"word": "Donald Duck",
+			"explanation": [
+				"It is an anthropomorphic white duck with a yellow-orange bill, legs, and feet. He typically wears a sailor suit with a cap and a black or red bow tie."
+			]
 		},
 		{
-		    "word": "conversation",
-		    "explanation": [
-			    "an informal spoken exchange between people"
-			    ]
+			"word": "Hello Kitty",
+			"explanation": [
+				"It is portrayed as a female white Japanese bobtail cat with a red bow."
+			]
 		},
 		{
-		    "word": "crown",
-		    "explanation": [
-			    "a circular ornamental headdress worn by a king or queen as a symbol of authority",
-			    "a wreath of leaves or flowers worn as an emblem of victory"
-			    ]
+			"word": "Goofy",
+			"explanation": [
+				"It is a tall, anthropomorphic dog, and typically wears a turtle neck and vest, with pants, shoes, white gloves, and a tall hat originally designed as a rumpled fedora."
+			]
 		},
 		{
-		    "word": "doubt",
-		    "explanation": [
-			    "a feeling of uncertainty about something",
-			    "disbelieve or mistrust someone"
-			    ]
+			"word": "Tom",
+			"explanation": [
+				"It is a blue and white domestic shorthair cat. He usually lives a pampered life, although the characters usually live in several lifestyles"
+			]
 		},
 		{
-		    "word": "lodger",
-		    "explanation": [
-			    "a person who pays rent to live in a property with the owner"
-			    ]
+			"word": "Jerry",
+			"explanation": [
+				"It is a small brown house mouse who always lives in close proximity to Tom."
+			]
 		},
 		{
-		    "word": "logo",
-		    "explanation": [
-			    "a design or symbol chosen by an organization to identify its products"
-			    ]
+			"word": "Conan",
+			"explanation": [
+				"At the beginning, he is a 16-year old student at Teitan High School. He is already well-known as a brilliant young detective. Due to a rare side effect, the poison shrinks him into a child and he adopts this pseudonym  to hide from those who poisoned him."
+			]
 		},
 		{
-		    "word": "mess",
-		    "explanation": [
-			    "a dirty or untidt state",
-			    "a state of confusion or difficulty",
-			    "make something untidy or dirty"
-			    ]
+			"word": "Huluwa",
+			"explanation": [
+				"They are seven cucumis brothers within: red, orange, yellow, green, cyan, blue, purple, white. Each has a unique supernatural ability such as super-strength, enhanced hearing and sight, invisibility, and pyrokinesis, as well as a weakness."
+			]
 		},
 		{
-		    "word": "nest",
-		    "explanation": [
-			    "a structure made by a bird for laying eggs and sheltering its young",
-			    "a place where an animal or insect breeds or shelters"
-			    ]
+			"word": "McDull",
+			"explanation": [
+				"He is a male pig who can be distinguished by a birthmark on his right eye. He has a heart of gold, but he isn't very smart and ordinary in every way; nevertheless, he has many dreams."
+			]
 		},
 		{
-		    "word": "cacation",
-		    "explanation": [
-			    "a holiday period between terms in universities and law courts",
-			    "take a holiday"
-			    ]
-		},
-		{
-		    "word": "tripper",
-		    "explanation": [
-			    "a person who goes on a pleasure trip"
-			    ]
-		},
-		{
-		    "word": "thriller",
-		    "explanation": [
-			    "a novel, play, or film with an exciting plot, typically involving crime or spying"
-			    ]
-		},
-		{
-		    "word": "summon",
-		    "explanation": [
-			    "instruct someone to be present",
-			    "urgently ask for help",
-			    "call polple to attend a meeting",
-			    "make an effort to produce a quality or reaction from within yourself"
-			    ]
-		},
-		{
-		    "word": "stress",
-		    "explanation": [
-		        "pressure or tension exerted on an object",
-		        "a state of mental oe emotional strain",
-		        "particular emphasis"
-			    ]
-		},
-		{
-		    "word": "serve",
-		    "explanation": [
-			    "perform duties or services for",
-			    "be employed as a member of the armed forces"
-			    ]
-		},
-		{
-		    "word": "perfect",
-		    "explanation": [
-			    "having al  the required elements or qualities",
-			    "free from any flaw"
-			    ]
+			"word": "Ninja Turtles",
+			"explanation": [
+				"They are a fictional team of four teenage anthropomorphic turtles, who were trained by their anthropomorphic rat sensei in the art of ninjutsu and named after four Renaissance artists."
+			]
 		}
 	]
 }

@@ -20,7 +20,7 @@ function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, grade
 			    "success": function (data) {
 			        var doTemp = doT.template(temp);
 			        word = data.word;
-			        $el.html(doTemp(data));
+                    $el.html(doTemp(data));
 			    }
 			}
 		);
