@@ -1,0 +1,13 @@
+<div class="logged">
+    <h3 class="txtalign-l ml-10">{{=it.username}}</h3>
+<<<<<<< HEAD
+	<a class="gw-btn-setting btn btn-small pull-right mr-10 mt-10" data-action="showsetting" href="#">
+=======
+	<a class="gw-btn-setting btn btn-small pull-right mr-10 mt-10 button green"  href="#" style="font:10px/1em 'Droid Sans', sans-serif">
+>>>>>>> baff77480d3185b756f3e584fe08527e5562dc98
+		<i class="icon-cog"></i>
+		Settings
+	</a>
+	<div class="gw-progress pull-left mt-15 ml-10 grid-7"></div>
+	<div class="well gw-main clear"></div>
+</div>
