@@ -1,6 +1,6 @@
-"use strict";
 
 define(["jquery", "context", "service/takeword"], function ($, context, takewordService) {
+    "use strict";
 
 	/*
     var url = "service/takeword";

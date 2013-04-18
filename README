@@ -1,0 +1,11 @@
+Game.
+Word game.
+Social word game.
+
+Player A vs Player B:
+*Player A Type explanation by word
+*Player B guess word by explanation
+	*Player B guess the currect word, then both Player A & Player B win the word
+	*Player B guess the wrong word, then both Player A & Player B lose the word
+
+

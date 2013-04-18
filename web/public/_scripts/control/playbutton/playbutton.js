@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "text!./control/playbutton/template.html", "roundoff"],
 function ($, template, roundoff) {
+    "use strict";
 
     return function ($btnContainer, $container) {
 

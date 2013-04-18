@@ -1,7 +1,7 @@
-"use strict";
-
 define(["jquery", "context", "doT", "getscore", "text!./control/score/template.html"],
 function ($, Context, doT, getscore, template) {
+    "use strict";
+    
     function getProgressCssClass(level) {
         var cssClass = "";
         switch (level) {

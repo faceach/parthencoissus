@@ -1,5 +1,3 @@
-"use strict";
-
 define({
 	msgtype: [
 		"invite",

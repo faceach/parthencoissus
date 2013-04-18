@@ -1,6 +1,5 @@
-"use strict";
-
 define(["jquery"], function ($) {
+    "use strict";
 
     var url = "../_data/matchpartner.txt";
 

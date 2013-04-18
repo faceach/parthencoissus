@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "doT", "context", "bullistword", "msghandler", "wordinput", "text!./template.html", "roundoff"],
 function ($, doT, Context, bullistword, MsgHandler, wordinput, template, roundoff) {
+    "use strict";
 
     gwRouter.route("invited", "invited", function () {
         console.log("#invited");

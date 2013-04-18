@@ -1,6 +1,5 @@
-"use strict";
-
 define(function () {
+	"use strict";
 
     return function (msgHandler) {
 

@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "widget/takeword/takeword", "bullistword", "doT", "text!./template.html", "msghandler", "roundoff"],
 function ($, takeword, bullistword, doT, template, MsgHandler, roundoff) {
+    "use strict";
 
     gwRouter.route("waiting", "waiting", function () {
         console.log("#waiting");

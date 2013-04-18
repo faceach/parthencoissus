@@ -1,9 +1,9 @@
-"use strict";
 
 var onlineUsers = [];
 
 define(["jquery", "socket.io", "context", "text!./template.html", "roundoff"],
 function ($, sio, Context, template, roundoff) {
+    "use strict";
 
     var loggedCallback;
 

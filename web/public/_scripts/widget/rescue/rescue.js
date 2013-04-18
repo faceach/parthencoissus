@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "context", "widget/takeword/takeword", "word", "playbutton", "doT", "text!./template.html", "msghandler","gradehandler","roundoff"],
 function ($, Context, takeword, Word, playbutton, doT, template, MsgHandler, gradehandler,roundoff) {
+	"use strict";
 
     gwRouter.route("rescue", "rescue", function () {
         console.log("#rescue");

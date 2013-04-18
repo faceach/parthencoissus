@@ -1,6 +1,5 @@
-"use strict";
-
 define(function () {
+    "use strict";
 
     return function (word) {
         var lens = word.length,

@@ -1,6 +1,6 @@
-"use strict";
 
 define(["socket.io", "underscore", "context"], function (sio, _, context) {
+    "use strict";
 
     var socket = io.connect();
     var key = "guessword",

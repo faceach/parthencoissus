@@ -1,6 +1,5 @@
-﻿"use strict";
-
-define(["jquery.mousewheel"], function () {
+﻿define(["jquery.mousewheel"], function () {
+	"use strict";
 
 	return function ($els) {
 
