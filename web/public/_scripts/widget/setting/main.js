@@ -1,21 +1,15 @@
-
-define(["jquery", "wordinput", "playbutton", "text!./template.html", "roundoff"],
-function ($, wordinput, playbutton, template, roundoff) {
+define(["jquery", "text!./template.html", "roundoff"],
+function ($, template, roundoff) {
     "use strict";
 
-    gwRouter.route("right", "right", function () {
-        console.log("#right");
+    gwRouter.route("setting", "setting", function () {
+        console.log("#setting");
     });
 
     return function ($container) {
-        location.hash = "right";
+        location.hash = "setting";
 
-        var $html = $(template),
-            $guess = $html.find(".gw-guess"),
-            $btnContainer = $html.find(".gw-btn-container");
-
-        wordinput.answer($guess);
-        playbutton($btnContainer, $container);
+        var $html = $(template);
 
         $container.empty().append($html);
         roundoff();
