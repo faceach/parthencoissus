@@ -93,6 +93,9 @@ app.get('/index', function (req, res) {
 app.get('/end', function (req, res) {
     res.render('views/prototype/end.html');
 });
+app.get('/full', function (req, res) {
+    res.render('views/prototype/fullview.html');
+});
 
 app.listen(3000, function () {
     var addr = app.address();
