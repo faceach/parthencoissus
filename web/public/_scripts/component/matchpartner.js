@@ -1,8 +1,7 @@
-"use strict";
-
 define(["jquery", "service/matchpartner"], function ($, matchpartnerService) {
+    "use strict";
 
-/*
+    /*
     var url = "../_data/matchpartner.txt";
 
     return function (callback) {

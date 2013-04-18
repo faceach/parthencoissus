@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "widget/takeword/takeword", "doT", "text!./template.html", "roundoff"],
 function ($, takeword, doT, template, roundoff) {
+    "use strict";
 
     gwRouter.route("exited", "exited", function () {
         console.log("#exited");

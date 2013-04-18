@@ -1,6 +1,5 @@
-"use strict";
-
 define(["jquery", "service/getscore"], function ($, getscoreService) {
+    "use strict";
 
 /*
     var url = "../_data/getscore.txt";

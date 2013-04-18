@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "jquery.textchange", "context", "doT", "takeword", "matchpartner", "msghandler", "gradehandler", "text!./template.html", "roundoff"],
 function ($, textchange, Context, doT, takeword, matchpartner, MsgHandler, gradehandler, template, roundoff) {
+    "use strict";
 
     gwRouter.route("takeword", "takeword", function () {
         console.log("#takeword");

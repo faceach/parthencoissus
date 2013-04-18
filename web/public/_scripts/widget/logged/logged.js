@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "context", "score", "widget/start/start", "widget/invited/invited", "doT", "text!./template.html", "roundoff"],
 function ($, Context, score, start, invited, doT, template, roundoff) {
+    "use strict";
 
     return function ($container) {
 

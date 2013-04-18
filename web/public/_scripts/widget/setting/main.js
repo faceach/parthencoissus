@@ -1,3 +1,4 @@
+
 define(["jquery", "wordinput", "playbutton", "text!./template.html", "roundoff"],
 function ($, wordinput, playbutton, template, roundoff) {
     "use strict";

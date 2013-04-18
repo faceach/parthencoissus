@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "playbutton", "text!./template.html"],
 function ($, playbutton, template) {
+	"use strict";
 
     return function ($container) {
 

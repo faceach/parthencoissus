@@ -1,7 +1,6 @@
-"use strict";
-
 define(["jquery", "widget/takeword/takeword", "word", "playbutton", "doT","text!./template.html", "roundoff"],
 function ($, takeword, Word, playbutton, doT,template, roundoff) {
+	"use strict";
 
     gwRouter.route("fail", "fail", function () {
         console.log("#fail");
