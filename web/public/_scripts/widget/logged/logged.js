@@ -8,7 +8,8 @@ function ($, Context, score, start, invited, setting, doT, template, roundoff) {
         var doTemp = doT.template(template),
 			$html = $(doTemp(Context.get())),
             $progress = $html.find(".gw-progress"),
-            $main = $html.find(".gw-main");
+            $main = $html.find(".gw-main"),
+            $settingMain = $html.find(".gw-setting-main");
 
         score.get($progress);
         start($main);
@@ -16,7 +17,14 @@ function ($, Context, score, start, invited, setting, doT, template, roundoff) {
 
         $html.on("click", "[data-action='showsetting']", function(e){
             e.preventDefault();
-            setting($main);
+            if($(this).attr("data-checked") == 0){
+                $(this).attr("data-checked", 1);
+                setting($settingMain, "show");
+            }else{
+                $(this).attr("data-checked", 0);
+                setting($settingMain, "hide");
+            }
+            
         });
 
         $container.html($html);

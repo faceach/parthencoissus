@@ -82,12 +82,16 @@ input.gw-input-hyphen[type="text"]
 	background-color: transparent;
 	cursor: default;
 }
-.gw-category{
+.gw-setting-main{
+	margin: 0 10px 10px 10px;
+	display: none;
+}
+.gw-category-option{
 	display: block;
 	float: left;
 	margin-right: 15px;
 }
-.gw-category img{
+.gw-category-option img{
 	width:35px;
 	height:35px;
 }

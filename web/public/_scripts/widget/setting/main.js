@@ -2,12 +2,12 @@ define(["jquery", "context", "text!./template.html", "roundoff"],
 function ($, Context, template, roundoff) {
     "use strict";
 
-    gwRouter.route("setting", "setting", function () {
-        console.log("#setting");
-    });
+    // gwRouter.route("setting", "setting", function () {
+    //     console.log("#setting");
+    // });
 
-    return function ($container) {
-        location.hash = "setting";
+    return function ($container, status) {
+        // location.hash = "setting";
 
         var $html = $(template);
         
@@ -16,10 +16,17 @@ function ($, Context, template, roundoff) {
             var category = $(this).attr("data-category");
             $.extend(Context.get(), {"category": category});
             console.log(Context.get());
-            location.hash = "start";
+           $container.hide("fast");
+
         });
 
         $container.empty().append($html);
+        if(status == "show"){
+            $container.show("fast");    
+        }else{
+            $container.hide("fast");
+        }
+        
         roundoff();
 
     };
