@@ -13,7 +13,9 @@ function ($, Context, template, roundoff) {
         
         $html.on("click", "[data-action='savesettings']", function(e){
             e.preventDefault();
-            var category = $html.find('input:radio[name=optionsRadios]:checked').val();
+            $html.find('a[data-action="savesettings"]').removeClass("gw-category-active");
+            $(this).addClass("gw-category-active");
+            var category = $(this).attr("data-category");
             $.extend(Context.get(), {"category": category});
             console.log(Context.get());
             location.hash = "start";

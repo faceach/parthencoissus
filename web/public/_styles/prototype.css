@@ -82,3 +82,15 @@ input.gw-input-hyphen[type="text"]
 	background-color: transparent;
 	cursor: default;
 }
+.gw-category{
+	display: block;
+	float: left;
+	border:2px solid whiteSmoke;
+	margin-right: 15px;
+}
+.gw-category-active{
+	border:2px solid #0074CC;
+}
+.gw-category:hover{
+	border:2px solid #0074CC;
+}
