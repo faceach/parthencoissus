@@ -25,11 +25,11 @@ textarea
 .gw-main
 {
     margin: 0 10px;
+    min-height: 400px;
 }
 .gw-main textarea
 {
-    width: 96%;
-    min-height: 400px;
+    width: 96%;   
 }
 .gw-explanationgrade-bar
 {
